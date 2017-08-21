@@ -127,28 +127,28 @@ Dynamic models describe systems with states $x$, usually quantifying the involve
 The time evolution of the states is expressed via a set of ODEs, $\dot x = f(x)$. Although constituting quite a special class of dynamic systems, chemical reaction networks formulated by the law of mass action as considered here allow for surprisingly general applications. Typical ODE examples derived from the law of mass action are:
 \begin{itemize}
 	\item $\dot x_A = k_p$, constant production of $x_A$ ($\emptyset \rightarrow A$)
-	\item $\dot x_C = k_c \cdot x_A \cdot x_B = - \dot x_A = - \dot x_B$, complex formation ($A+B \rightarrow C$)
-	\item $\dot x_C = - k_d \cdot x_C$, proportional degradation of $x_C$ ($C \rightarrow \emptyset$)
+	\item $\dot x_C = k_c \,x_A \,x_B = - \dot x_A = - \dot x_B$, complex formation ($A+B \rightarrow C$)
+	\item $\dot x_C = - k_d \,x_C$, proportional degradation of $x_C$ ($C \rightarrow \emptyset$)\,.
 \end{itemize}
-each generally written as
+A general reaction gives an ODE for all participating species $X_j$ ($j = 1, \dots, n$)
 \begin{align}
-	\dot x = \underbrace{k_0 \left(\prod x_i^{\nu_i}\right)}_{v_0(x, k_0)} (\nu' - \nu) \quad\leftrightarrow\quad (\nu_1 X_1 + \dots + \nu_n X_n \longrightarrow \nu'_1 X_1 + \dots + \nu'_n X_n)
+	\dot x_j = \underbrace{k_0 \left(\prod x_i^{\nu_i}\right)}_{w_0(x, k_0)} (\nu_j' - \nu_j) \quad\leftrightarrow\quad (\nu_1 X_1 + \dots + \nu_n X_n \longrightarrow \nu'_1 X_1 + \dots + \nu'_n X_n)\,,
 	\label{eq:ma}
 \end{align}
-where $X_1, \dots, X_n$ are the $n$ species involved, $\nu$ and $\nu'$ encode the stoichiometry of the reaction and $k_0$ is the reaction rate. When several reactions are involved, eq.~\eqref{eq:ma} generalizes to
+where $\nu_j$ and $\nu_j'$ encode the stoichiometric constants of the reaction and $k_0$ is the reaction rate. When several reactions $1, \dots, r$ are involved, all contributions have to be summed up holding the matrix equation
 \begin{align}
-	\dot x = S\cdot v(x, k)
+	\dot x = S\cdot w(x, k)
 	\label{eq:Sv}
 \end{align}
 %$\dot x_l = \sum_{j = 1\dots m}  k_{j} \prod_{i = 1\dots n} \nu_{i,j} x_i^{\nu_{i,j}}$ for a system of $n$ states and $m$ reactions with rate constants $p = \{ k_j, j = 1\dots m\}$ and stoichiometric constants $\nu_{i,j} \in \mathbb{Z}$.
 %An even more general expression of the system is given by $\dot x = S v(x,p)$
 with the stoichiometry matrix $S$
 %containing the stoichiometric constants $\nu_{i,j}$
-obtained from the collection of vectors $\nu' - \nu$ for reactions $1, \dots, r$,
-and the flux vector $v(x,k)\in\mathbb R^{r}$.
+%obtained from the collection of vectors $\nu' - \nu$ for reactions $1, \dots, r$,
+and the flux vector $w(x,k)\in\mathbb R^{r}$.
 Eq.~\eqref{eq:Sv} also holds for general ODEs that do not follow from mass action kinetics. Moreover the system may be explicitly time-dependent and may contain forcings $u(t)$ which e.g.~describe the external stimulation of the system. A general form of the dynamic model is therefore given by
 \begin{align}
-	\dot x = f(x,k,u,t) = S \cdot v(x,k,u,t), \quad\quad \textrm{with }  x(t = 0) = x_0.
+	\dot x = f(x,k,u,t) = S \cdot w(x,k,u,t), \quad\quad \textrm{with }  x(t = 0) = x_0.
 \end{align}
 The solution $x(t,\theta)$ for a given parameter vector $\theta = (k, x_0)$ is called model prediction. %The parameters $\theta$ contain the rate constants, initial values $x_0$ and additional parameters included in the forcings.
 It is generally assumed that the stoichiometry matrix $S$ of the system is known.
@@ -309,7 +309,7 @@ Let \code{g}, \code{x}, \code{p1} and \code{p2} be an observation-, a prediction
 A set of parameter values, forcings and events capture a certain condition in which we find the modeled system. Manipulating the system, single model parameters, forcings or events need to be changed to account for the manipulation. It is a typical approach in systems inference to systematically perturb small parts of a modeled system to reveal information about the processes.
 
 The aim of \pkg{dMod} is to allow for "simultaneous" predictions under several conditions and compare these predictions to the corresponding experimental data sets to estimate model parameters.
-Different experimental conditions are typically expressed by that fact that some parameters are different between conditions whereas others are common to all conditions. This situation occurs e.g.~if perturbation experiments are performed, affecting only few parts of a system.
+Different experimental conditions are typically expressed by the fact that some parameters are different between conditions whereas others are common to all conditions. This situation occurs e.g.~if perturbation experiments are performed, affecting only few parts of a system.
 %The full information contained in several perturbation experiments is only used if the multi-conditional model prediction is set up in a way that all model parameters not being changed from condition to condition correspond to exactly one parameter. On the other hand, parameters which are systematically perturbed correspond to different parameters.
 Mathematically speaking, we want to construct a parameter transformation
 \begin{equation}
@@ -370,7 +370,7 @@ Objective functions can be added by the \code{"+"} operator, meaning the objecti
 
 The following model is a simplified dynamic model on bile acid transport. Bile acids are produced in the liver. They are necessary for the digestion of fat and oil. In the liver, bile acids are taken up in hepatocytes (liver cells) by specific transporter molecules. Clearance occurs either via canalicular or sinusoidal export, i.e.~export to the bile transportation system of bile canaliculi or the intercellular space.
 
-To study bile clearance, experiments with hepatocytes or hepatocyte-derived cell lines are performed \textit{in-vitro}. Cells in a Petri dish stick together to a monolayer of cells, forming bile canaliculi in between cells. They adhere to the dish and are surrounded by a buffer providing the cells with nutrients. A radioactive label allows to measure the bile acid \textit{taurocholic acide} (TCA).
+To study bile clearance, experiments with hepatocytes or hepatocyte-derived cell lines are performed \textit{in-vitro}. Cells in a Petri dish stick together to a monolayer of cells, forming bile canaliculi in between cells. They adhere to the dish and are surrounded by a buffer providing the cells with nutrients. A radioactive label allows to measure the bile acid \textit{taurocholic acid} (TCA).
 
 For the mathematical description of bile flow, a three-compartment differential equation model is used. TCA is pipetted into the buffer compartment (\code{TCA_buffer}) from where it is transported into the cells (\code{TCA_cell}). Intracellular TCA is exported back to the buffer or the canalicular compartment (\code{TCA_cana}). Finally, canalicular TCA flows back into the buffer compartment. These processes give rise to the differential equations and corresponding flowchart presented in Figure~\ref{fig:flowchart}.
 \begin{figure}[ht]
@@ -487,7 +487,7 @@ g <- Y(observables, f = reactions, condition = NULL,
 \end{CodeChunk}
 Observation functions link internal to observable states. Thus, providing values for the model parameters, the observation function can be used to simulate the outcome of an experiment. Adding noise to the prediction, experimental data is simulated.
 In the following, we will simulate the outcome of an \textit{efflux experiment}.
-The experiment start with all TCA concentrations in steady state, such as shown in Figure~\ref{fig:prediction} after $t = 50$. To initiate the efflux, the buffer is replaced by TCA-free buffer, i.e.~\code{TCA_buffer = 0}. This translates into the following initial parameter values:
+The experiment starts with all TCA concentrations in steady state, such as shown in Figure~\ref{fig:prediction} after $t = 50$. To initiate the efflux, the buffer is replaced by TCA-free buffer, i.e.~\code{TCA_buffer = 0}. This translates into the following initial parameter values:
 %, i.e. time point $t = 0$ reflects the distribution of TCA after uptake, as shown in Figure~\ref{fig:prediction} after $t = 50$. Hence, we reset some of the parameter values. Initial values are set to steady state values. The incubation buffer is replaced by fresh buffer, meaning that \code{TCA_buffer} is set to 0. Finally, we assume that \code{s = 1000}. The prediction of the observables is made by concatenation of \code{g} and \code{x} via the concatenation operator \code{"*"} being defined in \pkg{dMod} for prediction, observation and parameter functions.
 \begin{CodeChunk}
 \begin{CodeInput}
@@ -504,7 +504,7 @@ The predicted dynamics of the system's internal and observable states is obtaine
 out <- (g*x)(times, pars, conditions = "standard")
 \end{CodeInput}
 \end{CodeChunk}
-Since \code{g} and \code{x} have been generated as generic functions, i.e.~\code{condition = NULL}, we can assign the output to a condition of our choice, in thas case "standard".
+Since \code{g} and \code{x} have been generated as generic functions, i.e.~\code{condition = NULL}, we can assign the output to a condition of our choice, in this case "standard".
 The predicted noiseless observation is obtained by considering the observable states only at the time point of observation \code{timesD}.
 %Finally, we obtain the simulated data by taking a subset of the prediction.
 \begin{CodeChunk}
@@ -575,7 +575,11 @@ The vector \code{outerpars} is the collection of all symbols on the right-hand s
 The objective of model fitting is to find parameter values such that the corresponding model prediction matches the observation. In Figure~\ref{fig:gxp}, the graphs of \code{buffer} and \code{cellular} should match the observation within the error.
 For normally distributed measurement noise, maxi\-mum-likelihood estimation is equivalent to least-squares estimation. A least-squares objective function can be generated by the \code{normL2()} command which requires a \code{datalist} object, in our case \code{data}, and a prediction function, in our case \code{g*x*p}.
 
-Frequently, non-identifiable parameters are encountered in non-linear dynamic systems. To prevent the optimizer from selecting extreme parameter values for which the ODE solver aborts, a general quadratic prior can be entailed on all parameters by calling \code{constraintL2()}. The objective functions returned by \code{normL2()} and \code{constraintL2()} are objects of class \code{objfn} and can be added by the \code{"+"} operator.
+%Frequently, non-identifiable parameters are encountered in non-linear dynamic systems. To prevent the optimizer from selecting extreme parameter values for which the ODE solver aborts, a general quadratic prior can be entailed on all parameters by calling \code{constraintL2()}. The objective functions returned by \code{normL2()} and \code{constraintL2()} are objects of class \code{objfn} and can be added by the \code{"+"} operator.
+
+If prior knowledge for parameter values is available, this can be incorporated by calling \code{constraintL2()}. The function penalizes distances between arbitrary prior values and parameter values with a quadratic function weighted by the strength of the prior. The objective functions returned by \code{normL2()} and \code{constraintL2()} are objects of class \code{objfn} and can be added by the \code{"+"} operator.
+
+Frequently, non-identifiable parameters are encountered in non-linear dynamic systems. In this case, adding a weak prior to all parameters prevents the optimizer from selecting extreme parameter values for which the ODE solver aborts. 
 
 The following code illustrates the implementation of the objective function and how it is used with the \code{trust()} optimizer from the \pkg{trust} package to obtain a model fit, shown in Figure~\ref{fig:myfit}.
 
@@ -993,7 +997,7 @@ s          : s             : s*exp(epsilon)
 
 
 %outputs one scaling invariance for the parameters \code{s}, \code{TCA_buffer}, \code{TCA_cana} and \code{TCA_cell} which is 
-In agreement with the identifiability analysis by the profile-likelihood method, the parameters \code{s}, \code{TCA_buffer}, \code{TCA_cana} and \code{TCA_cell} are found to be non-identifiable due to a scaling symmetry. The corresponding scaling transformation, last column, leaves the observation invariant for any choice of \code{epsilon}. The parameter non-identifiability can be resolved choosing one representative from the orbit of the transformation. In our case, the scaling parameter could e.g.~be fixed to 1. 
+In agreement with the identifiability analysis by the profile-likelihood method, the parameters \code{s}, \code{TCA_buffer}, \code{TCA_cana} and \code{TCA_cell} are found to be non-identifiable due to a scaling symmetry. The corresponding scaling transformation, last column, leaves the observation invariant for any choice of \code{epsilon}. The parameter non-identifiability can be resolved choosing one representative from the orbit of the transformation. In our case, the scaling parameter could, for example, be fixed to 1. 
 
 %scaling invariance could be removed by fixing one of the parameters to a certain value unequal to zero\footnote{Fixing $\mbox{TCA\_buffer}=0$ does not remove the invariance, since the corresponding symmetry transformation is not valid \citep{merkt2015higher}.}. For the case of a translational invariance all values were allowed.
 

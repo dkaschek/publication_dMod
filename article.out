@@ -1,0 +1,26 @@
+\BOOKMARK [1][-]{Section.0.Introduction.1}{Introduction}{}% 1
+\BOOKMARK [1][-]{Section.1.Theoretical background.1}{Theoretical background}{}% 2
+\BOOKMARK [2][-]{Subsection.2.0.Dynamic models and model sensitivities.2}{Dynamic models and model sensitivities}{Section.1.Theoretical background.1}% 3
+\BOOKMARK [2][-]{Subsection.2.1.Maximum-likelihood method.2}{Maximum-likelihood method}{Section.1.Theoretical background.1}% 4
+\BOOKMARK [2][-]{Subsection.2.2.Non-linear optimization.2}{Non-linear optimization}{Section.1.Theoretical background.1}% 5
+\BOOKMARK [2][-]{Subsection.2.3.Uncertainty analysis.2}{Uncertainty analysis}{Section.1.Theoretical background.1}% 6
+\BOOKMARK [1][-]{Section.2.Implementation and design principles.1}{Implementation and design principles}{}% 7
+\BOOKMARK [2][-]{Subsection.3.0.Model formulation.2}{Model formulation}{Section.2.Implementation and design principles.1}% 8
+\BOOKMARK [2][-]{Subsection.3.1.Prediction functions.2}{Prediction functions}{Section.2.Implementation and design principles.1}% 9
+\BOOKMARK [2][-]{Subsection.3.2.Observation functions.2}{Observation functions}{Section.2.Implementation and design principles.1}% 10
+\BOOKMARK [2][-]{Subsection.3.3.Parameter transformations.2}{Parameter transformations}{Section.2.Implementation and design principles.1}% 11
+\BOOKMARK [2][-]{Subsection.3.4.Multi-conditional prediction.2}{Multi-conditional prediction}{Section.2.Implementation and design principles.1}% 12
+\BOOKMARK [2][-]{Subsection.3.5.The data structure.2}{The data structure}{Section.2.Implementation and design principles.1}% 13
+\BOOKMARK [2][-]{Subsection.3.6.Objective function.2}{Objective function}{Section.2.Implementation and design principles.1}% 14
+\BOOKMARK [1][-]{Section.3.Three-compartment model of bile acid transport.1}{Three-compartment model of bile acid transport}{}% 15
+\BOOKMARK [2][-]{Subsection.4.0.Simulation and prediction.2}{Simulation and prediction}{Section.3.Three-compartment model of bile acid transport.1}% 16
+\BOOKMARK [2][-]{Subsection.4.1.Observation function and simulated data.2}{Observation function and simulated data}{Section.3.Three-compartment model of bile acid transport.1}% 17
+\BOOKMARK [2][-]{Subsection.4.2.Parameter transformation.2}{Parameter transformation}{Section.3.Three-compartment model of bile acid transport.1}% 18
+\BOOKMARK [2][-]{Subsection.4.3.Objective function and model fitting.2}{Objective function and model fitting}{Section.3.Three-compartment model of bile acid transport.1}% 19
+\BOOKMARK [2][-]{Subsection.4.4.Working with several conditions.2}{Working with several conditions}{Section.3.Three-compartment model of bile acid transport.1}% 20
+\BOOKMARK [2][-]{Subsection.4.5.Parameter uncertainty and identifiability.2}{Parameter uncertainty and identifiability}{Section.3.Three-compartment model of bile acid transport.1}% 21
+\BOOKMARK [2][-]{Subsection.4.6.Steady-state constraints and implicit transformations.2}{Steady-state constraints and implicit transformations}{Section.3.Three-compartment model of bile acid transport.1}% 22
+\BOOKMARK [2][-]{Subsection.4.7.Prediction uncertainty and validation profiles.2}{Prediction uncertainty and validation profiles}{Section.3.Three-compartment model of bile acid transport.1}% 23
+\BOOKMARK [1][-]{Section.4.Extensions of dMod.1}{Extensions of dMod}{}% 24
+\BOOKMARK [2][-]{Subsection.5.0.Lie-group symmetry detection.2}{Lie-group symmetry detection}{Section.4.Extensions of dMod.1}% 25
+\BOOKMARK [2][-]{Subsection.5.1.Analytical steady-state constraints.2}{Analytical steady-state constraints}{Section.4.Extensions of dMod.1}% 26
