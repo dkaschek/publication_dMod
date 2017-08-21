@@ -4,8 +4,6 @@
 
 
 library(dMod)
-library(deSolve)
-library(trust)
 setwd("/tmp")
 
 # Section 4.1. Simulation and prediction ------------------------------
@@ -107,8 +105,8 @@ out_mstrust <- mstrust(obj, pouter, rinit = 1, rmax = 10, iterlim = 500,
                        cores = 4, fits = 50)
 
 myframe <- as.parframe(out_mstrust)
-plotValues(myframe, value < 100)
-plotPars(myframe, value < 100)
+plotValues(myframe, tol = .01, value < 100)
+plotPars(myframe, tol = .01, value < 100)
 
 # 4.5. Working with several conditions -------------------------------
 
@@ -131,8 +129,8 @@ obj <- normL2(data, g*x*p) + constraintL2(pouter, sigma = 10)
 out_mstrust <- mstrust(obj, pouter, rinit = 1, rmax = 10, iterlim = 500,
                        sd = 4, cores = 4, fits = 50)
 myframe <- as.parframe(out_mstrust)
-plotValues(myframe, value < 100)
-plotPars(myframe, value < 100)
+plotValues(myframe, tol = 1, value < 100)
+plotPars(myframe, tol = 1, value < 100)
 bestfit <- as.parvec(myframe)
 plot((g*x*p)(times, bestfit), data)
 
