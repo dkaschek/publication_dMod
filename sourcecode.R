@@ -52,7 +52,7 @@ observables <- eqnvec(
   buffer = "s*TCA_buffer",
   cellular = "s*(TCA_cana + TCA_cell)"
 )
-g <- Y(observables, f = reactions, condition = NULL,
+g <- Y(observables, x, condition = NULL,
        compile = TRUE, modelname = "obsfn")
 
 # Reset parameter values
@@ -66,7 +66,7 @@ out <- (g*x)(times, pars, conditions = "standard")
 # Simuate data
 set.seed(1)
 timesD <- c(0.1, 1, 3, 7, 11, 15, 20, 41)
-datasheet <- subset(wide2long(out),
+datasheet <- subset(as.data.frame(out),
                     time %in% timesD & name %in% names(observables))
 
 datasheet$sigma <- sqrt(datasheet$value + 1)
@@ -112,7 +112,7 @@ plotPars(myframe, tol = .01, value < 100)
 
 pars["reflux"] <- 1e3
 out <- (g*x)(times, pars, conditions = "open")
-datasheet <- subset(wide2long(out),
+datasheet <- subset(as.data.frame(out),
                     time %in% timesD & name %in% names(observables))
 datasheet$sigma <- sqrt(datasheet$value + 1)
 datasheet$value <- rnorm(nrow(datasheet), datasheet$value, datasheet$sigma)
@@ -185,18 +185,18 @@ mymodel <- odemodel(reactions, modelname = "bamodel")
 f <- as.eqnvec(reactions)[c("TCA_buffer", "TCA_cana", "TCA_cell")]
 
 f["TCA_cell"] <- "TCA_buffer + TCA_cana + TCA_cell - TCA_tot"
-pSS <- P(f, "TCA_tot", method = "implicit",
+pSS <- P(f, method = "implicit",
          compile = TRUE, modelname = "pfn")
 
 # Set up explicit parameter transformation
 innerpars <- unique(c(getParameters(mymodel),
                       getSymbols(observables),
                       getSymbols(f)))
-trafo <- as.eqnvec(innerpars, names = innerpars)
-trafo[reactions$states] <- "0"
-trafo <- replaceSymbols(innerpars,
-                        paste0("exp(", innerpars, ")"),
-                        trafo)
+
+trafo <- repar("x ~ x", x = innerpars)
+trafo <- repar("x ~ 0", x = reactions$states, trafo)
+trafo <- repar("x ~ exp(x)", x = innerpars, trafo)
+
 p <- P(trafo)
 
 # Set up prediction function with events
@@ -216,9 +216,7 @@ x <- Xs(mymodel,
      condition = "open")
 
 # Generate observation function with modified states/parameters
-g <- Y(observables,
-       states = reactions$states,
-       parameters = setdiff(innerpars, reactions$states),
+g <- Y(observables, x,
        compile = TRUE, modelname = "obsfn")
 
 # Generate objective function
@@ -240,7 +238,7 @@ plotProfile(list(noSS = profiles,
 obj.validation <- datapointL2(name = "TCA_cell",
                               time = 41,
                               value = "d1",
-                              sigma = .002,
+                              sigma = .01,
                               condition = "standard")
 
 myfit <- trust(obj + obj.validation,
@@ -250,6 +248,7 @@ myfit <- trust(obj + obj.validation,
 
 profile_prediction <- profile(obj + obj.validation,
                               myfit$argument, "d1", limits = c(-5, 5),
+                              stepControl = list(stop = "data"),
                               fixed = c(TCA_tot = log(1)))
 
 
