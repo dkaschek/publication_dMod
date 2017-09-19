@@ -43,20 +43,20 @@
 \newlabel{eq:ma}{{2}{5}{}{equation.2.2}{}}
 \newlabel{eq:Sv}{{3}{5}{}{equation.2.3}{}}
 \newlabel{eq:observation}{{6}{5}{}{equation.2.6}{}}
+\citation{press1996numerical}
 \newlabel{eq:likelihood}{{7}{6}{}{equation.2.7}{}}
 \newlabel{eq:nll}{{8}{6}{}{equation.2.8}{}}
-\citation{press1996numerical}
+\newlabel{eq:newton}{{9}{6}{}{equation.2.9}{}}
 \citation{wright1999numerical}
 \citation{venzon1988method,murphy2000profile}
-\newlabel{eq:newton}{{9}{7}{}{equation.2.9}{}}
 \newlabel{eq:derivatives}{{10}{7}{}{equation.2.10}{}}
 \newlabel{eq:jacobian}{{11}{7}{}{equation.2.11}{}}
+\newlabel{eq:pl}{{12}{7}{}{equation.2.12}{}}
 \citation{kreutz2012likelihood,hass2016fast}
-\newlabel{eq:pl}{{12}{8}{}{equation.2.12}{}}
 \newlabel{eq:path}{{13}{8}{}{equation.2.13}{}}
 \newlabel{sec:implementation}{{3}{8}{}{section.3}{}}
 \citation{cOde}
-\newlabel{eq:partrafo}{{14}{11}{}{equation.3.14}{}}
+\newlabel{eq:partrafo}{{14}{10}{}{equation.3.14}{}}
 \newlabel{sec:example}{{4}{12}{}{section.4}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Differential equations and flowchart of the reaction network. Taurocholic acid, TCA, is transported between three compartments by four different processes. (A) Assuming mass-action kinetics, the three dynamic states satisfy a set of coupled differential equations. (B) The equations are visualized in a flowchart. }}{13}{figure.1}}
 \newlabel{fig:flowchart}{{1}{13}{Differential equations and flowchart of the reaction network. Taurocholic acid, TCA, is transported between three compartments by four different processes. (A) Assuming mass-action kinetics, the three dynamic states satisfy a set of coupled differential equations. (B) The equations are visualized in a flowchart}{figure.1}{}}
@@ -70,23 +70,23 @@
 \citation{parallel}
 \@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Prediction of internal and observed states after optimization of the objective function. Simulated data points are shown as dots with error bars.}}{19}{figure.5}}
 \newlabel{fig:myfit}{{5}{19}{Prediction of internal and observed states after optimization of the objective function. Simulated data points are shown as dots with error bars}{figure.5}{}}
+\newlabel{sec:conditions}{{4.5}{19}{}{subsection.4.5}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Result of multi-start fitting procedure. (A) Fits have been sorted by increasing objective value. Four optima were found with almost identical objective value. (B) The parameter values for different optima are shown in different colors. (C) Each local optimum corresponds to a different model prediction, shown in different colors. The observed states are pracitically undistinguishable although the internal states show different behavior.}}{20}{figure.6}}
 \newlabel{fig:mstrust}{{6}{20}{Result of multi-start fitting procedure. (A) Fits have been sorted by increasing objective value. Four optima were found with almost identical objective value. (B) The parameter values for different optima are shown in different colors. (C) Each local optimum corresponds to a different model prediction, shown in different colors. The observed states are pracitically undistinguishable although the internal states show different behavior}{figure.6}{}}
-\newlabel{sec:conditions}{{4.5}{20}{}{subsection.4.5}{}}
 \newlabel{chap_uncertainty}{{4.6}{21}{}{subsection.4.6}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Result of multi-start fitting procedure with two experimental conditions. (A) Model prediction of the best fit and the simulated data are shown in different colors. (B) Fits have been sorted by increasing objective value. The lowest value clearly separates from the second plateau. (C) Plotting the parameter values for each of the fits reveals that the second plateau consists of two optima. The lowest plateau however corresponds to a unique optimum.}}{22}{figure.7}}
 \newlabel{fig:twoconditions}{{7}{22}{Result of multi-start fitting procedure with two experimental conditions. (A) Model prediction of the best fit and the simulated data are shown in different colors. (B) Fits have been sorted by increasing objective value. The lowest value clearly separates from the second plateau. (C) Plotting the parameter values for each of the fits reveals that the second plateau consists of two optima. The lowest plateau however corresponds to a unique optimum}{figure.7}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces Profile likelihood. (A) Profiles of all parameters. Data- and prior contribution to the total objective value are distinguished by line-type. (B) Parameter paths for the scaling parameter \bgroup \catcode `\_12\relax \catcode `\~12\relax \catcode `\$12\relax {\normalfont  \ttfamily  \hyphenchar \font =-1 s}\egroup .}}{23}{figure.8}}
 \newlabel{fig:pl}{{8}{23}{Profile likelihood. (A) Profiles of all parameters. Data- and prior contribution to the total objective value are distinguished by line-type. (B) Parameter paths for the scaling parameter \code {s}}{figure.8}{}}
+\newlabel{chap_steady_state}{{4.7}{23}{}{subsection.4.7}{}}
 \citation{rootSolve}
-\newlabel{chap_steady_state}{{4.7}{24}{}{subsection.4.7}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces Parameter profiles for three different model implementations. The profile likelihood around the global optimum for the models without steady-state constraints, explicit steady-state constraints and implicit implementation of steady states is visualized by different colors. To illustrate that explicit (red) and implicit (blue) steady-state implementations yield the same result, the corresponding profiles are highlighted by red plus and blue cross signs, respectively.}}{27}{figure.9}}
 \newlabel{fig:allprofiles}{{9}{27}{Parameter profiles for three different model implementations. The profile likelihood around the global optimum for the models without steady-state constraints, explicit steady-state constraints and implicit implementation of steady states is visualized by different colors. To illustrate that explicit (red) and implicit (blue) steady-state implementations yield the same result, the corresponding profiles are highlighted by red plus and blue cross signs, respectively}{figure.9}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces Validation profile and confidence bands for the model prediction. (A) The profile likelihood for the data point parameter \bgroup \catcode `\_12\relax \catcode `\~12\relax \catcode `\$12\relax {\normalfont  \ttfamily  \hyphenchar \font =-1 d1}\egroup  describing \bgroup \catcode `\_12\relax \catcode `\~12\relax \catcode `\$12\relax {\normalfont  \ttfamily  \hyphenchar \font =-1 TCA\_cell}\egroup  at time point $t = 41$ is shown. (B) Computing the data parameter profile for different time points yields 95\% confidence bands on the prediction of \bgroup \catcode `\_12\relax \catcode `\~12\relax \catcode `\$12\relax {\normalfont  \ttfamily  \hyphenchar \font =-1 TCA\_cell}\egroup .}}{28}{figure.10}}
+\newlabel{fig:validation}{{10}{28}{Validation profile and confidence bands for the model prediction. (A) The profile likelihood for the data point parameter \code {d1} describing \code {TCA\_cell} at time point $t = 41$ is shown. (B) Computing the data parameter profile for different time points yields 95\% confidence bands on the prediction of \code {TCA\_cell}}{figure.10}{}}
 \citation{rPython}
-\newlabel{sec:extensions}{{5}{28}{}{section.5}{}}
 \citation{merkt2015higher}
-\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces Validation profile and confidence bands for the model prediction. (A) The profile likelihood for the data point parameter \bgroup \catcode `\_12\relax \catcode `\~12\relax \catcode `\$12\relax {\normalfont  \ttfamily  \hyphenchar \font =-1 d1}\egroup  describing \bgroup \catcode `\_12\relax \catcode `\~12\relax \catcode `\$12\relax {\normalfont  \ttfamily  \hyphenchar \font =-1 TCA\_cell}\egroup  at time point $t = 41$ is shown. (B) Computing the data parameter profile for different time points yields 95\% confidence bands on the prediction of \bgroup \catcode `\_12\relax \catcode `\~12\relax \catcode `\$12\relax {\normalfont  \ttfamily  \hyphenchar \font =-1 TCA\_cell}\egroup .}}{29}{figure.10}}
-\newlabel{fig:validation}{{10}{29}{Validation profile and confidence bands for the model prediction. (A) The profile likelihood for the data point parameter \code {d1} describing \code {TCA\_cell} at time point $t = 41$ is shown. (B) Computing the data parameter profile for different time points yields 95\% confidence bands on the prediction of \code {TCA\_cell}}{figure.10}{}}
+\newlabel{sec:extensions}{{5}{29}{}{section.5}{}}
 \citation{rosenblatt2016customized}
 \bibdata{mybib}
 \bibcite{azzalini1996statistical}{{1}{1996}{{Azzalini}}{{}}}

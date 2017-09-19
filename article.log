@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2017.9.5)  18 SEP 2017 13:32
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2017.9.5)  19 SEP 2017 10:36
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -907,39 +907,24 @@ Overfull \hbox (5.47499pt too wide) has occurred while \output is active
  []
 
 [2]
-Underfull \hbox (badness 2351) in paragraph at lines 113--113
-[]|\T1/aer/m/n/10.95 parameter es-ti-ma-tion based on trust-
- []
-
-
-Underfull \hbox (badness 2158) in paragraph at lines 115--115
-[]|\T1/aer/m/n/10.95 identifiability and un-cer-tainty anal-y-sis
- []
-
-
-Overfull \hbox (1.17087pt too wide) in paragraph at lines 105--119
-[][]
- []
-
-
 Overfull \hbox (5.47499pt too wide) has occurred while \output is active
 [] \T1/aer/m/n/10.95 3
  []
 
 [3]
-Overfull \hbox (5.47499pt too wide) has occurred while \output is active
-\T1/aer/m/n/10.95 4 []
- []
-
-[4]
-LaTeX Font Info:    Try loading font information for TS1+aer on input line 157.
+LaTeX Font Info:    Try loading font information for TS1+aer on input line 161.
 
  (/usr/share/texmf/tex/latex/R/tex/latex/ts1aer.fd
 File: ts1aer.fd 
 )
 LaTeX Font Info:    Font shape `TS1/aer/m/n' in size <10.95> not available
-(Font)              Font shape `TS1/cmr/m/n' tried instead on input line 157.
+(Font)              Font shape `TS1/cmr/m/n' tried instead on input line 161.
 
+Overfull \hbox (5.47499pt too wide) has occurred while \output is active
+\T1/aer/m/n/10.95 4 []
+ []
+
+[4]
 Overfull \hbox (5.47499pt too wide) has occurred while \output is active
 [] \T1/aer/m/n/10.95 5
  []
@@ -980,26 +965,26 @@ Overfull \hbox (10.94998pt too wide) has occurred while \output is active
  []
 
 [12]
-<images/flowchart.pdf, id=338, pagebox=cropbox, 327.2225pt x 284.06125pt>
+<images/flowchart.pdf, id=339, pagebox=cropbox, 327.2225pt x 284.06125pt>
 File: images/flowchart.pdf Graphic file (type pdf)
 <use images/flowchart.pdf>
-Package pdftex.def Info: images/flowchart.pdf  used on input line 434. on input
- line 434.
+Package pdftex.def Info: images/flowchart.pdf  used on input line 438. on input
+ line 438.
 Package pdftex.def Info: Requested size: 194.76872pt x 169.07704pt on input lin
-e 434.
+e 438.
 
 Overfull \hbox (10.94998pt too wide) has occurred while \output is active
 [] \T1/aer/m/n/10.95 13
  []
 
 [13 <./images/flowchart.pdf>]
-<images/figure1.pdf, id=360, pagebox=cropbox, 578.16pt x 310.15875pt>
+<images/figure1.pdf, id=361, pagebox=cropbox, 578.16pt x 310.15875pt>
 File: images/figure1.pdf Graphic file (type pdf)
 <use images/figure1.pdf>
-Package pdftex.def Info: images/figure1.pdf  used on input line 488. on input l
-ine 488.
+Package pdftex.def Info: images/figure1.pdf  used on input line 492. on input l
+ine 492.
 Package pdftex.def Info: Requested size: 442.65375pt x 237.4647pt on input line
- 488.
+ 492.
 
 Overfull \hbox (10.94998pt too wide) has occurred while \output is active
 \T1/aer/m/n/10.95 14 []
@@ -1011,51 +996,52 @@ Overfull \hbox (10.94998pt too wide) has occurred while \output is active
  []
 
 [15 <./images/figure1.pdf>]
-<images/figure2.pdf, id=397, pagebox=cropbox, 578.16pt x 144.54pt>
+<images/figure2.pdf, id=398, pagebox=cropbox, 578.16pt x 144.54pt>
 File: images/figure2.pdf Graphic file (type pdf)
 <use images/figure2.pdf>
-Package pdftex.def Info: images/figure2.pdf  used on input line 571. on input l
-ine 571.
+Package pdftex.def Info: images/figure2.pdf  used on input line 575. on input l
+ine 575.
 Package pdftex.def Info: Requested size: 442.65375pt x 110.66315pt on input lin
-e 571.
+e 575.
 
 Overfull \hbox (10.94998pt too wide) has occurred while \output is active
 \T1/aer/m/n/10.95 16 []
  []
 
 [16]
-<images/figure3.pdf, id=405, pagebox=cropbox, 578.16pt x 144.54pt>
+<images/figure3.pdf, id=406, pagebox=cropbox, 578.16pt x 144.54pt>
 File: images/figure3.pdf Graphic file (type pdf)
 <use images/figure3.pdf>
-Package pdftex.def Info: images/figure3.pdf  used on input line 605. on input l
-ine 605.
+Package pdftex.def Info: images/figure3.pdf  used on input line 609. on input l
+ine 609.
 Package pdftex.def Info: Requested size: 442.65375pt x 110.66315pt on input lin
-e 605.
+e 609.
 
 Overfull \hbox (10.94998pt too wide) has occurred while \output is active
 [] \T1/aer/m/n/10.95 17
  []
 
 [17 <./images/figure2.pdf>]
+<images/figure4.pdf, id=432, pagebox=cropbox, 578.16pt x 144.54pt>
+File: images/figure4.pdf Graphic file (type pdf)
+<use images/figure4.pdf>
+Package pdftex.def Info: images/figure4.pdf  used on input line 638. on input l
+ine 638.
+Package pdftex.def Info: Requested size: 442.65375pt x 110.66315pt on input lin
+e 638.
+
 Overfull \hbox (10.94998pt too wide) has occurred while \output is active
 \T1/aer/m/n/10.95 18 []
  []
 
 [18 <./images/figure3.pdf>]
-<images/figure4.pdf, id=453, pagebox=cropbox, 578.16pt x 144.54pt>
-File: images/figure4.pdf Graphic file (type pdf)
-<use images/figure4.pdf>
-Package pdftex.def Info: images/figure4.pdf  used on input line 634. on input l
-ine 634.
-Package pdftex.def Info: Requested size: 442.65375pt x 110.66315pt on input lin
-e 634.
-<images/figure5.pdf, id=458, pagebox=cropbox, 578.16pt x 361.35pt>
+<images/figure5.pdf, id=459, pagebox=cropbox, 578.16pt x 361.35pt>
 File: images/figure5.pdf Graphic file (type pdf)
 <use images/figure5.pdf>
-Package pdftex.def Info: images/figure5.pdf  used on input line 655. on input l
-ine 655.
+Package pdftex.def Info: images/figure5.pdf  used on input line 659. on input l
+ine 659.
 Package pdftex.def Info: Requested size: 442.65375pt x 276.65791pt on input lin
-e 655.
+e 659.
 
 Overfull \hbox (10.94998pt too wide) has occurred while \output is active
 [] \T1/aer/m/n/10.95 19
@@ -1067,35 +1053,32 @@ Overfull \hbox (10.94998pt too wide) has occurred while \output is active
  []
 
 [20 <./images/figure5.pdf>]
-<images/figure6.pdf, id=519, pagebox=cropbox, 578.16pt x 325.215pt>
+<images/figure6.pdf, id=520, pagebox=cropbox, 578.16pt x 325.215pt>
 File: images/figure6.pdf Graphic file (type pdf)
 <use images/figure6.pdf>
-Package pdftex.def Info: images/figure6.pdf  used on input line 727. on input l
-ine 727.
+Package pdftex.def Info: images/figure6.pdf  used on input line 731. on input l
+ine 731.
 Package pdftex.def Info: Requested size: 442.65375pt x 248.99211pt on input lin
-e 727.
+e 731.
 
 Overfull \hbox (10.94998pt too wide) has occurred while \output is active
 [] \T1/aer/m/n/10.95 21
  []
 
 [21]
-<images/figure7.pdf, id=528, pagebox=cropbox, 578.16pt x 433.62pt>
+<images/figure7.pdf, id=529, pagebox=cropbox, 578.16pt x 433.62pt>
 File: images/figure7.pdf Graphic file (type pdf)
 <use images/figure7.pdf>
-Package pdftex.def Info: images/figure7.pdf  used on input line 753. on input l
-ine 753.
+Package pdftex.def Info: images/figure7.pdf  used on input line 757. on input l
+ine 757.
 Package pdftex.def Info: Requested size: 442.65375pt x 331.9895pt on input line
- 753.
+ 757.
 
 Overfull \hbox (10.94998pt too wide) has occurred while \output is active
 \T1/aer/m/n/10.95 22 []
  []
 
 [22 <./images/figure6.pdf>]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
-
 Overfull \hbox (10.94998pt too wide) has occurred while \output is active
 [] \T1/aer/m/n/10.95 23
  []
@@ -1111,13 +1094,13 @@ Overfull \hbox (10.94998pt too wide) has occurred while \output is active
  []
 
 [25]
-<images/figure8.pdf, id=613, pagebox=cropbox, 578.16pt x 289.08pt>
+<images/figure8.pdf, id=614, pagebox=cropbox, 578.16pt x 289.08pt>
 File: images/figure8.pdf Graphic file (type pdf)
 <use images/figure8.pdf>
-Package pdftex.def Info: images/figure8.pdf  used on input line 898. on input l
-ine 898.
+Package pdftex.def Info: images/figure8.pdf  used on input line 901. on input l
+ine 901.
 Package pdftex.def Info: Requested size: 442.65375pt x 221.32632pt on input lin
-e 898.
+e 901.
 
 Overfull \hbox (10.94998pt too wide) has occurred while \output is active
 \T1/aer/m/n/10.95 26 []
@@ -1129,69 +1112,72 @@ Overfull \hbox (10.94998pt too wide) has occurred while \output is active
  []
 
 [27 <./images/figure8.pdf>]
-<images/figure9.pdf, id=647, pagebox=cropbox, 578.16pt x 289.08pt>
+<images/figure9.pdf, id=649, pagebox=cropbox, 578.16pt x 289.08pt>
 File: images/figure9.pdf Graphic file (type pdf)
 <use images/figure9.pdf>
-Package pdftex.def Info: images/figure9.pdf  used on input line 970. on input l
-ine 970.
+Package pdftex.def Info: images/figure9.pdf  used on input line 973. on input l
+ine 973.
 Package pdftex.def Info: Requested size: 442.65375pt x 221.32632pt on input lin
-e 970.
+e 973.
 
 Overfull \hbox (10.94998pt too wide) has occurred while \output is active
 \T1/aer/m/n/10.95 28 []
  []
 
-[28]
+[28 <./images/figure9.pdf>]
 Overfull \hbox (10.94998pt too wide) has occurred while \output is active
 [] \T1/aer/m/n/10.95 29
  []
 
-[29 <./images/figure9.pdf>]
-Overfull \hbox (10.94998pt too wide) has occurred while \output is active
-\T1/aer/m/n/10.95 30 []
- []
-
-[30] (./article.bbl
+[29] (./article.bbl
 LaTeX Font Info:    Font shape `T1/aer/b/it' in size <10.95> not available
 (Font)              Font shape `T1/aer/bx/it' tried instead on input line 26.
 
 Overfull \hbox (10.94998pt too wide) has occurred while \output is active
+\T1/aer/m/n/10.95 30 []
+ []
+
+[30]
+Overfull \hbox (10.94998pt too wide) has occurred while \output is active
 [] \T1/aer/m/n/10.95 31
  []
 
-[31]
+[31])
+LaTeX Font Info:    Font shape `T1/pzc/m/n' in size <13> not available
+(Font)              Font shape `T1/pzc/mb/it' tried instead on input line 1067.
+
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1067.
+
+Underfull \vbox (badness 2707) has occurred while \output is active []
+
+
 Overfull \hbox (10.94998pt too wide) has occurred while \output is active
 \T1/aer/m/n/10.95 32 []
  []
 
-[32])
-LaTeX Font Info:    Font shape `T1/pzc/m/n' in size <13> not available
-(Font)              Font shape `T1/pzc/mb/it' tried instead on input line 1064.
-
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1064.
-
+[32]
 Overfull \hbox (10.94998pt too wide) has occurred while \output is active
 [] \T1/aer/m/n/10.95 33
  []
 
 [33]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1064.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1067.
  (./article.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1064.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1064.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1067.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1067.
 
 Package rerunfilecheck Info: File `article.out' has not changed.
 (rerunfilecheck)             Checksum: F311D6D17A686B3865387B85361D6C59;3616.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1064.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1067.
  ) 
 Here is how much of TeX's memory you used:
- 8458 strings out of 494855
- 119982 string characters out of 6179190
- 203240 words of memory out of 5000000
- 11419 multiletter control sequences out of 15000+600000
- 64609 words of font info for 122 fonts, out of 8000000 for 9000
+ 8461 strings out of 494855
+ 120003 string characters out of 6179190
+ 202227 words of memory out of 5000000
+ 11420 multiletter control sequences out of 15000+600000
+ 66269 words of font info for 124 fonts, out of 8000000 for 9000
  59 hyphenation exceptions out of 8191
- 35i,18n,34p,1242b,475s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 35i,18n,34p,1242b,479s stack positions out of 5000i,500n,10000p,200000b,80000s
  </home/kaschek/.texlive2017/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1095.6
 00pk>{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/tex
 live/texmf-dist/fonts/type1/public/amsfonts/cm/cmb10.pfb></usr/share/texlive/te
@@ -1208,20 +1194,21 @@ are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texl
 ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb></usr/share/texlive/te
 xmf-dist/fonts/type1/public/amsfonts/cm/cmsltt10.pfb></usr/share/texlive/texmf-
 dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/share/texlive/texmf-dist/f
-onts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/share/texlive/texmf-dist/fonts
-/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1
-/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
-/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
-ts/cm/cmsy9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
-mti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.
-pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb></u
-sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr
-/share/texlive/texmf-dist/fonts/type1/urw/zapfchan/uzcmi8a.pfb>
-Output written on article.pdf (33 pages, 825695 bytes).
+onts/type1/public/amsfonts/cm/cmss8.pfb></usr/share/texlive/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmssbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
+msy9.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.p
+fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></u
+sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share
+/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/
+texlive/texmf-dist/fonts/type1/urw/zapfchan/uzcmi8a.pfb>
+Output written on article.pdf (33 pages, 836757 bytes).
 PDF statistics:
- 857 PDF objects out of 1000 (max. 8388607)
- 714 compressed objects within 8 object streams
+ 861 PDF objects out of 1000 (max. 8388607)
+ 717 compressed objects within 8 object streams
  145 named destinations out of 1000 (max. 500000)
  264 words of extra memory for PDF output out of 10000 (max. 10000000)
 

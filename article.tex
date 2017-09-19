@@ -65,7 +65,7 @@ The key elements of the framework and the methodology implemented in \pkg{dMod} 
   Institute of Physics, University of Freiburg\\
   Hermann-Herder-Str.~3\\
   79104 Freiburg, Germany\\
-  E-mail: \email{daniel.kaschek@physik.uni-freiburg.de}
+  E-mail: \email{daniel.kaschek@gmail.com}
   %URL: \url{http://eeecon.uibk.ac.at/~zeileis/}
 }
 %% It is also possible to add a telephone and fax number
@@ -102,24 +102,28 @@ The package is grown over the last years and reflects many developments and less
 \begin{table}[ht]
 	\caption{Overview of the \pkg{dMod} core functionality and comparison with other packages.}
 	\label{tab:comparison}
-	\begin{tabular}{m{7cm}||c|c|c|c|c}
-		& dMod & FME & nlmeODE & scaRabee & mkin\\
-		\hline
-		\hline
-		facilitated set-up of ODE models with automated \proglang{C} code generation for fast simulation of model predictions and model sensitivities & $+$ & $(+)^1$ & $-$ & $-$ & $(+)^1$ \\
-		\hline
-		flexible set-up of general parameter transformations (explicit or implicit) and observation functions, allowing for the implementation of multiple experimental conditions similar to mixed-effects modeling & $+$ & $-$ & $(+)^2$ & $(+)^2$ & $-$ \\
-		\hline
-		parameter estimation based on trust-region optimization of the negative log-likelihood, making use of the sensitivity equations of the dynamic system and of symbolic derivatives of the observation- and parameter transformation functions & $+$ & $-$ & $-$ & $-$ & $-$ \\
-		\hline
-		identifiability and uncertainty analysis based on the profile-likelihood method to determine confidence intervals for parameters and predictions & $+$ & $(-)^3$ & $-$ & $-$ & $-$ \\
-		\hline
-	\end{tabular}
+	\begin{scriptsize}
+		\begin{center}
+			\begin{tabular}{m{7cm}||c|c|c|c|c}
+				& dMod & FME & nlmeODE & scaRabee & mkin\\
+				\hline
+				\hline
+				facilitated set-up of ODE models with automated \proglang{C} code generation for fast simulation of model predictions and model sensitivities & $+$ & $(+)^1$ & $-$ & $-$ & $(+)^1$ \\
+				\hline
+				flexible set-up of general parameter transformations (explicit or implicit) and observation functions, allowing for the implementation of multiple experimental conditions similar to mixed-effects modeling & $+$ & $-$ & $(+)^2$ & $(+)^2$ & $-$ \\
+				\hline
+				parameter estimation based on trust-region optimization of the negative log-likelihood, making use of the sensitivity equations of the dynamic system and of symbolic derivatives of the observation- and parameter transformation functions & $+$ & $-$ & $-$ & $-$ & $-$ \\
+				\hline
+				identifiability and uncertainty analysis based on the profile-likelihood method to determine confidence intervals for parameters and predictions & $+$ & $(-)^3$ & $-$ & $-$ & $-$ \\
+				\hline
+			\end{tabular}
+		\end{center}
+	\end{scriptsize}
 	\vspace{0.1em}
 
-	\begin{footnotesize}
+	\begin{scriptsize}
 		$^1$Only ODE, no sensitivity equations generated. $^2$Mixed-effects modeling allows to define parameters in a condition-specific manner. $^3$Other methods used, e.g.~the collinearity method \citep{brun2001practical}. 
-	\end{footnotesize}
+	\end{scriptsize}
 \end{table}
 
 % \begin{enumerate}[(i)]
