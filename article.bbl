@@ -1,4 +1,4 @@
-\begin{thebibliography}{26}
+\begin{thebibliography}{30}
 \newcommand{\enquote}[1]{``#1''}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
@@ -27,6 +27,13 @@ Bihorel S (2014).
 \newblock \proglang{R}~package version~1.1-3,
   \urlprefix\url{http://CRAN.R-project.org/package=scaRabee}.
 
+\bibitem[{Brun \emph{et~al.}(2001)Brun, Reichert, and
+  K{\"u}nsch}]{brun2001practical}
+Brun R, Reichert P, K{\"u}nsch HR (2001).
+\newblock \enquote{Practical identifiability analysis of large environmental
+  simulation models.}
+\newblock \emph{Water Resources Research}, \textbf{37}(4), 1015--1030.
+
 \bibitem[{Geyer(2015)}]{trust}
 Geyer CJ (2015).
 \newblock \emph{\pkg{trust}: Trust Region Optimization}.
@@ -40,12 +47,27 @@ Hass H, Kreutz C, Timmer J, Kaschek D (2016).
   Differential Equation Models.}
 \newblock \emph{Bioinformatics}, \textbf{32}(8), 1204--1210.
 
+\bibitem[{Hooker \emph{et~al.}(2016)Hooker, Xiao, and Ramsay}]{CollocInfer}
+Hooker G, Xiao L, Ramsay J (2016).
+\newblock \emph{\pkg{CollocInfer}: Collocation Inference for Dynamic Systems}.
+\newblock \proglang{R}~package version~1.0.4,
+  \urlprefix\url{http://CRAN.R-project.org/package=CollocInfer}.
+
 \bibitem[{Kaschek(2017)}]{cOde}
 Kaschek D (2017).
 \newblock \emph{\pkg{cOde}: Automated C Code Generation for 'deSolve',
   'bvpSolve' and 'Sundials'}.
 \newblock \proglang{R}~package version~0.3,
   \urlprefix\url{http://CRAN.R-project.org/package=cOde}.
+
+\bibitem[{King \emph{et~al.}(2017)King, Ionides, Breto, Ellner, Ferrari,
+  Kendall, Lavine, Nguyen, Reuman, Wearing, Wood, Funk, and Johnson}]{pomp}
+King AA, Ionides EL, Breto C, Ellner SP, Ferrari MJ, Kendall BE, Lavine M,
+  Nguyen D, Reuman DC, Wearing H, Wood SN, Funk S, Johnson SG (2017).
+\newblock \emph{\pkg{pomp}: Statistical Inference for Partially Observed Markov
+  Processes}.
+\newblock \proglang{R}~package version~1.14,
+  \urlprefix\url{http://CRAN.R-project.org/package=pomp}.
 
 \bibitem[{Kreutz \emph{et~al.}(2013)Kreutz, Raue, Kaschek, and
   Timmer}]{kreutz2013profile}
@@ -136,6 +158,14 @@ Rosenblatt M, Timmer J, Kaschek D (2016).
 \newblock \enquote{Customized Steady-State Constraints for Parameter Estimation
   in Non-Linear Ordinary Differential Equation Models.}
 \newblock \emph{Frontiers in Cell and Developmental Biology}, \textbf{4}.
+
+\bibitem[{Sklyar \emph{et~al.}(2015)Sklyar, Murdoch, Smith, Eddelbuettel,
+  Francoi, and Soetaert}]{inline}
+Sklyar O, Murdoch D, Smith M, Eddelbuettel D, Francoi o, Soetaert K (2015).
+\newblock \emph{\pkg{inline}: Functions to Inline C, C++, Fortran Function
+  Calls from R}.
+\newblock \proglang{R}~package version~0.3.14,
+  \urlprefix\url{http://CRAN.R-project.org/package=inline}.
 
 \bibitem[{Soetaert(2009)}]{rootSolve}
 Soetaert K (2009).
