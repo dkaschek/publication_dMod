@@ -3,50 +3,50 @@ Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: article.aux
 The style file: jss.bst
 Database file #1: mybib.bib
-Repeated entry---line 297 of file mybib.bib
+Repeated entry---line 306 of file mybib.bib
  : @article{murphy2000profile
  :                           ,
 I'm skipping whatever remains of this entry
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
-You've used 30 entries,
+You've used 31 entries,
             3215 wiz_defined-function locations,
-            834 strings with 11154 characters,
-and the built_in function-call counts, 34042 in all, are:
-= -- 3360
-> -- 956
+            840 strings with 11402 characters,
+and the built_in function-call counts, 35422 in all, are:
+= -- 3501
+> -- 999
 < -- 16
-+ -- 360
-- -- 328
-* -- 2546
-:= -- 4019
-add.period$ -- 112
-call.type$ -- 30
-change.case$ -- 238
-chr.to.int$ -- 31
-cite$ -- 30
-duplicate$ -- 3564
-empty$ -- 2615
-format.name$ -- 411
-if$ -- 6862
++ -- 378
+- -- 343
+* -- 2650
+:= -- 4179
+add.period$ -- 117
+call.type$ -- 31
+change.case$ -- 247
+chr.to.int$ -- 32
+cite$ -- 31
+duplicate$ -- 3713
+empty$ -- 2714
+format.name$ -- 429
+if$ -- 7139
 int.to.chr$ -- 2
 int.to.str$ -- 1
-missing$ -- 345
-newline$ -- 165
-num.names$ -- 120
-pop$ -- 1763
+missing$ -- 357
+newline$ -- 171
+num.names$ -- 124
+pop$ -- 1842
 preamble$ -- 1
-purify$ -- 229
+purify$ -- 238
 quote$ -- 0
-skip$ -- 580
+skip$ -- 600
 stack$ -- 0
-substring$ -- 3636
-swap$ -- 820
+substring$ -- 3790
+swap$ -- 844
 text.length$ -- 3
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 264
+type$ -- 273
 warning$ -- 0
-while$ -- 227
+while$ -- 235
 width$ -- 0
-write$ -- 408
+write$ -- 422
 (There was 1 error message)
