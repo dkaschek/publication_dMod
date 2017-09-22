@@ -251,4 +251,57 @@ profile_prediction <- profile(obj + obj.validation,
                               stepControl = list(stop = "data"),
                               fixed = c(TCA_tot = log(1)))
 
+# 4.9 Speed comparison ----------------------------------------------------
+
+plist <- lapply(1:50, function(i) pouter + rnorm(length(pouter)))
+time1 <- mclapply(plist, function(pars) system.time(trust(obj, pars, rinit = 1, rmax = 10))[1], mc.cores = 4, mc.preschedule = FALSE)
+time2 <- mclapply(plist, function(pars) system.time(optim(pars, function(...) obj(..., deriv = FALSE)$value, control = list(maxit = 10000)))[1], mc.cores = 4, mc.preschedule = FALSE)
+time3 <- mclapply(plist, function(pars) system.time(optim(pars, function(...) obj(..., deriv = FALSE)$value, method = "L-BFGS-B", lower = -10, upper = 10))[1], mc.cores = 4, mc.preschedule = FALSE)
+
+mytable <- rbind(
+  data.frame(
+    code = factor("compiled", levels = c("compiled", "not compiled")),
+    optimizer = factor(c(rep("trust-region", length(time1)), rep("Nelder-Mead", length(time2)), rep("L-BFGS-B", length(time3))), levels = c("trust-region", "Nelder-Mead", "L-BFGS-B")),
+    time = c(unlist(time1), unlist(time2), unlist(time3))),
+  data.frame(
+    code = factor("not compiled", levels = c("compiled", "not compiled")),
+    optimizer = factor(c(rep("trust-region", length(time1)), rep("Nelder-Mead", length(time2)), rep("L-BFGS-B", length(time3))), levels = c("trust-region", "Nelder-Mead", "L-BFGS-B")),
+    time = 50*c(unlist(time1), unlist(time2), unlist(time3)))
+)
+  
+  
+
+#P <- ggplot(mytable, aes(x  = paste(optimizer, code, sep = ",\n"), y = time)) +
+P <- ggplot(mytable, aes(x  = optimizer, y = time, color = code, pch = code)) +
+  geom_violin(position = "identity", size = .3) + geom_jitter(size = 1, alpha = .3) + 
+  scale_y_log10(breaks = c(1, 5, 10, 50, 100, 500, 1000, 5000)) +
+  scale_x_discrete(labels = c("(1) trust-region", "(2) Nelder-Mead", "(3) L-BFGS-B")) +
+  #annotation_logticks(sides = "lr") +
+  ylab("runtime for a single fit [s] (logarithmic)") +
+  xlab("optimization method") +
+  scale_shape_manual(values = c(1, 2)) +
+  scale_color_manual(values = c("black", "darkgoldenrod3")) +
+  # annotate(geom = "text", 
+  #          x = unique(paste(mytable$optimizer, mytable$code, sep = ",\n")),
+  #          y = .2,
+  #          label = c("(dMod)", "(mkin, FME)", "(mkin, FME)", "(nlmeODE)", "(scaRabee), (FME)", "(FME)"),
+  #          hjust = 0, size = 2, family = "LM Roman 10") +
+  # scale_x_continuous(sec.axis = dup_axis(labels = letters[1:6])) +
+  annotate(geom = "text",
+           x = c("trust-region", "Nelder-Mead", "L-BFGS-B", "trust-region", "Nelder-Mead", "L-BFGS-B"),
+           y = c(.4, 2, 300, 15, 70, 5),
+           label = c("(dMod)", "(mkin, FME)*", "(FME)*", "(nlmeODE)*", "(scaRabee, FME)*", "(FME)*"),
+           hjust = 0, size = 2, family = "LM Roman 10") +
+  annotate(geom = "text", y = .4, x = "L-BFGS-B", label = "* estimated", hjust = 0, vjust = -1, size = 2, family = "LM Roman 10", fontface = "bold") +
+  #scale_x_continuous(sec.axis = dup_axis(labels = letters[1:6])) +
+  theme_dMod(base_size = 8, base_family = "LM Roman 10") +
+  theme(legend.position = "top", legend.box.margin=margin(-10,-10,-10,-10),
+        axis.text.y = element_text(hjust = 0)) +
+  coord_flip()
+
+
+cairo_pdf(filename = "~/Abteilung_Timmer/RProjects/publication_dMod/images/figure10.pdf", 
+          width = 6, height = 2)
+print(P)
+dev.off()
 

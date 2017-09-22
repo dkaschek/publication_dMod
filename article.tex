@@ -994,6 +994,21 @@ In summary, we find that the prediction of cellular TCA amounts is highly
 precise despite the non-identifiability of the \code{export_sinus} and
 \code{reflux_open} parameters.
 
+\subsection{Speed comparison}
+
+Last but not least, the computational efficiency of \pkg{dMod} is tested. In comparison to other \proglang{R} packages offering functions to estimate parameters of ODE models from experimental data, see Table~\ref{tab:comparison}, \pkg{dMod} provides all observation-, prediction- and parameter transformation functions with derivatives. Those are based on symbolic expressions being translated into \proglang{C} code and being compiled alongside the model itself.
+
+For the comparison, we have tested three different scenarios with \pkg{dMod}. The scenarios approximate the conditions found in different frameworks: (1) The default settings with derivatives and trust region optimization, (2) derivative-free optimization with the Nelder-Mead algorithm and, (3) optimization with the L-BFGS-B algorithm with numerically computed gradient. With either of these settings, the example model has been fitted 50 times and the runtime of each fit has been evaluated. The result of the runtime evaluation is shown in Figure~\ref{fig:comparison} as black dots and violin lines. Since in \pkg{dMod} the ODE model and observation function are compiled, runtime values for the corresponding scenarios with native \proglang{R} code have been roughly estimated to exceed the runtime of compile code by a factor of 50, as indicated by \cite{deSolve}. The extrapolated runtimes are shown in orange. Finally, the available packages for parameter estimation in ODE models have been assigned to one or more scenarios depending on whether the framework supports compiled code or supports sensitivity equations. Except for the runtime values obtained with \pkg{dMod}, these assignments reflects a rough estimate, indicated by an asterisk.  
+
+\begin{figure}[ht]
+
+	\centering
+	\includegraphics[width=6in]{images/figure10}
+	\caption{Comparison of the runtime for parameter estimation for different scenarios. The runtime values obtained from 50 fits per scenario with \pkg{dMod} are shown as black dots and violin lines. Runtime values for native \proglang{R} code (not compiled) were assumed be 50 times larger, shown as orange triangles and violin lines. Modeling frameworks have been assigned to either of the scenarios based on their characteristics.}
+	\label{fig:comparison}
+\end{figure}
+The speed comparison shows that by a combination of compiled code and symbolically derived gradient and hessian, the runtime achieves its best value. The reason for the good performance is that the evaluation of sensitivity equations is only slower by a factor 2-3. On the other hand, the objective function needs to be called only once per iteration of the optimizer whereas the numeric evaluation of the gradient requires many function calls. 
+
 \section{Extensions of dMod}
 \label{sec:extensions}
 Computer algebra and symbolic tools are not part of \proglang{R}'s core functionality. In this section we illustrate two symbolic tools that are shiped with \pkg{dMod},  dealing with structural non-identifiability and steady-state constraints. They are implemented in \proglang{Python} and are interfaced via the \pkg{rPython} package \citep{rPython}.
