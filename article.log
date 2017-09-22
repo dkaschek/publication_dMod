@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2017.9.5)  22 SEP 2017 10:14
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2017.9.5)  22 SEP 2017 10:37
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -965,7 +965,7 @@ Overfull \hbox (10.94998pt too wide) has occurred while \output is active
  []
 
 [12]
-<images/flowchart.pdf, id=343, pagebox=cropbox, 327.2225pt x 284.06125pt>
+<images/flowchart.pdf, id=342, pagebox=cropbox, 327.2225pt x 284.06125pt>
 File: images/flowchart.pdf Graphic file (type pdf)
 <use images/flowchart.pdf>
 Package pdftex.def Info: images/flowchart.pdf  used on input line 438. on input
@@ -978,7 +978,7 @@ Overfull \hbox (10.94998pt too wide) has occurred while \output is active
  []
 
 [13 <./images/flowchart.pdf>]
-<images/figure1.pdf, id=365, pagebox=cropbox, 578.16pt x 310.15875pt>
+<images/figure1.pdf, id=364, pagebox=cropbox, 578.16pt x 310.15875pt>
 File: images/figure1.pdf Graphic file (type pdf)
 <use images/figure1.pdf>
 Package pdftex.def Info: images/figure1.pdf  used on input line 492. on input l
@@ -996,7 +996,7 @@ Overfull \hbox (10.94998pt too wide) has occurred while \output is active
  []
 
 [15 <./images/figure1.pdf>]
-<images/figure2.pdf, id=402, pagebox=cropbox, 578.16pt x 144.54pt>
+<images/figure2.pdf, id=401, pagebox=cropbox, 578.16pt x 144.54pt>
 File: images/figure2.pdf Graphic file (type pdf)
 <use images/figure2.pdf>
 Package pdftex.def Info: images/figure2.pdf  used on input line 575. on input l
@@ -1009,7 +1009,7 @@ Overfull \hbox (10.94998pt too wide) has occurred while \output is active
  []
 
 [16]
-<images/figure3.pdf, id=410, pagebox=cropbox, 578.16pt x 144.54pt>
+<images/figure3.pdf, id=409, pagebox=cropbox, 578.16pt x 144.54pt>
 File: images/figure3.pdf Graphic file (type pdf)
 <use images/figure3.pdf>
 Package pdftex.def Info: images/figure3.pdf  used on input line 609. on input l
@@ -1022,7 +1022,7 @@ Overfull \hbox (10.94998pt too wide) has occurred while \output is active
  []
 
 [17 <./images/figure2.pdf>]
-<images/figure4.pdf, id=436, pagebox=cropbox, 578.16pt x 144.54pt>
+<images/figure4.pdf, id=435, pagebox=cropbox, 578.16pt x 144.54pt>
 File: images/figure4.pdf Graphic file (type pdf)
 <use images/figure4.pdf>
 Package pdftex.def Info: images/figure4.pdf  used on input line 638. on input l
@@ -1035,7 +1035,7 @@ Overfull \hbox (10.94998pt too wide) has occurred while \output is active
  []
 
 [18 <./images/figure3.pdf>]
-<images/figure5.pdf, id=463, pagebox=cropbox, 578.16pt x 361.35pt>
+<images/figure5.pdf, id=462, pagebox=cropbox, 578.16pt x 361.35pt>
 File: images/figure5.pdf Graphic file (type pdf)
 <use images/figure5.pdf>
 Package pdftex.def Info: images/figure5.pdf  used on input line 659. on input l
@@ -1053,7 +1053,7 @@ Overfull \hbox (10.94998pt too wide) has occurred while \output is active
  []
 
 [20 <./images/figure5.pdf>]
-<images/figure6.pdf, id=524, pagebox=cropbox, 578.16pt x 325.215pt>
+<images/figure6.pdf, id=523, pagebox=cropbox, 578.16pt x 325.215pt>
 File: images/figure6.pdf Graphic file (type pdf)
 <use images/figure6.pdf>
 Package pdftex.def Info: images/figure6.pdf  used on input line 731. on input l
@@ -1066,7 +1066,7 @@ Overfull \hbox (10.94998pt too wide) has occurred while \output is active
  []
 
 [21]
-<images/figure7.pdf, id=533, pagebox=cropbox, 578.16pt x 433.62pt>
+<images/figure7.pdf, id=532, pagebox=cropbox, 578.16pt x 433.62pt>
 File: images/figure7.pdf Graphic file (type pdf)
 <use images/figure7.pdf>
 Package pdftex.def Info: images/figure7.pdf  used on input line 757. on input l
@@ -1094,7 +1094,7 @@ Overfull \hbox (10.94998pt too wide) has occurred while \output is active
  []
 
 [25]
-<images/figure8.pdf, id=618, pagebox=cropbox, 578.16pt x 289.08pt>
+<images/figure8.pdf, id=617, pagebox=cropbox, 578.16pt x 289.08pt>
 File: images/figure8.pdf Graphic file (type pdf)
 <use images/figure8.pdf>
 Package pdftex.def Info: images/figure8.pdf  used on input line 901. on input l
@@ -1112,7 +1112,7 @@ Overfull \hbox (10.94998pt too wide) has occurred while \output is active
  []
 
 [27 <./images/figure8.pdf>]
-<images/figure9.pdf, id=653, pagebox=cropbox, 578.16pt x 289.08pt>
+<images/figure9.pdf, id=652, pagebox=cropbox, 578.16pt x 289.08pt>
 File: images/figure9.pdf Graphic file (type pdf)
 <use images/figure9.pdf>
 Package pdftex.def Info: images/figure9.pdf  used on input line 973. on input l
@@ -1125,7 +1125,7 @@ Overfull \hbox (10.94998pt too wide) has occurred while \output is active
  []
 
 [28 <./images/figure9.pdf>]
-<images/figure10.pdf, id=692, pagebox=cropbox, 433.62pt x 144.54pt>
+<images/figure10.pdf, id=691, pagebox=cropbox, 433.62pt x 144.54pt>
 File: images/figure10.pdf Graphic file (type pdf)
 <use images/figure10.pdf>
 Package pdftex.def Info: images/figure10.pdf  used on input line 1006. on input
@@ -1178,7 +1178,7 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1082.
 Here is how much of TeX's memory you used:
  8471 strings out of 494855
  120244 string characters out of 6179190
- 202661 words of memory out of 5000000
+ 202659 words of memory out of 5000000
  11426 multiletter control sequences out of 15000+600000
  66269 words of font info for 124 fonts, out of 8000000 for 9000
  59 hyphenation exceptions out of 8191
@@ -1210,10 +1210,10 @@ sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share
 /texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/
 texlive/texmf-dist/fonts/type1/urw/zapfchan/uzcmi8a.pfb>
-Output written on article.pdf (33 pages, 895588 bytes).
+Output written on article.pdf (33 pages, 895633 bytes).
 PDF statistics:
- 893 PDF objects out of 1000 (max. 8388607)
- 742 compressed objects within 8 object streams
+ 892 PDF objects out of 1000 (max. 8388607)
+ 741 compressed objects within 8 object streams
  148 named destinations out of 1000 (max. 500000)
  277 words of extra memory for PDF output out of 10000 (max. 10000000)
 
