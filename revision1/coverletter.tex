@@ -1,0 +1,116 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% "ModernCV" CV and Cover Letter
+% LaTeX Template
+% Version 1.1 (9/12/12)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Xavier Danaux (xdanaux@gmail.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+% Important note:
+% This template requires the moderncv.cls and .sty files to be in the same 
+% directory as this .tex file. These files provide the resume style and themes 
+% used for structuring the document.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[11pt,a4paper,sans]{moderncv} % Font sizes: 10, 11, or 12; paper sizes: a4paper, letterpaper, a5paper, legalpaper, executivepaper or landscape; font families: sans or roman
+
+\moderncvstyle{casual} % CV theme - options include: 'casual' (default), 'classic', 'oldstyle' and 'banking'
+\moderncvcolor{blue} % CV color - options include: 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+
+\usepackage{lipsum} % Used for inserting dummy 'Lorem ipsum' text into the template
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\renewcommand{\subsection}[1]{\vspace{1em} {\large{#1}} \vspace{1em} }
+
+\usepackage[scale=0.7, top=2.5cm, bottom=3.5cm, left=2.5cm, right=2.5cm]{geometry} 
+\setlength{\footskip}{60pt} 
+
+% \usepackage[scale=0.7]{geometry} % Reduce document margins
+%\setlength{\hintscolumnwidth}{3cm} % Uncomment to change the width of the dates column
+%\setlength{\makecvtitlenamewidth}{10cm} % For the 'classic' style, uncomment to adjust the width of the space allocated to your name
+
+%----------------------------------------------------------------------------------------
+%	NAME AND CONTACT INFORMATION SECTION
+%----------------------------------------------------------------------------------------
+
+\firstname{Dr.~Daniel} % Your first name
+\familyname{Kaschek} % Your last name
+
+% All information in this block is optional, comment out any lines you don't need
+\title{Cover Letter}
+\address{Hermann-Herder-Str. 3}{79104 Freiburg, Germany}
+\email{daniel.kaschek@gmail.com}
+\homepage{sysbio.uni-freiburg.de/kaschek}{sysbio.uni-freiburg.de/kaschek} % The first argument is the url for the clickable link, the second argument is the url displayed in the template - this allows special characters to be displayed such as the tilde in this example
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+
+
+%----------------------------------------------------------------------------------------
+%	COVER LETTER
+%----------------------------------------------------------------------------------------
+
+% To remove the cover letter, comment out this entire block
+
+\clearpage
+
+\recipient{Journal of Statistical Software}{Universität Innsbruck\\Institut für Statistik\\Universitätsstraße 15\\6020 Innsbruck, Austria} % Letter recipient
+\date{\today} % Letter date
+\opening{Dear Sir / Madam,} % Opening greeting
+\closing{Sincerely yours,} % Closing phrase
+%\enclosure[Attached]{Manuscript} % List of enclosed documents
+
+\makelettertitle % Print letter title
+
+We are glad that our manuscript entitled ``\textit{Dynamic Modeling, Parameter Estimation and Uncertainty Analysis in R}'' is considered for publication in the Journal of Statistical Software. We thank the reviewers for their effort and time they have spent reading our manuscript in great detailed. We are happy about having received so many constructive comments and suggestions.
+
+Enclosed in this document you find our point-by-point response to the reviewers' comments. We think that with the changes introduced, the manuscript has substantially improved. We hope that with the updated manuscript submitted today we meet all necessary requirements for publication in JSS. 
+
+\vspace{2em}
+Sincerely yours,\\
+\vspace{2em}
+\includegraphics{signature}
+
+\vspace{-3em}
+\textbf{Daniel Kaschek}
+
+\newpage
+
+\section{Reviewer 1}
+
+
+\input{reviewer1}
+\newpage
+
+\section{Reviewer 2}
+
+
+\input{reviewer2}
+\newpage
+
+\section{Reviewer 3}
+
+\input{reviewer3}
+
+
+
+%\makeletterclosing % Print letter signature
+
+%----------------------------------------------------------------------------------------
+
+\end{document}
+
