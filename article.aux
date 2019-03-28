@@ -22,6 +22,8 @@
 \citation{mkin}
 \citation{scaRabee}
 \citation{deSolve}
+\citation{inline}
+\citation{brun2001practical}
 \citation{merkt2015higher}
 \citation{rosenblatt2016customized}
 \citation{squire1998using}
@@ -31,80 +33,90 @@
 \citation{kreutz2012likelihood}
 \citation{raue2011addressing}
 \citation{maiwald2016driving}
-\newlabel{sec:theory}{{2}{4}{}{section.2}{}}
-\newlabel{eq:ma}{{1}{4}{}{equation.2.1}{}}
-\newlabel{eq:Sv}{{2}{4}{}{equation.2.2}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Overview of the {\fontseries  {b}\selectfont  dMod} core functionality and comparison with other packages.}}{4}{table.1}}
+\newlabel{tab:comparison}{{1}{4}{Overview of the \pkg {dMod} core functionality and comparison with other packages}{table.1}{}}
+\newlabel{sec:theory}{{2}{5}{}{section.2}{}}
+\newlabel{eq:ma_chemical}{{1}{5}{}{equation.2.1}{}}
+\newlabel{eq:ma}{{2}{5}{}{equation.2.2}{}}
+\newlabel{eq:Sv}{{3}{5}{}{equation.2.3}{}}
 \citation{azzalini1996statistical}
-\newlabel{eq:observation}{{5}{5}{}{equation.2.5}{}}
+\newlabel{eq:observation}{{6}{6}{}{equation.2.6}{}}
 \citation{press1996numerical}
 \citation{wright1999numerical}
-\newlabel{eq:likelihood}{{6}{6}{}{equation.2.6}{}}
-\newlabel{eq:nll}{{7}{6}{}{equation.2.7}{}}
-\newlabel{eq:newton}{{8}{6}{}{equation.2.8}{}}
-\newlabel{eq:derivatives}{{9}{6}{}{equation.2.9}{}}
-\newlabel{eq:jacobian}{{10}{6}{}{equation.2.10}{}}
+\newlabel{eq:likelihood}{{7}{7}{}{equation.2.7}{}}
+\newlabel{eq:nll}{{8}{7}{}{equation.2.8}{}}
+\newlabel{eq:newton}{{9}{7}{}{equation.2.9}{}}
+\newlabel{eq:derivatives}{{10}{7}{}{equation.2.10}{}}
+\newlabel{eq:jacobian}{{11}{7}{}{equation.2.11}{}}
 \citation{venzon1988method,murphy2000profile}
+\newlabel{eq:pl}{{12}{8}{}{equation.2.12}{}}
 \citation{kreutz2012likelihood,hass2016fast}
-\newlabel{eq:pl}{{11}{7}{}{equation.2.11}{}}
-\newlabel{eq:path}{{12}{7}{}{equation.2.12}{}}
 \citation{cOde}
-\newlabel{sec:implementation}{{3}{8}{}{section.3}{}}
-\newlabel{eq:partrafo}{{13}{10}{}{equation.3.13}{}}
-\newlabel{sec:example}{{4}{11}{}{section.4}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Differential equations and flowchart of the reaction network. Taurocholic acid, TCA, is transported between three compartments by four different processes. (A) Assuming mass-action kinetics, the three dynamic states satisfy a set of coupled differential equations. (B) The equations are visualized in a flowchart. }}{12}{figure.1}}
-\newlabel{fig:flowchart}{{1}{12}{Differential equations and flowchart of the reaction network. Taurocholic acid, TCA, is transported between three compartments by four different processes. (A) Assuming mass-action kinetics, the three dynamic states satisfy a set of coupled differential equations. (B) The equations are visualized in a flowchart}{figure.1}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Output of the prediction function. (A) Prediction of the TCA states. (B) Sensitivities of the three TCA states for the rate parameters only.}}{14}{figure.2}}
-\newlabel{fig:prediction}{{2}{14}{Output of the prediction function. (A) Prediction of the TCA states. (B) Sensitivities of the three TCA states for the rate parameters only}{figure.2}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Model prediction of the observable and internal states. Simulated data is shown as dots with error bars.}}{16}{figure.3}}
-\newlabel{fig:observation}{{3}{16}{Model prediction of the observable and internal states. Simulated data is shown as dots with error bars}{figure.3}{}}
+\newlabel{eq:path}{{13}{9}{}{equation.2.13}{}}
+\newlabel{sec:implementation}{{3}{9}{}{section.3}{}}
+\newlabel{eq:partrafo}{{14}{11}{}{equation.3.14}{}}
+\citation{kaschek2017dynamic}
+\newlabel{sec:example}{{4}{13}{}{section.4}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Differential equations and flowchart of the reaction network. Taurocholic acid, TCA, is transported between three compartments by four different processes. (A) Assuming mass-action kinetics, the three dynamic states satisfy a set of coupled differential equations. (B) The equations are visualized in a flowchart. }}{14}{figure.1}}
+\newlabel{fig:flowchart}{{1}{14}{Differential equations and flowchart of the reaction network. Taurocholic acid, TCA, is transported between three compartments by four different processes. (A) Assuming mass-action kinetics, the three dynamic states satisfy a set of coupled differential equations. (B) The equations are visualized in a flowchart}{figure.1}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Output of the prediction function. (A) Prediction of the TCA states. (B) Sensitivities of the three TCA states for the rate parameters only.}}{15}{figure.2}}
+\newlabel{fig:prediction}{{2}{15}{Output of the prediction function. (A) Prediction of the TCA states. (B) Sensitivities of the three TCA states for the rate parameters only}{figure.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Model prediction of the observable and internal states. Simulated data is shown as dots with error bars.}}{17}{figure.3}}
+\newlabel{fig:observation}{{3}{17}{Model prediction of the observable and internal states. Simulated data is shown as dots with error bars}{figure.3}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Prediction of internal and observed states. All values of the outer parameters have been set to $-1$. Simulated data points are shown as dots with error bars.}}{18}{figure.4}}
+\newlabel{fig:gxp}{{4}{18}{Prediction of internal and observed states. All values of the outer parameters have been set to $-1$. Simulated data points are shown as dots with error bars}{figure.4}{}}
 \citation{trust}
-\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Prediction of internal and observed states. All values of the outer parameters have been set to $-1$. Simulated data points are shown as dots with error bars.}}{17}{figure.4}}
-\newlabel{fig:gxp}{{4}{17}{Prediction of internal and observed states. All values of the outer parameters have been set to $-1$. Simulated data points are shown as dots with error bars}{figure.4}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Prediction of internal and observed states after optimization of the objective function. Simulated data points are shown as dots with error bars.}}{19}{figure.5}}
+\newlabel{fig:myfit}{{5}{19}{Prediction of internal and observed states after optimization of the objective function. Simulated data points are shown as dots with error bars}{figure.5}{}}
 \citation{parallel}
-\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Prediction of internal and observed states after optimization of the objective function. Simulated data points are shown as dots with error bars.}}{18}{figure.5}}
-\newlabel{fig:myfit}{{5}{18}{Prediction of internal and observed states after optimization of the objective function. Simulated data points are shown as dots with error bars}{figure.5}{}}
-\newlabel{sec:conditions}{{4.5}{18}{}{subsection.4.5}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Result of multi-start fitting procedure. (A) Fits have been sorted by increasing objective value. Four optima were found with almost identical objective value. (B) The parameter values for different optima are shown in different colors. (C) Each local optimum corresponds to a different model prediction, shown in different colors. The observed states are pracitically undistinguishable although the internal states show different behavior.}}{19}{figure.6}}
-\newlabel{fig:mstrust}{{6}{19}{Result of multi-start fitting procedure. (A) Fits have been sorted by increasing objective value. Four optima were found with almost identical objective value. (B) The parameter values for different optima are shown in different colors. (C) Each local optimum corresponds to a different model prediction, shown in different colors. The observed states are pracitically undistinguishable although the internal states show different behavior}{figure.6}{}}
-\newlabel{chap_uncertainty}{{4.6}{20}{}{subsection.4.6}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Result of multi-start fitting procedure with two experimental conditions. (A) Model prediction of the best fit and the simulated data are shown in different colors. (B) Fits have been sorted by increasing objective value. The lowest value clearly separates from the second plateau. (C) Plotting the parameter values for each of the fits reveals that the second plateau consists of two optima. The lowest plateau however corresponds to a unique optimum.}}{21}{figure.7}}
-\newlabel{fig:twoconditions}{{7}{21}{Result of multi-start fitting procedure with two experimental conditions. (A) Model prediction of the best fit and the simulated data are shown in different colors. (B) Fits have been sorted by increasing objective value. The lowest value clearly separates from the second plateau. (C) Plotting the parameter values for each of the fits reveals that the second plateau consists of two optima. The lowest plateau however corresponds to a unique optimum}{figure.7}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces Profile likelihood. (A) Profiles of all parameters. Data- and prior contribution to the total objective value are distinguished by line-type. (B) Parameter paths for the scaling parameter \bgroup \catcode `\_12\relax \catcode `\~12\relax \catcode `\$12\relax {\normalfont  \ttfamily  \hyphenchar \font =-1 s}\egroup .}}{22}{figure.8}}
-\newlabel{fig:pl}{{8}{22}{Profile likelihood. (A) Profiles of all parameters. Data- and prior contribution to the total objective value are distinguished by line-type. (B) Parameter paths for the scaling parameter \code {s}}{figure.8}{}}
-\newlabel{chap_steady_state}{{4.7}{22}{}{subsection.4.7}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Result of multi-start fitting procedure. (A) Fits have been sorted by increasing objective value. Four optima were found with almost identical objective value. (B) The parameter values for different optima are shown in different colors. (C) Each local optimum corresponds to a different model prediction, shown in different colors. The observed states are pracitically undistinguishable although the internal states show different behavior.}}{20}{figure.6}}
+\newlabel{fig:mstrust}{{6}{20}{Result of multi-start fitting procedure. (A) Fits have been sorted by increasing objective value. Four optima were found with almost identical objective value. (B) The parameter values for different optima are shown in different colors. (C) Each local optimum corresponds to a different model prediction, shown in different colors. The observed states are pracitically undistinguishable although the internal states show different behavior}{figure.6}{}}
+\newlabel{sec:conditions}{{4.5}{21}{}{subsection.4.5}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Result of multi-start fitting procedure with two experimental conditions. (A) Model prediction of the best fit and the simulated data are shown in different colors. (B) Fits have been sorted by increasing objective value. The lowest value clearly separates from the second plateau. (C) Plotting the parameter values for each of the fits reveals that the second plateau consists of two optima. The lowest plateau however corresponds to a unique optimum.}}{22}{figure.7}}
+\newlabel{fig:twoconditions}{{7}{22}{Result of multi-start fitting procedure with two experimental conditions. (A) Model prediction of the best fit and the simulated data are shown in different colors. (B) Fits have been sorted by increasing objective value. The lowest value clearly separates from the second plateau. (C) Plotting the parameter values for each of the fits reveals that the second plateau consists of two optima. The lowest plateau however corresponds to a unique optimum}{figure.7}{}}
+\newlabel{chap_uncertainty}{{4.6}{23}{}{subsection.4.6}{}}
+\newlabel{chap_steady_state}{{4.7}{23}{}{subsection.4.7}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces Profile likelihood. (A) Profiles of all parameters. Data- and prior contribution to the total objective value are distinguished by line-type. (B) Parameter paths for the scaling parameter \bgroup \catcode `\_12\relax \catcode `\~12\relax \catcode `\$12\relax {\normalfont  \ttfamily  \hyphenchar \font =-1 s}\egroup .}}{24}{figure.8}}
+\newlabel{fig:pl}{{8}{24}{Profile likelihood. (A) Profiles of all parameters. Data- and prior contribution to the total objective value are distinguished by line-type. (B) Parameter paths for the scaling parameter \code {s}}{figure.8}{}}
 \citation{rootSolve}
-\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces Parameter profiles for three different model implementations. The profile likelihood around the global optimum for the models without steady-state constraints, explicit steady-state constraints and implicit implementation of steady states is visualized by different colors. To illustrate that explicit (red) and implicit (blue) steady-state implementations yield the same result, the corresponding profiles are highlighted by red plus and blue cross signs, respectively.}}{26}{figure.9}}
-\newlabel{fig:allprofiles}{{9}{26}{Parameter profiles for three different model implementations. The profile likelihood around the global optimum for the models without steady-state constraints, explicit steady-state constraints and implicit implementation of steady states is visualized by different colors. To illustrate that explicit (red) and implicit (blue) steady-state implementations yield the same result, the corresponding profiles are highlighted by red plus and blue cross signs, respectively}{figure.9}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces Validation profile and confidence bands for the model prediction. (A) The profile likelihood for the data point parameter \bgroup \catcode `\_12\relax \catcode `\~12\relax \catcode `\$12\relax {\normalfont  \ttfamily  \hyphenchar \font =-1 d1}\egroup  describing \bgroup \catcode `\_12\relax \catcode `\~12\relax \catcode `\$12\relax {\normalfont  \ttfamily  \hyphenchar \font =-1 TCA\_cell}\egroup  at time point $t = 41$ is shown. (B) Computing the data parameter profile for different time points yields 95\% confidence bands on the prediction of \bgroup \catcode `\_12\relax \catcode `\~12\relax \catcode `\$12\relax {\normalfont  \ttfamily  \hyphenchar \font =-1 TCA\_cell}\egroup .}}{27}{figure.10}}
-\newlabel{fig:validation}{{10}{27}{Validation profile and confidence bands for the model prediction. (A) The profile likelihood for the data point parameter \code {d1} describing \code {TCA\_cell} at time point $t = 41$ is shown. (B) Computing the data parameter profile for different time points yields 95\% confidence bands on the prediction of \code {TCA\_cell}}{figure.10}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces Parameter profiles for three different model implementations. The profile likelihood around the global optimum for the models without steady-state constraints, explicit steady-state constraints and implicit implementation of steady states is visualized by different colors. To illustrate that explicit (red) and implicit (blue) steady-state implementations yield the same result, the corresponding profiles are highlighted by red plus and blue cross signs, respectively.}}{27}{figure.9}}
+\newlabel{fig:allprofiles}{{9}{27}{Parameter profiles for three different model implementations. The profile likelihood around the global optimum for the models without steady-state constraints, explicit steady-state constraints and implicit implementation of steady states is visualized by different colors. To illustrate that explicit (red) and implicit (blue) steady-state implementations yield the same result, the corresponding profiles are highlighted by red plus and blue cross signs, respectively}{figure.9}{}}
+\citation{deSolve}
+\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces Validation profile and confidence bands for the model prediction. (A) The profile likelihood for the data point parameter \bgroup \catcode `\_12\relax \catcode `\~12\relax \catcode `\$12\relax {\normalfont  \ttfamily  \hyphenchar \font =-1 d1}\egroup  describing \bgroup \catcode `\_12\relax \catcode `\~12\relax \catcode `\$12\relax {\normalfont  \ttfamily  \hyphenchar \font =-1 TCA\_cell}\egroup  at time point $t = 41$ is shown. (B) Computing the data parameter profile for different time points yields 95\% confidence bands on the prediction of \bgroup \catcode `\_12\relax \catcode `\~12\relax \catcode `\$12\relax {\normalfont  \ttfamily  \hyphenchar \font =-1 TCA\_cell}\egroup .}}{29}{figure.10}}
+\newlabel{fig:validation}{{10}{29}{Validation profile and confidence bands for the model prediction. (A) The profile likelihood for the data point parameter \code {d1} describing \code {TCA\_cell} at time point $t = 41$ is shown. (B) Computing the data parameter profile for different time points yields 95\% confidence bands on the prediction of \code {TCA\_cell}}{figure.10}{}}
 \citation{rPython}
+\@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces Comparison of the runtime for parameter estimation for different scenarios. The runtime values obtained from 50 fits per scenario with {\fontseries  {b}\selectfont  dMod} are shown as black dots and violin lines. Runtime values for native \textsf  {R} code (not compiled) were assumed be 50 times larger, shown as orange triangles and violin lines. Modeling frameworks have been assigned to either of the scenarios based on their characteristics.}}{30}{figure.11}}
+\newlabel{fig:comparison}{{11}{30}{Comparison of the runtime for parameter estimation for different scenarios. The runtime values obtained from 50 fits per scenario with \pkg {dMod} are shown as black dots and violin lines. Runtime values for native \proglang {R} code (not compiled) were assumed be 50 times larger, shown as orange triangles and violin lines. Modeling frameworks have been assigned to either of the scenarios based on their characteristics}{figure.11}{}}
+\newlabel{sec:extensions}{{5}{30}{}{section.5}{}}
 \citation{merkt2015higher}
-\newlabel{sec:extensions}{{5}{28}{}{section.5}{}}
 \citation{rosenblatt2016customized}
 \bibdata{mybib}
 \bibcite{azzalini1996statistical}{{1}{1996}{{Azzalini}}{{}}}
 \bibcite{rPython}{{2}{2015}{{Bellosta}}{{}}}
 \bibcite{scaRabee}{{3}{2014}{{Bihorel}}{{}}}
-\bibcite{trust}{{4}{2015}{{Geyer}}{{}}}
-\bibcite{hass2016fast}{{5}{2016}{{Hass \emph  {et~al.}}}{{Hass, Kreutz, Timmer, and Kaschek}}}
-\bibcite{cOde}{{6}{2017}{{Kaschek}}{{}}}
-\bibcite{kreutz2013profile}{{7}{2013}{{Kreutz \emph  {et~al.}}}{{Kreutz, Raue, Kaschek, and Timmer}}}
-\bibcite{kreutz2012likelihood}{{8}{2012}{{Kreutz \emph  {et~al.}}}{{Kreutz, Raue, and Timmer}}}
-\bibcite{maiwald2016driving}{{9}{2016}{{Maiwald \emph  {et~al.}}}{{Maiwald, Hass, Steiert, Vanlier, Engesser, Raue, Kipkeew, Bock, Kaschek, Kreutz, and Timmer}}}
-\bibcite{merkt2015higher}{{10}{2015}{{Merkt \emph  {et~al.}}}{{Merkt, Timmer, and Kaschek}}}
-\bibcite{murphy2000profile}{{11}{2000}{{Murphy and Van~der Vaart}}{{}}}
-\bibcite{press1996numerical}{{12}{1996}{{Press \emph  {et~al.}}}{{Press, Teukolsky, Vetterling, and Flannery}}}
-\bibcite{parallel}{{13}{2016}{{R Core Team}}{{}}}
-\bibcite{mkin}{{14}{2016}{{Ranke \emph  {et~al.}}}{{Ranke, Lindenberger, and Lehmann}}}
-\bibcite{raue2009structural}{{15}{2009}{{Raue \emph  {et~al.}}}{{Raue, Kreutz, Maiwald, Bachmann, Schilling, Klingm\IeC {\"u}ller, and Timmer}}}
-\bibcite{raue2011addressing}{{16}{2011}{{Raue \emph  {et~al.}}}{{Raue, Kreutz, Maiwald, Klingm\IeC {\"u}ller, and Timmer}}}
-\bibcite{raue2013joining}{{17}{2013{a}}{{Raue \emph  {et~al.}}}{{Raue, Kreutz, Theis, and Timmer}}}
-\bibcite{raue2013lessons}{{18}{2013{b}}{{Raue \emph  {et~al.}}}{{Raue, Schilling, Bachmann, Matteson, Schelker, Kaschek, Hug, Kreutz, Harms, Theis, Klingm\IeC {\"u}ller, and Timmer}}}
-\bibcite{rosenblatt2016customized}{{19}{2016}{{Rosenblatt \emph  {et~al.}}}{{Rosenblatt, Timmer, and Kaschek}}}
-\bibcite{rootSolve}{{20}{2009}{{Soetaert}}{{}}}
-\bibcite{FME}{{21}{2010}{{Soetaert and Petzoldt}}{{}}}
-\bibcite{deSolve}{{22}{2010}{{Soetaert \emph  {et~al.}}}{{Soetaert, Petzoldt, and Setzer}}}
-\bibcite{squire1998using}{{23}{1998}{{Squire and Trapp}}{{}}}
-\bibcite{nlmeODE}{{24}{2012}{{Tornoe}}{{}}}
-\bibcite{venzon1988method}{{25}{1988}{{Venzon and Moolgavkar}}{{}}}
-\bibcite{wright1999numerical}{{26}{1999}{{Wright and Nocedal}}{{}}}
+\bibcite{brun2001practical}{{4}{2001}{{Brun \emph  {et~al.}}}{{Brun, Reichert, and K{\"u}nsch}}}
+\bibcite{trust}{{5}{2015}{{Geyer}}{{}}}
+\bibcite{hass2016fast}{{6}{2016}{{Hass \emph  {et~al.}}}{{Hass, Kreutz, Timmer, and Kaschek}}}
+\bibcite{cOde}{{7}{2017}{{Kaschek}}{{}}}
+\bibcite{kaschek2017dynamic}{{8}{2017}{{Kaschek \emph  {et~al.}}}{{Kaschek, Sharanek, Guillouzo, Timmer, and Weaver}}}
+\bibcite{kreutz2013profile}{{9}{2013}{{Kreutz \emph  {et~al.}}}{{Kreutz, Raue, Kaschek, and Timmer}}}
+\bibcite{kreutz2012likelihood}{{10}{2012}{{Kreutz \emph  {et~al.}}}{{Kreutz, Raue, and Timmer}}}
+\bibcite{maiwald2016driving}{{11}{2016}{{Maiwald \emph  {et~al.}}}{{Maiwald, Hass, Steiert, Vanlier, Engesser, Raue, Kipkeew, Bock, Kaschek, Kreutz, and Timmer}}}
+\bibcite{merkt2015higher}{{12}{2015}{{Merkt \emph  {et~al.}}}{{Merkt, Timmer, and Kaschek}}}
+\bibcite{murphy2000profile}{{13}{2000}{{Murphy and Van~der Vaart}}{{}}}
+\bibcite{press1996numerical}{{14}{1996}{{Press \emph  {et~al.}}}{{Press, Teukolsky, Vetterling, and Flannery}}}
+\bibcite{parallel}{{15}{2016}{{R Core Team}}{{}}}
+\bibcite{mkin}{{16}{2016}{{Ranke \emph  {et~al.}}}{{Ranke, Lindenberger, and Lehmann}}}
+\bibcite{raue2009structural}{{17}{2009}{{Raue \emph  {et~al.}}}{{Raue, Kreutz, Maiwald, Bachmann, Schilling, Klingm\IeC {\"u}ller, and Timmer}}}
+\bibcite{raue2011addressing}{{18}{2011}{{Raue \emph  {et~al.}}}{{Raue, Kreutz, Maiwald, Klingm\IeC {\"u}ller, and Timmer}}}
+\bibcite{raue2013joining}{{19}{2013{a}}{{Raue \emph  {et~al.}}}{{Raue, Kreutz, Theis, and Timmer}}}
+\bibcite{raue2013lessons}{{20}{2013{b}}{{Raue \emph  {et~al.}}}{{Raue, Schilling, Bachmann, Matteson, Schelker, Kaschek, Hug, Kreutz, Harms, Theis, Klingm\IeC {\"u}ller, and Timmer}}}
+\bibcite{rosenblatt2016customized}{{21}{2016}{{Rosenblatt \emph  {et~al.}}}{{Rosenblatt, Timmer, and Kaschek}}}
+\bibcite{inline}{{22}{2015}{{Sklyar \emph  {et~al.}}}{{Sklyar, Murdoch, Smith, Eddelbuettel, Francoi, and Soetaert}}}
+\bibcite{rootSolve}{{23}{2009}{{Soetaert}}{{}}}
+\bibcite{FME}{{24}{2010}{{Soetaert and Petzoldt}}{{}}}
+\bibcite{deSolve}{{25}{2010}{{Soetaert \emph  {et~al.}}}{{Soetaert, Petzoldt, and Setzer}}}
+\bibcite{squire1998using}{{26}{1998}{{Squire and Trapp}}{{}}}
+\bibcite{nlmeODE}{{27}{2012}{{Tornoe}}{{}}}
+\bibcite{venzon1988method}{{28}{1988}{{Venzon and Moolgavkar}}{{}}}
+\bibcite{wright1999numerical}{{29}{1999}{{Wright and Nocedal}}{{}}}

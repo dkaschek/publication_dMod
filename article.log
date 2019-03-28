@@ -1,11 +1,11 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2017.11.12)  7 DEC 2017 13:24
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.10.13)  28 MAR 2019 12:38
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **article.tex
 (./article.tex
 LaTeX2e <2017-04-15>
-Babel <3.12> and hyphenation patterns for 84 language(s) loaded.
+Babel <3.18> and hyphenation patterns for 84 language(s) loaded.
 (./jss.cls
 Document Class: jss 2015/09/01 3.0 jss class by Achim Zeileis
 (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
@@ -44,7 +44,7 @@ File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 Package graphics Info: Driver file: pdftex.def on input line 99.
 
 (/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def
-File: pdftex.def 2017/06/24 v1.0g Graphics/color driver for pdftex
+File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
 ))
 \Gin@req@height=\dimen103
 \Gin@req@width=\dimen104
@@ -186,7 +186,7 @@ LaTeX Info: Redefining \cite on input line 694.
 \footerskip=\skip45
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
-Package: hyperref 2017/03/14 v6.85a Hypertext links for LaTeX
+Package: hyperref 2018/02/06 v6.86b Hypertext links for LaTeX
 
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/hobsub-hyperref.sty
 Package: hobsub-hyperref 2016/05/16 v1.14 Bundle oberdiek, subset hyperref (HO)
@@ -210,7 +210,7 @@ Package etexcmds Info: Could not find \expanded.
 (etexcmds)             In the latter case, load this package earlier.
 Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
 Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
-Package: pdftexcmds 2017/03/19 v0.25 Utility functions of pdfTeX for LuaTeX (HO
+Package: pdftexcmds 2018/01/21 v0.26 Utility functions of pdfTeX for LuaTeX (HO
 )
 Package pdftexcmds Info: LuaTeX not detected.
 Package pdftexcmds Info: \pdf@primitive is available.
@@ -246,49 +246,48 @@ Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
 \Hy@pagecounter=\count92
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def
-File: pd1enc.def 2017/03/14 v6.85a Hyperref: PDFDocEncoding definition (HO)
+File: pd1enc.def 2018/02/06 v6.86b Hyperref: PDFDocEncoding definition (HO)
 )
 \Hy@SavedSpaceFactor=\count93
 
 (/usr/share/texlive/texmf-dist/tex/latex/latexconfig/hyperref.cfg
 File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
 )
-Package hyperref Info: Hyper figures OFF on input line 4498.
-Package hyperref Info: Link nesting OFF on input line 4503.
-Package hyperref Info: Hyper index ON on input line 4506.
-Package hyperref Info: Plain pages OFF on input line 4513.
-Package hyperref Info: Backreferencing OFF on input line 4518.
+Package hyperref Info: Hyper figures OFF on input line 4509.
+Package hyperref Info: Link nesting OFF on input line 4514.
+Package hyperref Info: Hyper index ON on input line 4517.
+Package hyperref Info: Plain pages OFF on input line 4524.
+Package hyperref Info: Backreferencing OFF on input line 4529.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
-Package hyperref Info: Bookmarks ON on input line 4751.
+Package hyperref Info: Bookmarks ON on input line 4762.
 \c@Hy@tempcnt=\count94
 
 (/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip10
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
-LaTeX Info: Redefining \url on input line 5104.
+LaTeX Info: Redefining \url on input line 5115.
 \XeTeXLinkMargin=\dimen106
 \Fld@menulength=\count95
 \Field@Width=\dimen107
 \Fld@charsize=\dimen108
-Package hyperref Info: Hyper figures OFF on input line 6358.
-Package hyperref Info: Link nesting OFF on input line 6363.
-Package hyperref Info: Hyper index ON on input line 6366.
-Package hyperref Info: backreferencing OFF on input line 6373.
-Package hyperref Info: Link coloring OFF on input line 6378.
-Package hyperref Info: Link coloring with OCG OFF on input line 6383.
-Package hyperref Info: PDF/A mode OFF on input line 6388.
-LaTeX Info: Redefining \ref on input line 6428.
-LaTeX Info: Redefining \pageref on input line 6432.
+Package hyperref Info: Hyper figures OFF on input line 6369.
+Package hyperref Info: Link nesting OFF on input line 6374.
+Package hyperref Info: Hyper index ON on input line 6377.
+Package hyperref Info: backreferencing OFF on input line 6384.
+Package hyperref Info: Link coloring OFF on input line 6389.
+Package hyperref Info: Link coloring with OCG OFF on input line 6394.
+Package hyperref Info: PDF/A mode OFF on input line 6399.
+LaTeX Info: Redefining \ref on input line 6439.
+LaTeX Info: Redefining \pageref on input line 6443.
 \Hy@abspage=\count96
 \c@Item=\count97
 \c@Hfootnote=\count98
 )
-
-Package hyperref Message: Driver (autodetected): hpdftex.
+Package hyperref Info: Driver (autodetected): hpdftex.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/hpdftex.def
-File: hpdftex.def 2017/03/14 v6.85a Hyperref driver for pdfTeX
+File: hpdftex.def 2018/02/06 v6.86b Hyperref driver for pdfTeX
 \Fld@listcount=\count99
 \c@bookmark@seq@number=\count100
 
@@ -709,7 +708,7 @@ Now handling font encoding PD1 ...
    defining Unicode char U+2423 (decimal 9251)
 ))
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
-Package: amsmath 2016/11/05 v2.16a AMS math features
+Package: amsmath 2017/09/02 v2.17a AMS math features
 \@mathmargin=\skip53
 
 For additional information on amsmath, use the `?' option.
@@ -779,44 +778,52 @@ LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (/usr/share/texlive/texmf-dist/tex/latex/tools/enumerate.sty
 Package: enumerate 2015/07/23 v3.00 enumerate extensions (DPC)
 \@enLab=\toks22
+)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty
+Package: array 2016/10/06 v2.4d Tabular extension package (FMi)
+\col@sep=\dimen118
+\extrarowheight=\dimen119
+\NC@list=\toks23
+\extratabsurround=\skip56
+\backup@length=\skip57
 ) (./article.aux)
 \openout1 = `article.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 81.
-LaTeX Font Info:    ... okay on input line 81.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 81.
-LaTeX Font Info:    ... okay on input line 81.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 81.
-LaTeX Font Info:    ... okay on input line 81.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 81.
-LaTeX Font Info:    ... okay on input line 81.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 81.
-LaTeX Font Info:    ... okay on input line 81.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 81.
-LaTeX Font Info:    ... okay on input line 81.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 81.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 81.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 82.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 82.
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 81.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 81.
-LaTeX Font Info:    ... okay on input line 81.
+LaTeX Font Info:    ... okay on input line 82.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 82.
+LaTeX Font Info:    ... okay on input line 82.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count113
-\scratchdimen=\dimen118
+\scratchdimen=\dimen120
 \scratchbox=\box29
 \nofMPsegments=\count114
 \nofMParguments=\count115
-\everyMPshowfont=\toks23
+\everyMPshowfont=\toks24
 \MPscratchCnt=\count116
-\MPscratchDim=\dimen119
+\MPscratchDim=\dimen121
 \MPnumerator=\count117
 \makeMPintoPDFobject=\count118
-\everyMPtoPDFconversion=\toks24
+\everyMPtoPDFconversion=\toks25
 ) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
 
@@ -835,7 +842,7 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 \AtBeginShipoutBox=\box30
-Package hyperref Info: Link coloring ON on input line 81.
+Package hyperref Info: Link coloring ON on input line 82.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
@@ -845,38 +852,37 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count119
 )
-LaTeX Info: Redefining \ref on input line 81.
-LaTeX Info: Redefining \pageref on input line 81.
-LaTeX Info: Redefining \nameref on input line 81.
+LaTeX Info: Redefining \ref on input line 82.
+LaTeX Info: Redefining \pageref on input line 82.
+LaTeX Info: Redefining \nameref on input line 82.
 
 (./article.out) (./article.out)
 \@outlinefile=\write4
 \openout4 = `article.out'.
 
-<jsslogo.jpg, id=108, 540.0175pt x 393.47pt>
+<jsslogo.jpg, id=112, 540.0175pt x 393.47pt>
 File: jsslogo.jpg Graphic file (type jpg)
 <use jsslogo.jpg>
-Package pdftex.def Info: jsslogo.jpg  used on input line 81. on input line 81.
-Package pdftex.def Info: Requested size: 89.80768pt x 65.43607pt on input line 
-81.
-LaTeX Font Info:    Try loading font information for T1+pzc on input line 81.
+Package pdftex.def Info: jsslogo.jpg  used on input line 82.
+(pdftex.def)             Requested size: 89.80768pt x 65.43607pt.
+LaTeX Font Info:    Try loading font information for T1+pzc on input line 82.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pzc.fd
 File: t1pzc.fd 2001/06/04 font definitions for T1/pzc.
 )
 LaTeX Font Info:    Font shape `T1/pzc/m/n' in size <28> not available
-(Font)              Font shape `T1/pzc/mb/it' tried instead on input line 81.
-LaTeX Font Info:    Try loading font information for T1+aess on input line 81.
+(Font)              Font shape `T1/pzc/mb/it' tried instead on input line 82.
+LaTeX Font Info:    Try loading font information for T1+aess on input line 82.
 
 (/usr/share/texlive/texmf-dist/tex/latex/ae/t1aess.fd
 File: t1aess.fd 1997/11/16 Font definitions for T1/aess.
 )
-LaTeX Font Info:    Try loading font information for U+msa on input line 81.
+LaTeX Font Info:    Try loading font information for U+msa on input line 82.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 81.
+LaTeX Font Info:    Try loading font information for U+msb on input line 82.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -886,7 +892,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
  [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./jsslogo.jpg>]
-LaTeX Font Info:    Try loading font information for T1+aett on input line 93.
+LaTeX Font Info:    Try loading font information for T1+aett on input line 95.
 
 (/usr/share/texlive/texmf-dist/tex/latex/ae/t1aett.fd
 File: t1aett.fd 1997/11/16 Font definitions for T1/aett.
@@ -901,19 +907,22 @@ Overfull \hbox (5.47499pt too wide) has occurred while \output is active
  []
 
 [3]
-LaTeX Font Info:    Try loading font information for TS1+aer on input line 131.
+Underfull \vbox (badness 5667) has occurred while \output is active []
 
- (/usr/share/texmf/tex/latex/R/tex/latex/ts1aer.fd
-File: ts1aer.fd 
-)
-LaTeX Font Info:    Font shape `TS1/aer/m/n' in size <10.95> not available
-(Font)              Font shape `TS1/cmr/m/n' tried instead on input line 131.
 
 Overfull \hbox (5.47499pt too wide) has occurred while \output is active
 \T1/aer/m/n/10.95 4 []
  []
 
 [4]
+LaTeX Font Info:    Try loading font information for TS1+aer on input line 176.
+
+ (/usr/share/texmf/tex/latex/R/tex/latex/ts1aer.fd
+File: ts1aer.fd 
+)
+LaTeX Font Info:    Font shape `TS1/aer/m/n' in size <10.95> not available
+(Font)              Font shape `TS1/cmr/m/n' tried instead on input line 176.
+
 Overfull \hbox (5.47499pt too wide) has occurred while \output is active
 [] \T1/aer/m/n/10.95 5
  []
@@ -929,6 +938,9 @@ Overfull \hbox (5.47499pt too wide) has occurred while \output is active
  []
 
 [7]
+Underfull \vbox (badness 1748) has occurred while \output is active []
+
+
 Overfull \hbox (5.47499pt too wide) has occurred while \output is active
 \T1/aer/m/n/10.95 8 []
  []
@@ -949,26 +961,16 @@ Overfull \hbox (10.94998pt too wide) has occurred while \output is active
  []
 
 [11]
-<images/flowchart.pdf, id=310, pagebox=cropbox, 327.2225pt x 284.06125pt>
-File: images/flowchart.pdf Graphic file (type pdf)
-<use images/flowchart.pdf>
-Package pdftex.def Info: images/flowchart.pdf  used on input line 397. on input
- line 397.
-Package pdftex.def Info: Requested size: 194.76872pt x 169.07704pt on input lin
-e 397.
-
 Overfull \hbox (10.94998pt too wide) has occurred while \output is active
 \T1/aer/m/n/10.95 12 []
  []
 
-[12 <./images/flowchart.pdf>]
-<images/figure1.pdf, id=331, pagebox=cropbox, 578.16pt x 310.15875pt>
-File: images/figure1.pdf Graphic file (type pdf)
-<use images/figure1.pdf>
-Package pdftex.def Info: images/figure1.pdf  used on input line 460. on input l
-ine 460.
-Package pdftex.def Info: Requested size: 442.65375pt x 237.4647pt on input line
- 460.
+[12]
+<images/flowchart.pdf, id=341, 327.2225pt x 284.06125pt>
+File: images/flowchart.pdf Graphic file (type pdf)
+<use images/flowchart.pdf>
+Package pdftex.def Info: images/flowchart.pdf  used on input line 453.
+(pdftex.def)             Requested size: 194.76872pt x 169.07704pt.
 
 Overfull \hbox (10.94998pt too wide) has occurred while \output is active
 [] \T1/aer/m/n/10.95 13
@@ -979,100 +981,89 @@ Overfull \hbox (10.94998pt too wide) has occurred while \output is active
 \T1/aer/m/n/10.95 14 []
  []
 
-[14 <./images/figure1.pdf>]
-<images/figure2.pdf, id=369, pagebox=cropbox, 578.16pt x 144.54pt>
-File: images/figure2.pdf Graphic file (type pdf)
-<use images/figure2.pdf>
-Package pdftex.def Info: images/figure2.pdf  used on input line 540. on input l
-ine 540.
-Package pdftex.def Info: Requested size: 442.65375pt x 110.66315pt on input lin
-e 540.
+[14 <./images/flowchart.pdf>]
+<images/figure1.pdf, id=368, 578.16pt x 310.15875pt>
+File: images/figure1.pdf Graphic file (type pdf)
+<use images/figure1.pdf>
+Package pdftex.def Info: images/figure1.pdf  used on input line 513.
+(pdftex.def)             Requested size: 442.65375pt x 237.4647pt.
 
 Overfull \hbox (10.94998pt too wide) has occurred while \output is active
 [] \T1/aer/m/n/10.95 15
  []
 
-[15]
-<images/figure3.pdf, id=377, pagebox=cropbox, 578.16pt x 144.54pt>
-File: images/figure3.pdf Graphic file (type pdf)
-<use images/figure3.pdf>
-Package pdftex.def Info: images/figure3.pdf  used on input line 574. on input l
-ine 574.
-Package pdftex.def Info: Requested size: 442.65375pt x 110.66315pt on input lin
-e 574.
-
-Underfull \vbox (badness 2221) has occurred while \output is active []
-
-
+[15 <./images/figure1.pdf>]
 Overfull \hbox (10.94998pt too wide) has occurred while \output is active
 \T1/aer/m/n/10.95 16 []
  []
 
-[16 <./images/figure2.pdf>]
-<images/figure4.pdf, id=402, pagebox=cropbox, 578.16pt x 144.54pt>
-File: images/figure4.pdf Graphic file (type pdf)
-<use images/figure4.pdf>
-Package pdftex.def Info: images/figure4.pdf  used on input line 603. on input l
-ine 603.
-Package pdftex.def Info: Requested size: 442.65375pt x 110.66315pt on input lin
-e 603.
+[16]
+<images/figure2.pdf, id=405, 578.16pt x 144.54pt>
+File: images/figure2.pdf Graphic file (type pdf)
+<use images/figure2.pdf>
+Package pdftex.def Info: images/figure2.pdf  used on input line 593.
+(pdftex.def)             Requested size: 442.65375pt x 110.66315pt.
 
 Overfull \hbox (10.94998pt too wide) has occurred while \output is active
 [] \T1/aer/m/n/10.95 17
  []
 
-[17 <./images/figure3.pdf>]
-<images/figure5.pdf, id=429, pagebox=cropbox, 578.16pt x 361.35pt>
-File: images/figure5.pdf Graphic file (type pdf)
-<use images/figure5.pdf>
-Package pdftex.def Info: images/figure5.pdf  used on input line 623. on input l
-ine 623.
-Package pdftex.def Info: Requested size: 442.65375pt x 276.65791pt on input lin
-e 623.
+[17 <./images/figure2.pdf>]
+<images/figure3.pdf, id=428, 578.16pt x 144.54pt>
+File: images/figure3.pdf Graphic file (type pdf)
+<use images/figure3.pdf>
+Package pdftex.def Info: images/figure3.pdf  used on input line 627.
+(pdftex.def)             Requested size: 442.65375pt x 110.66315pt.
 
 Overfull \hbox (10.94998pt too wide) has occurred while \output is active
 \T1/aer/m/n/10.95 18 []
  []
 
-[18 <./images/figure4.pdf>]
+[18 <./images/figure3.pdf>]
+<images/figure4.pdf, id=455, 578.16pt x 144.54pt>
+File: images/figure4.pdf Graphic file (type pdf)
+<use images/figure4.pdf>
+Package pdftex.def Info: images/figure4.pdf  used on input line 656.
+(pdftex.def)             Requested size: 442.65375pt x 110.66315pt.
+
 Overfull \hbox (10.94998pt too wide) has occurred while \output is active
 [] \T1/aer/m/n/10.95 19
  []
 
-[19 <./images/figure5.pdf>]
-<images/figure6.pdf, id=491, pagebox=cropbox, 578.16pt x 325.215pt>
-File: images/figure6.pdf Graphic file (type pdf)
-<use images/figure6.pdf>
-Package pdftex.def Info: images/figure6.pdf  used on input line 696. on input l
-ine 696.
-Package pdftex.def Info: Requested size: 442.65375pt x 248.99211pt on input lin
-e 696.
-<images/figure7.pdf, id=494, pagebox=cropbox, 578.16pt x 433.62pt>
-File: images/figure7.pdf Graphic file (type pdf)
-<use images/figure7.pdf>
-Package pdftex.def Info: images/figure7.pdf  used on input line 722. on input l
-ine 722.
-Package pdftex.def Info: Requested size: 442.65375pt x 331.9895pt on input line
- 722.
+[19 <./images/figure4.pdf>]
+<images/figure5.pdf, id=482, 578.16pt x 361.35pt>
+File: images/figure5.pdf Graphic file (type pdf)
+<use images/figure5.pdf>
+Package pdftex.def Info: images/figure5.pdf  used on input line 676.
+(pdftex.def)             Requested size: 442.65375pt x 276.65791pt.
 
 Overfull \hbox (10.94998pt too wide) has occurred while \output is active
 \T1/aer/m/n/10.95 20 []
  []
 
-[20]
-Underfull \vbox (badness 1383) has occurred while \output is active []
-
-
+[20 <./images/figure5.pdf>]
 Overfull \hbox (10.94998pt too wide) has occurred while \output is active
 [] \T1/aer/m/n/10.95 21
  []
 
-[21 <./images/figure6.pdf>]
+[21]
+<images/figure6.pdf, id=527, 578.16pt x 325.215pt>
+File: images/figure6.pdf Graphic file (type pdf)
+<use images/figure6.pdf>
+Package pdftex.def Info: images/figure6.pdf  used on input line 748.
+(pdftex.def)             Requested size: 442.65375pt x 248.99211pt.
+
 Overfull \hbox (10.94998pt too wide) has occurred while \output is active
 \T1/aer/m/n/10.95 22 []
  []
 
-[22 <./images/figure7.pdf>]
+[22 <./images/figure6.pdf>]
+<images/figure7.pdf, id=564, 578.16pt x 433.62pt>
+File: images/figure7.pdf Graphic file (type pdf)
+<use images/figure7.pdf>
+Package pdftex.def Info: images/figure7.pdf  used on input line 774.
+(pdftex.def)             Requested size: 442.65375pt x 331.9895pt.
+
 Overfull \hbox (10.94998pt too wide) has occurred while \output is active
 [] \T1/aer/m/n/10.95 23
  []
@@ -1082,15 +1073,7 @@ Overfull \hbox (10.94998pt too wide) has occurred while \output is active
 \T1/aer/m/n/10.95 24 []
  []
 
-[24]
-<images/figure8.pdf, id=584, pagebox=cropbox, 578.16pt x 289.08pt>
-File: images/figure8.pdf Graphic file (type pdf)
-<use images/figure8.pdf>
-Package pdftex.def Info: images/figure8.pdf  used on input line 867. on input l
-ine 867.
-Package pdftex.def Info: Requested size: 442.65375pt x 221.32632pt on input lin
-e 867.
-
+[24 <./images/figure7.pdf>]
 Overfull \hbox (10.94998pt too wide) has occurred while \output is active
 [] \T1/aer/m/n/10.95 25
  []
@@ -1100,65 +1083,90 @@ Overfull \hbox (10.94998pt too wide) has occurred while \output is active
 \T1/aer/m/n/10.95 26 []
  []
 
-[26 <./images/figure8.pdf>]
-<images/figure9.pdf, id=622, pagebox=cropbox, 578.16pt x 289.08pt>
-File: images/figure9.pdf Graphic file (type pdf)
-<use images/figure9.pdf>
-Package pdftex.def Info: images/figure9.pdf  used on input line 939. on input l
-ine 939.
-Package pdftex.def Info: Requested size: 442.65375pt x 221.32632pt on input lin
-e 939.
+[26]
+<images/figure8.pdf, id=621, 578.16pt x 289.08pt>
+File: images/figure8.pdf Graphic file (type pdf)
+<use images/figure8.pdf>
+Package pdftex.def Info: images/figure8.pdf  used on input line 918.
+(pdftex.def)             Requested size: 442.65375pt x 221.32632pt.
 
 Overfull \hbox (10.94998pt too wide) has occurred while \output is active
 [] \T1/aer/m/n/10.95 27
  []
 
-[27 <./images/figure9.pdf>]
+[27 <./images/figure8.pdf>]
 Overfull \hbox (10.94998pt too wide) has occurred while \output is active
 \T1/aer/m/n/10.95 28 []
  []
 
-[28] (./article.bbl
-LaTeX Font Info:    Font shape `T1/aer/b/it' in size <10.95> not available
-(Font)              Font shape `T1/aer/bx/it' tried instead on input line 26.
+[28]
+<images/figure9.pdf, id=656, 578.16pt x 289.08pt>
+File: images/figure9.pdf Graphic file (type pdf)
+<use images/figure9.pdf>
+Package pdftex.def Info: images/figure9.pdf  used on input line 990.
+(pdftex.def)             Requested size: 442.65375pt x 221.32632pt.
 
 Overfull \hbox (10.94998pt too wide) has occurred while \output is active
 [] \T1/aer/m/n/10.95 29
  []
 
-[29]
+[29 <./images/figure9.pdf>]
+<images/figure10.pdf, id=696, 433.62pt x 144.54pt>
+File: images/figure10.pdf Graphic file (type pdf)
+<use images/figure10.pdf>
+Package pdftex.def Info: images/figure10.pdf  used on input line 1023.
+(pdftex.def)             Requested size: 433.62pt x 144.54623pt.
+
 Overfull \hbox (10.94998pt too wide) has occurred while \output is active
 \T1/aer/m/n/10.95 30 []
  []
 
-[30])
-LaTeX Font Info:    Font shape `T1/pzc/m/n' in size <13> not available
-(Font)              Font shape `T1/pzc/mb/it' tried instead on input line 1033.
-
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1033.
-
+[30 <./images/figure10.pdf>]
 Overfull \hbox (10.94998pt too wide) has occurred while \output is active
 [] \T1/aer/m/n/10.95 31
  []
 
-[31]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1033.
+[31] (./article.bbl
+LaTeX Font Info:    Font shape `T1/aer/b/it' in size <10.95> not available
+(Font)              Font shape `T1/aer/bx/it' tried instead on input line 26.
+
+Overfull \hbox (10.94998pt too wide) has occurred while \output is active
+\T1/aer/m/n/10.95 32 []
+ []
+
+[32]
+Overfull \hbox (10.94998pt too wide) has occurred while \output is active
+[] \T1/aer/m/n/10.95 33
+ []
+
+[33])
+LaTeX Font Info:    Font shape `T1/pzc/m/n' in size <13> not available
+(Font)              Font shape `T1/pzc/mb/it' tried instead on input line 1099.
+
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1099.
+
+Overfull \hbox (10.94998pt too wide) has occurred while \output is active
+\T1/aer/m/n/10.95 34 []
+ []
+
+[34]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1099.
  (./article.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1033.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1033.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1099.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1099.
 
 Package rerunfilecheck Info: File `article.out' has not changed.
-(rerunfilecheck)             Checksum: F311D6D17A686B3865387B85361D6C59;3616.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1033.
+(rerunfilecheck)             Checksum: F57808A91803DCAD9E0C88AEB06F421A;3750.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1099.
  ) 
 Here is how much of TeX's memory you used:
- 8390 strings out of 492990
- 119088 string characters out of 6135004
- 204692 words of memory out of 5000000
- 11599 multiletter control sequences out of 15000+600000
- 64609 words of font info for 122 fonts, out of 8000000 for 9000
+ 8474 strings out of 492982
+ 120313 string characters out of 6134895
+ 208733 words of memory out of 5000000
+ 11674 multiletter control sequences out of 15000+600000
+ 66269 words of font info for 124 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 35i,18n,34p,1200b,478s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 35i,18n,34p,1285b,477s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}{/usr/share/texli
 ve/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/texmf-dist/fonts/
 type1/public/amsfonts/cm/cmb10.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
@@ -1175,20 +1183,22 @@ xmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist
 ype1/public/amsfonts/cm/cmsl10.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
 ublic/amsfonts/cm/cmsltt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
 c/amsfonts/cm/cmss10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
-onts/cm/cmssbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-sy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb
-></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr
-/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share
-/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb></usr/share/texliv
-e/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texlive
-/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texmf/fo
-nts/type1/public/cm-super/sfrm1095.pfb></usr/share/texlive/texmf-dist/fonts/typ
-e1/urw/zapfchan/uzcmi8a.pfb>
-Output written on article.pdf (31 pages, 810592 bytes).
+onts/cm/cmss8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmssbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cms
+y10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb
+></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/
+share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/share/t
+exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texlive/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmtt9.pfb></usr/share/texlive/texmf-dist/f
+onts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fo
+nts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texmf/fonts/type1/publ
+ic/cm-super/sfrm1095.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/zapfcha
+n/uzcmi8a.pfb>
+Output written on article.pdf (34 pages, 904339 bytes).
 PDF statistics:
- 818 PDF objects out of 1000 (max. 8388607)
- 679 compressed objects within 7 object streams
- 140 named destinations out of 1000 (max. 500000)
- 264 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 897 PDF objects out of 1000 (max. 8388607)
+ 745 compressed objects within 8 object streams
+ 152 named destinations out of 1000 (max. 500000)
+ 277 words of extra memory for PDF output out of 10000 (max. 10000000)
 
