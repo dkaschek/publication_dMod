@@ -693,15 +693,17 @@ To simulate the new experimental condition, the \code{"reflux"} parameter is mod
 
 \begin{CodeChunk}
 \begin{CodeInput}
-pars["reflux"] <- 1e3
-out <- (g*x)(times, pars, conditions = "open")
+  pars["reflux"] <- 1e3
+  out <- (g*x)(times, pars, conditions = "open")
 
-datasheet <- subset(as.data.frame(out),
-		    time %in% timesD & name %in% names(observables))
-datasheet$sigma <- sqrt(datasheet$value + 1)
-datasheet$value <- rnorm(nrow(datasheet), datasheet$value, datasheet$sigma)
+  datasheet <- subset(as.data.frame(out),
+                      time %in% timesD & name %in% names(observables))
+  datasheet <- within(datasheet, {
+	  sigma <- sqrt(value + 1)
+	  value <- rnorm(length(value), value, sigma)
+  })
 
-data <- data + as.datalist(datasheet)
+  data <- data + as.datalist(datasheet)
 \end{CodeInput}
 \end{CodeChunk}
 
