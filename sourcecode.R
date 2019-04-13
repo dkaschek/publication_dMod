@@ -47,7 +47,7 @@ plot(out)
 outSens <- getDerivs(x(times, pars[4:7], fixed = pars[1:3]))
 plot(outSens)
 
-# Reproduce figure in the paper:
+# Reproduce Figure 2 in the paper:
 P.pred <- plot(out) + 
   facet_wrap(~name, scales="free", ncol=1) + 
   theme(legend.position = "none") + ylab("concentration")
@@ -96,7 +96,7 @@ datasheet <- within(datasheet, {
 data <- as.datalist(datasheet)
 plot(out, data)
 
-# Reproduce figure in the paper:
+# Reproduce Figure 3 in the paper:
 P.simu <- plot(out, data) + 
   facet_wrap(~name,scales="free", nrow=1) + 
   theme(legend.position = "none") + 
@@ -126,7 +126,7 @@ outerpars <- getParameters(p)
 pouter <- structure(rep(-1, length(outerpars)), names = outerpars)
 plot((g*x*p)(times, pouter), data)
 
-# Reproduce figure in the paper
+# Reproduce Figure 4 in the paper
 P.fit <- plot((g*x*p)(times, pouter), data) + 
   facet_wrap(~name,scales="free", nrow=1) + 
   theme(legend.position = "none") + 
@@ -144,7 +144,7 @@ myfit <- trust(obj, pouter, rinit = 1, rmax = 10)
 
 plot((g*x*p)(times, myfit$argument), data)
 
-# Reproduce figure in the paper
+# Reproduce Figure 5 in the paper
 P.fit <- plot((g*x*p)(times, myfit$argument), data) + 
   facet_wrap(~name,scales="free", nrow=1) + 
   theme(legend.position = "none") + 
@@ -163,7 +163,7 @@ myframe <- as.parframe(out_mstrust)
 plotValues(myframe, tol = .01, value < 100)
 plotPars(myframe, tol = .01, value < 100)
 
-# Reproduce plot in the paper
+# Reproduce Figure 6 in the paper
 P.lhs <- plotValues(myframe, tol = 0.01, value < 100) + 
   ylab(expression(chi^2~value)) 
 
@@ -221,7 +221,7 @@ plotPars(myframe, tol = 0.1, value < 100)
 bestfit <- as.parvec(myframe)
 plot((g*x*p)(times, bestfit), data)
 
-# Reproduce figure in the paper
+# Reproduce Figure 7 in the paper
 d.pred <- as.data.frame((g*x*p)(times, bestfit))
 d.data <- as.data.frame(data)
 P.fit <- 
@@ -262,7 +262,7 @@ profiles <- profile(obj, bestfit, names(bestfit),
 plotProfile(profiles)
 plotPaths(profiles, whichPar = "s")
 
-# Reproduce figure in the paper
+# Reproduce Figure 8 in the paper
 P.prof <- plotProfile(profiles) + 
   facet_wrap(~name, scales="free_x", nrow=2) + 
   guides(color = "none") +
@@ -378,7 +378,7 @@ profiles_SS_implicit <- profiles
 
 
 
-# Reproduce figure in the paper
+# Reproduce Figure 9 in the paper
 profiles_tot <- list("noSS" = profiles_noSS, 
                      "SS_explicit" = profiles_SS_analytic,
                      "SS_implicit" = profiles_SS_implicit)
@@ -455,7 +455,7 @@ profile_prediction <- profile(obj + obj.validation,
                               fixed = fixed)
 
 
-# Compute validation band to reproduce the figure in the paper
+# Compute validation band to reproduce the Figure 10 in the paper
 tPred <-  c(1, 3, 6, 10, 15, 21, 28, 36, 45)
 obj <- normL2(data, g*x*pSS*p, times = tPred) + constraintL2(pouter, sigma = 10)
 
