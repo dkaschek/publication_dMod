@@ -89,26 +89,11 @@ Dynamic systems modeled by ordinary differential equations (ODEs) are found in s
 Single mechanisms or single processes of a complex system are represented by respective terms in the equations of a dynamic model. Parameter estimation can then identify those processes which are crucial to explaining the observation.
 In that sense, parameter estimation can be employed as an instrument to \textit{understand} complex systems. Once the link between observation and model has been established by the estimated parameters, questions about their identifiability arise. The parameter space needs to be explored in order to analyze whether the estimate is unique and to determine confidence bounds.
 
-
-Although the problem of parameter estimation in non-linear dynamic systems is highly relevant and at the heart of statistical computing, to this day there are not more than four \proglang{R} packages published on the topic on the Comprehensive \proglang{R} Archive Network (CRAN), namely \pkg{FME} \citep{FME}, \pkg{nlmeODE} \citep{nlmeODE}, \pkg{mkin} \citep{mkin} and \pkg{scaRabee} \citep{scaRabee}. All packages have in common that they are built upon the \pkg{deSolve} package \citep{deSolve}.
-The packages \pkg{mkin} and \pkg{FME} support ODEs defined by compiled code where \pkg{mkin} also provides tools to autogenerate the \proglang{C} code and compile it using the \pkg{inline} package. For model fitting and uncertainty analysis, \pkg{mkin} fully resorts to the functionality of \pkg{FME}.
-Concerning model fitting, \pkg{FME} and \pkg{nlmeODE} (with \pkg{nlme} in the background) use deterministic derivative-based optimizers by default, i.e.~either Levenberg-Marquardt or Newton methods provided by \code{nls.lm()}, \code{optim()} or \code{nlmimb()}. Although all these optimizers support gradient or Hessian information as input, only the \pkg{nlmeODE} package provides an option to augment the ODE by its sensitivity equations to generate derivates for the residuals. By default, sensitivities are computed by finite differences. Last but not least, the \pkg{scaRabee} package uses the Nelder-Mead optimization algorithm which is derivative-free but needs in general more iterations until convergence compared to derivative-based methods.
-In all packages, uncertainty analysis is by default based on the variance-covariance matrix, i.e.~on the inverse Hessian matrix of the least squares function. For non-linear models, this method provides a good approximation only if parameters are identifiable and the data is highly informative. If these conditions are not met, more sophisticated methods like e.g.~Markov chain Monte Carlo (MCMC) sampling, implemented in \pkg{FME}, are required.
-The strength of \pkg{scaRabee} and especially \pkg{nlmeODE} is multi-conditional fitting. This means that the same model with the same parameters but different forcings to reflect experimental conditions is fitted simultaneously to the condition-specific data sets. In the context of mixed-effects modeling as provided by \pkg{nlmeODE}, parameters can be grouped in fixed effects (same parameters over all conditions) and random effects (parameters are different between conditions).
-
-In this paper we present \pkg{dMod}, an \proglang{R} package on dynamic modeling and parameter estimation. 
-The package is grown over the last years and reflects many developments and lessons learned from our research projects with time-resolved experimental data from Systems Biology. They form the basis of the development of \pkg{dMod} and are mostly referenced in the following paragraphs.\\
-The aim and core functionality of \pkg{dMod} is
-\begin{enumerate}[(i)]
-	\item facilitated set-up of dynamic models with automated \proglang{C} code generation for fast simulation of model predictions and model sensitivities,
-	\item flexible set-up of general parameter transformations (explicit or implicit) and observation functions, allowing for the implementation of multiple experimental conditions similar to mixed-effects modeling,
-	\item parameter estimation based on trust-region optimization of the negative log-likelihood, making use of the sensitivity equations of the dynamic system and of symbolic derivatives of the observation- and parameter transformation functions,
-	\item identifiability and uncertainty analysis based on the profile-likelihood method to determine confidence intervals for parameters and predictions.
-\end{enumerate}
+Although the problem of parameter estimation in non-linear ODE models is highly relevant and at the heart of statistical computing, there are currently not more than four \proglang{R} packages published on the topic on the Comprehensive \proglang{R} Archive Network (CRAN), namely \pkg{FME} \citep{FME}, \pkg{nlmeODE} \citep{nlmeODE}, \pkg{mkin} \citep{mkin} and \pkg{scaRabee} \citep{scaRabee}. All packages have in common that they are built upon the \pkg{deSolve} package \citep{deSolve}. Taking a broader perspective on the topic of dynamic modeling and inference, we find more packages, dealing with, e.g., discrete-time and continuous-time stochastic systems \citep{CollocInfer} or the statistical inference of partially observed Markov processes \citep{pomp}.
 
 The packages \pkg{mkin} and \pkg{FME} support ODEs defined by compiled code while \pkg{mkin} also provides tools to autogenerate the \proglang{C} code and compile it using the \pkg{inline} package \citep{inline}. For model fitting and uncertainty analysis, \pkg{mkin} fully resorts to the functionality of \pkg{FME}.
-Concerning model fitting, \pkg{FME} and \pkg{nlmeODE} (with \pkg{nlme} in the background) use deterministic derivative-based optimizers by default, i.e.~either Levenberg-Marquardt or Newton methods provided by \code{nls.lm()}, \code{optim()} or \code{nlmimb()}. Although all these optimizers support gradient or Hessian information as input, only the \pkg{nlmeODE} package provides an option to augment the ODE by its sensitivity equations to generate derivates for the residuals. By default, sensitivities are computed by finite differences. Last but not least, the \pkg{scaRabee} package uses the Nelder-Mead optimization algorithm which is derivative-free but generally needs more iterations until convergence compared to derivative-based methods.
-In all packages, uncertainty analysis is by default based on the variance-covariance matrix, i.e.~on the inverse Hessian matrix of the least squares function. For non-linear models, this method provides a good approximation only if parameters are identifiable and the data is highly informative. If these conditions are not met, more sophisticated methods like e.g.~Markov chain Monte Carlo (MCMC) sampling, implemented in \pkg{FME}, are required.
+Concerning model fitting, \pkg{FME} and \pkg{nlmeODE} (with \pkg{nlme} in the background) use deterministic derivative-based optimizers by default, i.e., either Levenberg-Marquardt or Newton methods provided by \code{nls.lm()}, \code{optim()} or \code{nlmimb()}. Although all these optimizers support gradient or Hessian information as input, only the \pkg{nlmeODE} package provides an option to augment the ODE by its sensitivity equations to generate derivates for the residuals. By default, sensitivities are computed by finite differences. Last but not least, the \pkg{scaRabee} package uses the Nelder-Mead optimization algorithm which is derivative-free but generally needs more iterations until convergence compared to derivative-based methods.
+In all packages, uncertainty analysis is by default based on the variance-covariance matrix, i.e., non the inverse Hessian matrix of the least squares function. For non-linear models, this method provides a good approximation only if parameters are identifiable and the data is highly informative. If these conditions are not met, more sophisticated methods like, e.g., Markov chain Monte Carlo (MCMC) sampling, implemented in \pkg{FME}, are required.
 The strength of \pkg{scaRabee} and especially \pkg{nlmeODE} is multi-conditional fitting. This means that the same model with the same parameters but different forcings to reflect experimental conditions is fitted simultaneously to the condition-specific data sets. In the context of mixed-effects modeling as provided by \pkg{nlmeODE}, parameters can be grouped in fixed effects (parameters are the same in all conditions) and random effects (parameters are different between conditions).
 
 In this paper we present \pkg{dMod}, an \proglang{R} package on dynamic modeling and parameter estimation. 
@@ -137,7 +122,7 @@ The package has grown over the past years and reflects many developments and les
 	\vspace{0.1em}
 
 	\begin{scriptsize}
-		$^1$Only ODE, no sensitivity equations generated. $^2$Mixed-effects modeling allows to define parameters in a condition-specific manner. $^3$Other methods used, e.g.~the collinearity method \citep{brun2001practical}. 
+		$^1$Only ODE, no sensitivity equations generated. $^2$Mixed-effects modeling allows to define parameters in a condition-specific manner. $^3$Other methods used, e.g., the collinearity method \citep{brun2001practical}. 
 	\end{scriptsize}
 \end{table}
 
@@ -151,7 +136,7 @@ The package has grown over the past years and reflects many developments and les
 The \pkg{dMod} package deals with noise in the observation but not with noise in the dynamics. Therefore, the application of \pkg{dMod} is restricted to systems that are described or can be approximated by a deterministic set of differential equations. 
 The core functionality is extended by two symbolic methods implemented in \proglang{Python} and interfaced via the \pkg{rPython} package: identifiability and observability analysis based on Lie-group symmetries \citep{merkt2015higher} and steady-state constraints for parameter estimation \citep{rosenblatt2016customized}.
 
-The implementation of capabilities to generate and propagate derivatives on a compiled-code level distinguishes \pkg{dMod} from other modeling frameworks as discussed above. Most of the standard optimization routines implemented in \proglang{R} need derivative information. However, the computation of derivatives in the context of ODE models holds some pitfalls. The accuracy of sensitivities obtained from finite differences can be insufficient because the step control of the integrator presents an additional source of numeric inaccuracy. Even for numeric methods circumventing this problem, e.g.~complex-step derivatives \citep{squire1998using}, the use of sensitivity equations is still beneficial judging from the accuracy vs.~computational cost ratio. See \cite{raue2013lessons} for a comparison of methods.
+The implementation of capabilities to generate and propagate derivatives on a compiled-code level distinguishes \pkg{dMod} from other modeling frameworks as discussed above. Most of the standard optimization routines implemented in \proglang{R} need derivative information. However, the computation of derivatives in the context of ODE models holds some pitfalls. The accuracy of sensitivities obtained from finite differences can be insufficient because the step control of the integrator presents an additional source of numeric inaccuracy. Even for numeric methods circumventing this problem, e.g., complex-step derivatives \citep{squire1998using}, the use of sensitivity equations is still beneficial judging from the accuracy vs.~computational cost ratio. See \cite{raue2013lessons} for a comparison of methods.
 
 Another distinguishing feature of \pkg{dMod} is the handling of non-identifiability of parameters, a phenomenon that occurs frequently in the context of parameter estimation in dynamic systems.
 In some cases, non-identifiability has structural reasons. The differential equations bear certain symmetries which can or cannot be broken, depending on the structure of the observation. A functional relationship between parameters that leaves the observation invariant is the consequence of the latter. In other cases, the data allows the determination of a unique optimum but other solutions, although worse, cannot be statistically rejected. The \pkg{dMod} package deals with parameter identifiability and parameter uncertainty by the profile-likelihood method \citep{murphy2000profile, raue2009structural, kreutz2013profile}. This method has proven especially useful in the case of non-identifiable parameters where results obtained from both the quadratic approximation by the variance-covariance matrix and MCMC sampling can be misleading \citep{raue2013joining}. Besides parameter uncertainties, the profile likelihood method allows the estimation of prediction uncertainty \citep{kreutz2012likelihood}. It therefore supports the planning of new informative experiments \citep{raue2011addressing} or suggests possible model reductions \citep{maiwald2016driving}.
@@ -198,7 +183,7 @@ Here, $S$ denotes the $n\times r$ stoichiometry matrix where each column corresp
 %containing the stoichiometric constants $\nu_{i,j}$
 %obtained from the collection of vectors $\nu' - \nu$ for reactions $1, \dots, r$,
 %and the flux vector $w(x,k)\in\mathbb R^{r}$.
-Eq.~\eqref{eq:Sv} also holds for general ODEs that do not follow from mass action kinetics. Moreover the system may be explicitly time-dependent and may contain forcings $u(t)$ which e.g.~describe the external stimulation of the system. A general form of the dynamic model is therefore given by
+Eq.~\eqref{eq:Sv} also holds for general ODEs that do not follow from mass action kinetics. Moreover the system may be explicitly time-dependent and may contain forcings $u(t)$ which, e.g., describe the external stimulation of the system. A general form of the dynamic model is therefore given by
 \begin{align}
 	\dot x = f(x,k,u,t) = S w(x,k,u,t), \quad\quad \textrm{with }  x(t = 0) = x_0.
 \end{align}
@@ -226,7 +211,7 @@ The estimation of the parameters $\theta$ given the observation $y(t)$ is addres
 
 \subsection{Maximum-likelihood method}
 
-Parameter estimation is a common task in statistics. It describes the process of inferring parameter values or parameter ranges of a statistical model based on observed data. Over decades, appropriate estimators have been developed for different problem classes. The principle of maximum likelihood allows to derive an estimator which is especially suited for applications where the distribution of the measurement noise is known. This knowledge about the structure of the noise constitutes additional information that makes the maximum-likelihood estimator (MLE) \textit{efficient}, i.e.~from all unbiased estimators the MLE has the lowest variance. Other properties of maximum-likelihood estimation are \textit{consistency}, i.e.~the estimated parameter value approaches the true parameter value in the limit of infinite data-sample size, and \textit{asymptotic normality}, i.e.~in the limit of infinite data the MLE follows a multivariate normal distribution. See \cite{azzalini1996statistical} for an introduction to likelihood theory.
+Parameter estimation is a common task in statistics. It describes the process of inferring parameter values or parameter ranges of a statistical model based on observed data. Over decades, appropriate estimators have been developed for different problem classes. The principle of maximum likelihood allows to derive an estimator which is especially suited for applications where the distribution of the measurement noise is known. This knowledge about the structure of the noise constitutes additional information that makes the maximum-likelihood estimator (MLE) \textit{efficient}, i.e., from all unbiased estimators the MLE has the lowest variance. Other properties of maximum-likelihood estimation are \textit{consistency}, i.e., the estimated parameter value approaches the true parameter value in the limit of infinite data-sample size, and \textit{asymptotic normality}, i.e., in the limit of infinite data the MLE follows a multivariate normal distribution. See \cite{azzalini1996statistical} for an introduction to likelihood theory.
 
 Maximum-likelihood estimation is based on the maximization of the likelihood function $L(\theta) = \phi(y^D|\theta)$. Here, $\phi$ is the joint probability density for a vector of observations $y$, c.f.~eq.~\eqref{eq:observation}, evaluated at the point $y = y^D$, the vector of data points. The distribution $\phi$ depends parametrically on model parameters $\theta$. The maximum-likelihood estimator $\hat\theta$ is defined as
 \begin{align*}
@@ -256,7 +241,7 @@ Optimization by the Newton method attempts to iteratively find the root of the g
 	\theta^{(n+1)} = \theta^{(n)} - Hl(\theta)^{-1}\nabla l(\theta),
 	\label{eq:newton}
 \end{align}
-where $Hl(\theta)$ denotes the Hessian, i.e.~the matrix of second derivatives of $l(\theta)$. The fact that for normally distributed noise the log-likelihood is a least squares function, has a big advantage: gradient and (approximate) Hessian can be computed from first-order derivatives  \citep{press1996numerical}. Since the second-order contributions to the Hessian can be neglected, gradient and Hessian read
+where $Hl(\theta)$ denotes the Hessian, i.e., the matrix of second derivatives of $l(\theta)$. The fact that for normally distributed noise the log-likelihood is a least squares function, has a big advantage: gradient and (approximate) Hessian can be computed from first-order derivatives  \citep{press1996numerical}. Since the second-order contributions to the Hessian can be neglected, gradient and Hessian read
 \begin{align}
 	\nabla l(\theta) = 2 r(\theta) J(\theta) \quad\quad Hl(\theta) \approx 2 J(\theta)^T J(\theta),
 	\label{eq:derivatives}
@@ -268,7 +253,6 @@ with the weighted residual vector $r_i(\theta) = \frac{y_i(\theta) - y_i^D}{\sig
 As indicated by eqs.~\eqref{eq:derivatives}-\eqref{eq:jacobian},  first order model sensitivities $\frac{\partial y_i}{\partial\theta_j}$ are sufficient to compute gradient and Hessian in good approximation.
 
 The Newton recursion, eq.~\eqref{eq:newton}, converges in one iteration if $l(\theta)$ is a quadratic form. However, $l(\theta)$ is only quadratic if the model $y(\theta)$ is linear in $\theta$ which is usually not the case for ODE models. On the other hand, each smooth function, no matter if quadratic or not, can be approximated by a quadratic function based on its Taylor series.
-%Depending on the function's shape, the \textit{trust region}, i.e.~the region where $l(\theta)$ is well approximated, can become quite small. Accordingly, a Newton step pointing far beyond this region could be misleading and not helpful for optimization. This is the idea behind trust-region optimization \citep{wright1999numerical}.
 Thus, $l(\theta)$ can be approximated by a quadratic function in at least a small region around $\theta$. The idea of trust-region optimization is to confine a Newton step to a region, the \textit{trust region}, where the quadratic approximation holds \citep{wright1999numerical}.
 In each iteration, the trust-region radius is adjusted and the optimization problem restricted to the trust region is solved. For parameter estimation in ODE models this has the additional advantage that parameter changes are constricted and optimization steps into parameter regions where the ODE cannot be numerically solved any more  become less frequent. This makes trust-region optimization the method of choice for \pkg{dMod}.
 
@@ -324,15 +308,15 @@ The guiding idea behind the implementation of \pkg{dMod} is to provide a class s
 
 A system of ODEs $\dot x = f(x, p, u, t)$ is represented by a named \code{character} vector of symbolic expressions, the right-hand side of the ODE, involving symbols for the states $x$, the parameters $p$, the forcings $u$ and the keyword \code{time} for $t$. The names of the vector are the state names. The class provided by \pkg{dMod} for such objects is the \code{eqnvec} class which checks whether the character can be parsed and thus, can be interpreted as an equation.
 
-\pkg{dMod} provides several ways to define the differential equations. An \code{eqnvec} of equations can be explicitly formulated, analogously to a \code{c()} command. Especially for chemical reactions it can be tedious to keep track of all gain and loss terms. Therefore, \pkg{dMod} provides also the \code{eqnlist} class which encodes the ODE by a list of (1) state names, (2) rate expressions, (3) compartment volumes and (4) the stoichiometric matrix. Each reaction flux, c.f.~eq.~\eqref{eq:Sv}, occurs only once and the gain and loss is represented by the coefficients in the stoichiometric matrix. \pkg{dMod} supports the read-in of a csv file with the stoichiometric matrix and rate expressions and provides a function \code{addReaction()} to construct an \code{eqnlist} object step-by-step or add further reactions to an already existing \code{eqnlist}. An \code{eqnlist} is converted to (differential) equations, i.e.~an \code{eqnvec}, by \code{as.eqnvec()}. The conversion does all the bookkeeping of gain and loss terms and volume ratios due to compartment transitions.
+\pkg{dMod} provides several ways to define the differential equations. An \code{eqnvec} of equations can be explicitly formulated, analogously to a \code{c()} command. Especially for chemical reactions it can be tedious to keep track of all gain and loss terms. Therefore, \pkg{dMod} provides also the \code{eqnlist} class which encodes the ODE by a list of (1) state names, (2) rate expressions, (3) compartment volumes and (4) the stoichiometric matrix. Each reaction flux, c.f.~eq.~\eqref{eq:Sv}, occurs only once and the gain and loss is represented by the coefficients in the stoichiometric matrix. \pkg{dMod} supports the read-in of a csv file with the stoichiometric matrix and rate expressions and provides a function \code{addReaction()} to construct an \code{eqnlist} object step-by-step or add further reactions to an already existing \code{eqnlist}. An \code{eqnlist} is converted to (differential) equations, i.e., an \code{eqnvec}, by \code{as.eqnvec()}. The conversion does all the bookkeeping of gain and loss terms and volume ratios due to compartment transitions.
 
 \pkg{dMod} makes use of derivatives wherever possible. It is one of the core functionalities of the \pkg{cOde} package \citep{cOde} upon which \pkg{dMod} is based to augment a system of ODEs by its sensitivity equations. If $r$ parameters are involved and the system consists of $n$ states, the number of equations grows as quick as $n^2 + nr$. Solving the equations can be considerably accelerated by utilizing compiled code. \pkg{dMod} provides the \code{odemodel} class. An object of class \code{odemodel} is generated from an \code{eqnlist} or \code{eqnvec}. In the background, \proglang{C} code for the ODE and the combined system of ODE and sensitivity equations is generated, written to the working directory and compiled. The \code{odemodel} object keeps track of the shared objects. It is the basis of a prediction function $x(t, p)$ generated by the \code{Xs()} command.
 
 \subsection{Prediction functions}
 
-\pkg{dMod} seeks to stay close to the mathematical formulation, i.e.~\code{x <- Xs(myodemodel)} will indeed return an \proglang{R} function, an object of class \code{prdfn}, which expects arguments \code{times} and \code{pars} and turns them into a model prediction. The letter \code{"s"} in \code{"Xs"} refers to sensitivities, i.e.~the solution $x(t)$ is returned, the sensitivities $\frac{\partial x}{\partial p}(t)$ are returned, too.
+\pkg{dMod} seeks to stay close to the mathematical formulation, i.e., \code{x <- Xs(myodemodel)} will indeed return an \proglang{R} function, an object of class \code{prdfn}, which expects arguments \code{times} and \code{pars} and turns them into a model prediction. The letter \code{"s"} in \code{"Xs"} refers to sensitivities, i.e., the solution $x(t)$ is returned, the sensitivities $\frac{\partial x}{\partial p}(t)$ are returned, too.
 
-Besides parameters, the prediction might also depend on forcings $u(t)$ and sudden events, e.g.~setting states to 0 at a predefined point in time. Since forcings and events are by default fixed, they are defined together with the  prediction function, \code{x <- Xs(odemodel, forcings = myforcings, events = myevents)}. The definitions of both, forcings and events, are compatible with the way they are defined in \pkg{deSolve}.
+Besides parameters, the prediction might also depend on forcings $u(t)$ and sudden events, e.g., setting states to 0 at a predefined point in time. Since forcings and events are by default fixed, they are defined together with the  prediction function, \code{x <- Xs(odemodel, forcings = myforcings, events = myevents)}. The definitions of both, forcings and events, are compatible with the way they are defined in \pkg{deSolve}.
 
 \subsection{Observation functions}
 
@@ -340,9 +324,9 @@ Besides parameters, the prediction might also depend on forcings $u(t)$ and sudd
 
 An observation function is a function $g(x, p_{\rm obs}, t)$ that evaluates the solution $x(t)$ together with additional (observation) parameters $p_{\rm obs}$. The function can explicitly depend on time~$t$. Similar to the ODE case, an observation function can be expressed as a character vector with names corresponding to the names of the observables and equations involving symbols for the states, parameters and the keyword \code{time}. An observation function is defined as an \code{eqnvec} and turned into an \proglang{R} function via \code{Y()}.
 
-It is one of the fundamental concepts of \pkg{dMod} to allow concatenation of functions via the \code{"*"} operator. The mathematical formulation $y = g\circ x$, i.e.~$y(t, p) = (g\circ x)(t, p):= g(x(t, p), p, t)$ becomes \code{y = g*x} in \proglang{R}. To obtain derivatives $\frac{\partial y}{\partial p}$, the chain rule is applied: $\frac{\partial y}{\partial p} = \frac{\partial g}{\partial x}\frac{\partial x}{\partial p} + \frac{\partial g}{\partial p}$. This means that \code{Y()} needs to be informed which symbols are states and parameters to generate the corresponding expressions $\frac{\partial g}{\partial x}$ and $\frac{\partial g}{\partial p}$. The observation function \code{g} takes care of computing theses derivatives from the symbolic expressions and doing the matrix multiplication with the sensitivities $\frac{\partial x}{\partial p}$ from the prediction function. Evaluation of symbolic expressions can become inefficient in \proglang{R}. Therefore, the observation function is usually translated into a \proglang{C} code and compiled.
+It is one of the fundamental concepts of \pkg{dMod} to allow concatenation of functions via the \code{"*"} operator. The mathematical formulation $y = g\circ x$, i.e., $y(t, p) = (g\circ x)(t, p):= g(x(t, p), p, t)$ becomes \code{y = g*x} in \proglang{R}. To obtain derivatives $\frac{\partial y}{\partial p}$, the chain rule is applied: $\frac{\partial y}{\partial p} = \frac{\partial g}{\partial x}\frac{\partial x}{\partial p} + \frac{\partial g}{\partial p}$. This means that \code{Y()} needs to be informed which symbols are states and parameters to generate the corresponding expressions $\frac{\partial g}{\partial x}$ and $\frac{\partial g}{\partial p}$. The observation function \code{g} takes care of computing theses derivatives from the symbolic expressions and doing the matrix multiplication with the sensitivities $\frac{\partial x}{\partial p}$ from the prediction function. Evaluation of symbolic expressions can become inefficient in \proglang{R}. Therefore, the observation function is usually translated into a \proglang{C} code and compiled.
 
-When observation- and prediction functions are concatenated, the result is a prediction function, e.g.~\code{y = g*x} is the \proglang{R} function computing values $y(t)$ from the arguments \code{times} and \code{pars} via evaluation of the ODE and subsequent evaluation of the observation function. Two observation functions can be concatenated, too, again yielding an observation function.
+When observation- and prediction functions are concatenated, the result is a prediction function, e.g., \code{y = g*x} is the \proglang{R} function computing values $y(t)$ from the arguments \code{times} and \code{pars} via evaluation of the ODE and subsequent evaluation of the observation function. Two observation functions can be concatenated, too, again yielding an observation function.
 
 \subsection{Parameter transformations}
 
@@ -352,7 +336,7 @@ In principle, a parameter transformation $p = \Phi(\theta)$ is a (differentiable
 
 An \proglang{R} function of class \code{parfn} is produced by the \code{P()} command. Transformations can either be formulated explicitly or implicitly. In the explicit case, the function $p = \Phi(\theta)$ corresponds to an \code{eqnvec} whose names are the names of the inner parameters and entries are equations with symbols for the outer parameters. An implicit transformation has the form $f\big(p = \Phi(\theta), \theta\big) = 0$. In this case, $f$ is expressed by an \code{eqnvec} with equations containing symbols for $p$ and $\theta$ and the names of the \code{eqnvec} are the symbols for $p$.
 
-Similar to prediction- and observation functions, parameter functions not only return parameter values but the Jacobian of the transformation, too. Exploiting the chain rule, the derivatives are propagated, allowing to define \code{y = g*x*p} which is a function returning $y(t, \theta)$ and $\frac{\partial y}{\partial \theta}(t)$, i.e.~\code{g*x*p} is a prediction function.
+Similar to prediction- and observation functions, parameter functions not only return parameter values but the Jacobian of the transformation, too. Exploiting the chain rule, the derivatives are propagated, allowing to define \code{y = g*x*p} which is a function returning $y(t, \theta)$ and $\frac{\partial y}{\partial \theta}(t)$, i.e., \code{g*x*p} is a prediction function.
 
 Let \code{g}, \code{x}, \code{p1} and \code{p2} be an observation-, a prediction- and two parameter transformation functions. Then \code{p1*p2} is a parameter transformation function, \code{x*p1} is a prediction function and \code{g*p1} is an observation function.
 
@@ -361,7 +345,7 @@ Let \code{g}, \code{x}, \code{p1} and \code{p2} be an observation-, a prediction
 A set of parameter values, forcings and events captures a certain condition in which we find the modeled system. Manipulating the system, single model parameters, forcings or events need to be changed to account for the manipulation. It is a typical approach in systems inference to systematically perturb small parts of a modeled system to reveal information about the processes.
 
 The aim of \pkg{dMod} is to allow for ``simultaneous'' predictions under several conditions and compare these predictions to the corresponding experimental data sets to estimate model parameters.
-Different experimental conditions are typically expressed by the fact that some parameters are different between conditions whereas others are common to all conditions. This situation occurs e.g.~if perturbation experiments are performed, affecting only few parts of a system.
+Different experimental conditions are typically expressed by the fact that some parameters are different between conditions whereas others are common to all conditions. This situation occurs, e.g., if perturbation experiments are performed, affecting only few parts of a system.
 %The full information contained in several perturbation experiments is only used if the multi-conditional model prediction is set up in a way that all model parameters not being changed from condition to condition correspond to exactly one parameter. On the other hand, parameters which are systematically perturbed correspond to different parameters.
 Mathematically speaking, we want to construct a parameter transformation
 \begin{equation}
@@ -389,7 +373,7 @@ Prediction- and observation functions are generalized to multiple conditions by 
 	\end{aligned}
 	\label{}
 \end{align*}
-In words, if prediction- or observation functions are defined for different conditions then they expect condition-specific inputs which are evaluated by the matching functions. Examples for condition-specific prediction functions typically involve different forcings or events. Observation functions can e.g.~differ between different measurement techniques. In all these cases, the different prediction functions $x_1, \dots, x_n$ or observation functions $g_1, \dots, g_n$ are defined, referencing the condition, and combined by the \code{"+"} operator analogously to \code{p}.
+In words, if prediction- or observation functions are defined for different conditions then they expect condition-specific inputs which are evaluated by the matching functions. Examples for condition-specific prediction functions typically involve different forcings or events. Observation functions can, e.g., differ between different measurement techniques. In all these cases, the different prediction functions $x_1, \dots, x_n$ or observation functions $g_1, \dots, g_n$ are defined, referencing the condition, and combined by the \code{"+"} operator analogously to \code{p}.
 % Aufruf der Funktionen mit subset von conditions
 
 All commands, \code{P()}, \code{Xs()}, \code{Y()}, etc.~can be executed with \code{condition = NULL}. In that case, the corresponding returned function is generic and, if called for different conditions, the same identical function is evaluated with the condition-specific input. The other way round, if a function, say, \code{x} is defined for several conditions, its prediction can be evaluated only for a subset of conditions by \code{x(times, pars, conditions = myconditions)}.
@@ -411,7 +395,7 @@ The aim of \pkg{dMod} is parameter estimation. The objective function to be mini
 
 The objective function is the final link connecting the chain of parameter transformations, prediction- and observation functions to observations. It collects all derivative information and besides the objective value it also computes gradient and Hessian. The standard optimizer employed within \pkg{dMod} is the \code{trust()} optimizer from the \pkg{trust} package.
 
-Objective functions can be added by the \code{"+"} operator, meaning the objective values, gradients and Hessians are accumulated by summation. Besides the standard function \code{normL2()}, \pkg{dMod} provides several other functions returning objective functions, e.g.~\code{constraintL2()} or \code{datapointL2()}. They allow to define quadratic parameter priors or treat data points as parameters, respectively, as shown in Section~\ref{sec:example}. Thus, a typical objective function used for parameter estimation could be
+Objective functions can be added by the \code{"+"} operator, meaning the objective values, gradients and Hessians are accumulated by summation. Besides the standard function \code{normL2()}, \pkg{dMod} provides several other functions returning objective functions, e.g., \code{constraintL2()} or \code{datapointL2()}. They allow to define quadratic parameter priors or treat data points as parameters, respectively, as shown in Section~\ref{sec:example}. Thus, a typical objective function used for parameter estimation could be
 \begin{center}
 	\code{obj <- normL2(data, g*x*(p1+p2+p3)) + constraintL2(mu, sigma)}.
 \end{center}
@@ -420,7 +404,7 @@ Objective functions can be added by the \code{"+"} operator, meaning the objecti
 \section{Three-compartment model of bile acid transport}
 \label{sec:example}
 
-The following model is a simplified dynamic model on bile acid transport published by \cite{kaschek2017dynamic}. Bile acids are produced in the liver. They are necessary for the digestion of fat and oil. In the liver, bile acids are taken up in hepatocytes (liver cells) by specific transporter molecules. Clearance occurs either via canalicular or sinusoidal export, i.e.~export to the bile transportation system of bile canaliculi or the intercellular space.
+The following model is a simplified dynamic model on bile acid transport published by \cite{kaschek2017dynamic}. Bile acids are produced in the liver. They are necessary for the digestion of fat and oil. In the liver, bile acids are taken up in hepatocytes (liver cells) by specific transporter molecules. Clearance occurs either via canalicular or sinusoidal export, i.e., export to the bile transportation system of bile canaliculi or the intercellular space.
 
 To study bile clearance, experiments with hepatocytes or hepatocyte-derived cell lines are performed \textit{in-vitro}. Cells in a Petri dish stick together to a monolayer of cells, forming bile canaliculi in between cells. They adhere to the dish and are surrounded by a buffer providing the cells with nutrients. A radioactive label allows to measure the bile acid \textit{taurocholic acid} (TCA).
 
@@ -473,7 +457,7 @@ Each transportation process is modeled by mass-action kinetics. A possible imple
   			 description = "Reflux into the buffer")
 	\end{CodeInput}
 \end{CodeChunk}
-The reactions are translated into the ODE model object:
+The reaction list is translated into an ODE model object:
 \begin{CodeChunk}
 	\begin{CodeInput}
   mymodel <- odemodel(reactions, modelname = "bamodel")
@@ -485,7 +469,7 @@ Finally, the prediction function is generated:
   x <- Xs(mymodel, condition = NULL)
 	\end{CodeInput}
 \end{CodeChunk}
-The reactions are collected in an \code{eqnlist} object. The \code{odemodel()} command composes the single reactions to an ODE system and auto-generates the \proglang{C} code which is used by the \pkg{deSolve} package to evaluate the ODE. Prediction functions are generated by the \code{Xs()} command. The usage of the prediction function is illustrated by the following code chunk. Time points are defined between 0 and 50, numeric values are assigned to all model parameters. Note that the first three parameters refer to state initial values: 
+The reactions are collected in an \code{eqnlist} object. The \code{odemodel()} command composes the single reactions to an ODE system and auto-generates the \proglang{C} code which is used by the \pkg{deSolve} package to evaluate the ODE. Prediction functions are generated by the \code{Xs()} command. The usage of the prediction function is illustrated by the following code chunk. Time points are defined between 0 and 50, numeric values are assigned to all model parameters. Note that the first three parameters correspond to initial state values.
 \begin{CodeChunk}
 \begin{CodeInput}
   times <- seq(0, 50, .1)
@@ -498,7 +482,7 @@ The reactions are collected in an \code{eqnlist} object. The \code{odemodel()} c
 	    reflux = 0.1)
 \end{CodeInput}
 \end{CodeChunk}
-Finally the prediction function is called and both, the prediction and the sensitivities, are plotted, shown in Figure~\ref{fig:prediction}:
+Finally the prediction function is called and both, the prediction and the sensitivities, are plotted, shown in Figure~\ref{fig:prediction}.
 \begin{CodeChunk}
 \begin{CodeInput}
   out <- x(times, pars)
@@ -540,14 +524,13 @@ First, observables are defined by an \code{eqnvec} object from which an observat
     cellular = "s*(TCA_cana + TCA_cell)"
   )
   
-  g <- Y(observables, f = reactions, condition = NULL,
+  g <- Y(observables, f = x, condition = NULL,
          compile = TRUE, modelname = "obsfn")
 \end{CodeInput}
 \end{CodeChunk}
 Observation functions link internal to observable states. Thus, providing values for the model parameters, the observation function can be used to simulate the outcome of an experiment. Adding noise to the prediction, experimental data is simulated.
 In the following, we will simulate the outcome of an \textit{efflux experiment}.
-The experiment starts with all TCA concentrations in steady state, such as shown in Figure~\ref{fig:prediction} after $t = 50$. To initiate the efflux, the buffer is replaced by TCA-free buffer, i.e.~\code{TCA_buffer = 0}. This translates into the following initial parameter values:
-%, i.e. time point $t = 0$ reflects the distribution of TCA after uptake, as shown in Figure~\ref{fig:prediction} after $t = 50$. Hence, we reset some of the parameter values. Initial values are set to steady state values. The incubation buffer is replaced by fresh buffer, meaning that \code{TCA_buffer} is set to 0. Finally, we assume that \code{s = 1000}. The prediction of the observables is made by concatenation of \code{g} and \code{x} via the concatenation operator \code{"*"} being defined in \pkg{dMod} for prediction, observation and parameter functions.
+The experiment starts with all TCA concentrations in steady state, such as shown in Figure~\ref{fig:prediction} after $t = 50$. To initiate the efflux, the buffer is replaced by TCA-free buffer, i.e., \code{TCA_buffer = 0}. This translates into the following initial parameter values:
 \begin{CodeChunk}
 \begin{CodeInput}
   pars["TCA_cell"] <- 0.3846154
@@ -562,7 +545,7 @@ The predicted dynamics of the system's internal and observable states is obtaine
   out <- (g*x)(times, pars, conditions = "standard")
 \end{CodeInput}
 \end{CodeChunk}
-Since \code{g} and \code{x} have been generated as generic functions, i.e.~\code{condition = NULL}, we can assign the output to a condition of our choice, in this case ``standard''.
+Since \code{g} and \code{x} have been generated as generic functions, i.e., \code{condition = NULL}, we can assign the output to a condition of our choice, in this case ``standard''.
 The predicted noiseless observation is obtained by considering the observable states only at the time point of observation \code{timesD}.
 %Finally, we obtain the simulated data by taking a subset of the prediction.
 \begin{CodeChunk}
@@ -573,7 +556,7 @@ The predicted noiseless observation is obtained by considering the observable st
 \end{CodeInput}
 \end{CodeChunk}
 
-Data uncertainties $\sigma$ are derived by the Poisson nature of radioactive count experiments, i.e. $\sigma_x = \sqrt{x}$. To avoid division by 0, the minimal $\sigma$-value is set to 1. Random values are added to the predicted values to simulate observation noise. In the end, the \code{data.frame} is converted into a \code{datalist} object.
+Data uncertainties $\sigma$ are derived by the Poisson nature of radioactive count experiments, i.e., $\sigma_x = \sqrt{x}$. To avoid division by 0, the minimal $\sigma$-value is set to 1. Random values are added to the predicted values to simulate observation noise. In the end, the \code{data.frame} is converted into a \code{datalist} object.
 
 
 \begin{CodeChunk}
@@ -598,7 +581,7 @@ Both, the simulated data and the model prediction from which the data is derived
 \subsection{Parameter transformation}
 Parameter transformations play a crucial role in the set-up of \pkg{dMod}. They can have several purposes such as fixing paramer values, implementing parameter bounds, including steady-state constraints or mapping parameters to different conditions. While being conceptually the same, it might be worth noting that parameters can be distinguished in two classes. The first class of parameters are \textit{initial values} for dynamic states, such as \code{TCA_buffer}. Parameters of the second class, such as rate parameters, have no accompanying dynamic state.
 
-First, we use parameter transformations to constrain all parameters to be positive or zero because all our parameters are either amounts or rate parameters. The parameter transformation is generated by the \code{P()} command taking an \code{eqnvec} object. Parameter transformations explicitly state the relation between the \textbf{inner} parameters, i.e.~the parameter values that are evaluated within the model, and the \textbf{outer} parameters, i.e.~the parameter values provided by the user or by an optimizer. In our case, we imply positivity of inner parameters using the \code{exp()} function on outer parameters.
+First, we use parameter transformations to constrain all parameters to be positive or zero because all our parameters are either amounts or rate parameters. The parameter transformation is generated by the \code{P()} command taking an \code{eqnvec} object. Parameter transformations explicitly state the relation between the \textbf{inner} parameters, i.e., the parameter values that are evaluated within the model, and the \textbf{outer} parameters, i.e., the parameter values provided by the user or by an optimizer. In our case, we imply positivity of inner parameters using the \code{exp()} function on outer parameters.
 The corresponding code reads:
 \begin{CodeChunk}
 \begin{CodeInput}
@@ -662,12 +645,13 @@ Besides non-identifiability of parameters, local optima constitute another pit-f
 \begin{CodeChunk}
 \begin{CodeInput}
   out_mstrust <- mstrust(obj, pouter, sd = 4, fits = 50,
-                         rinit = 1, rmax = 10, iterlim = 500)
+                         rinit = 1, rmax = 10, iterlim = 500,
+                         cores = 4)
   
   myframe <- as.parframe(out_mstrust)
   
-  plotValues(myframe, value < 100)
-  plotPars(myframe, value < 100)
+  plotValues(myframe, tol = 0.01, value < 100)
+  plotPars(myframe, tol = 0.01, value < 100)
 \end{CodeInput}
 \end{CodeChunk}
 Here, we have searched according to $\vec p_i = \vec p_0 + \Delta\vec p_i$ where $\vec p_0$ is the center, in our case \code{pouter}, $\Delta\vec p_i\sim N(0, \sigma^2)$ is a random parameter vector taken from a normal distribution, in our case $\sigma = 4$, and the index $i$ runs from 1 to \code{fits = 50}. The \code{mclapply()} command from the standard \pkg{parallel} package \citep{parallel} is used internally to run fits in parallel, here \code{cores = 4}. The result of \code{mstrust()} is a list of all returned values of \code{trust()}. To extract the final objective value, parameter values, convergence information and the number of iterations, \code{as.parframe()} is used. The multi-start approach identifies four local optima, see Figure~\ref{fig:mstrust}, which yield almost the same objective value, Figure~\ref{fig:mstrust}A.
@@ -711,7 +695,7 @@ To add a condition to the parameter transformation function, we use the equation
 
 \begin{CodeChunk}
 \begin{CodeInput}
-trafo <- summary(p)$standard$equations
+trafo <- getEquations(p, conditions = "standard")
 trafo["reflux"] <- "exp(reflux_open)"
 p <- p + P(trafo, condition = "open")
 \end{CodeInput}
@@ -752,7 +736,7 @@ plot((g*x*p)(times, bestfit), data)
 	\label{fig:twoconditions}
 \end{figure}
 
-Interestingly, with the new experiment the best optimum becomes unique. The log-likelihood difference, i.e.~half the difference between the objective values, is more than 20 between the lowest and the second plateau, which is highly significant. The uniqueness of the lowest plateau is confirmed by Figure~\ref{fig:twoconditions}C which shows no scattering of the black circles.
+Interestingly, with the new experiment the best optimum becomes unique. The log-likelihood difference, i.e., half the difference between the objective values, is more than 20 between the lowest and the second plateau, which is highly significant. The uniqueness of the lowest plateau is confirmed by Figure~\ref{fig:twoconditions}C which shows no scattering of the black circles.
 
 \subsection{Parameter uncertainty and identifiability}
 \label{chap_uncertainty}
@@ -799,21 +783,19 @@ This relation can be explicitly used in a parameter transformation to express \c
 \begin{CodeChunk}
 \begin{CodeInput}
 pSS <- NULL
-trafos <- summary(p)
-conditions <- names(trafos)
-
+equations <- getEquations(p)
+conditions <- names(equations)
 for (n in conditions) {
-  equations <- trafos[[n]]$equations
-  equations["TCA_cana"] <- "exp(export_cana)*exp(TCA_cell)/exp(reflux)"
-  pSS <- pSS + P(equations, condition = n)
+  equations[[n]]["TCA_cana"] <- "exp(export_cana)*exp(TCA_cell)/exp(reflux)"
+  pSS <- pSS + P(equations[[n]], condition = n)
 }
 \end{CodeInput}
 \end{CodeChunk}
-We get all the information about the transformations from the \code{summary()} command. The equation for \code{TCA_cana} is substituted by our steady-state constraint. By the \code{"+"} operator, a new parameter transformation function \code{pSS} is iteratively constructed for all conditions.
+We get all the information about the transformations from the \code{getEquations()} command. The equation for \code{TCA_cana} is substituted by our steady-state constraint. By the \code{"+"} operator, a new parameter transformation function \code{pSS} is iteratively constructed for all conditions.
 
-Alternatively, we want to implement the steady-state constraint by an \textit{implicit} parameter transformation, as opposed to the explicit transformation shown above. Let $\dot x = f(x, p)$ be our dynamic system. Then, under certain conditions, we find a function $g(p)$ such that $f\big( g(p), p\big) = 0$ for all $p$, i.e.~$x_S = g(p)$ is a steady state of $f$. The parameter transformation we want to generate is the function $p \mapsto \big(p, g(p)\big)$. Here, the set of outer parameters is the set of the reaction rates  $p$ whereas the set of inner parameters contains these rates and the corresponding steady states as initial value parameters. The root of $f$ must be determined numerically to which end \code{multiroot()} from the \pkg{rootSolve} package \citep{rootSolve} is used .
+Alternatively, we want to implement the steady-state constraint by an \textit{implicit} parameter transformation, as opposed to the explicit transformation shown above. Let $\dot x = f(x, p)$ be our dynamic system. Then, under certain conditions, we find a function $g(p)$ such that $f\big( g(p), p\big) = 0$ for all $p$, i.e., $x_S = g(p)$ is a steady state of $f$. The parameter transformation we want to generate is the function $p \mapsto \big(p, g(p)\big)$. Here, the set of outer parameters is the set of the reaction rates  $p$ whereas the set of inner parameters contains these rates and the corresponding steady states as initial value parameters. The root of $f$ must be determined numerically to which end \code{multiroot()} from the \pkg{rootSolve} package \citep{rootSolve} is used.
 
-The following code is a reimplementation of the example above. The condition ``open'' is special in the sense that the reflux rate is modified compared to the reflux rate by which the steady state is computed. This is solved by an event, flipping a switch variable from 0 to 1 and thereby replacing the rate \code{reflux} by \code{reflux_open}.
+The following code is a reimplementation of the example above. The replacement of the buffer and the possibility for different reflux rates between the ``standard'' and  ``open'' conditions are explicitly modeled by events at time zero. 
 
 \begin{CodeChunk}
 \begin{CodeInput}
@@ -835,10 +817,28 @@ reactions <- addReaction(reactions, "0", "switch",
 		 rate = "0",
 		 description = "Create a switch")
 
-# Translate into ODE model
-mymodel <- odemodel(reactions, modelname = "bamodel")
 \end{CodeInput}
 \end{CodeChunk}
+
+The events for \code{TCA_buffer} and \code{switch} are generated as part of the model and, therefore, need to be provided to the \code{odemodel()} command together with the model.
+
+\begin{CodeChunk}
+\begin{CodeInput}
+# Construct events
+events <- NULL
+events <- addEvent(events, var = "TCA_buffer", time = 0, value = 0      )
+events <- addEvent(events, var = "switch"    , time = 0, value = "OnOff")
+
+# Translate into ODE model
+mymodel <- odemodel(reactions, modelname = "bamodel2", events = events)
+
+# Set up prediction function
+x <- Xs(mymodel)
+
+\end{CodeInput}
+\end{CodeChunk}
+
+Event times and values can both be either numeric or a character representing a parameter. These parameters are treated in the same way as all other parameters, meaning that they can be set in a condition-specific way or be estimated.
 
 For the implicit parameter transformation we need the ODE which is obtained by the command \code{as.eqnvec()} from the reactions. The Jacobian of $f$ is rank-deficient because the system has a conserved quantity $c = \verb!TCA_buffer + TCA_cana + TCA_cell!$ which is the total TCA amount. Replacing one element of $f$ by $c - \verb!TCA_tot!$, the rank of the Jacobian is completed, the condition for the local existence of the implicit function $g(p)$ is satisfied and the steady state is parameterized by $p$ and the additional parameter \code{TCA_tot}.
 
@@ -852,7 +852,7 @@ pSS <- P(f, method = "implicit",
 \end{CodeInput}
 \end{CodeChunk}
 
-For the optimization, all outer parameters should still be log-parameters, implemented by an explicit parameter transformation. Outer parameters for the initial values are not necessary any more. They can be replaced by 0 since the initial values are computed by the implicit transformation. The final transformation will be a concatenation of the implicit and explicit transformations, \code{pSS*p}.
+For the optimization, all outer parameters should still be log-parameters, implemented by an explicit parameter transformation. Outer parameters for the initial values are not necessary any more. They can be replaced by 0 since the initial values are computed by the implicit transformation. The switch parameter \code{OnOff} is defined in a condition-specific way: zero for the ``standard'' condition and one for the ``open'' condition. The final transformation will be a concatenation of the implicit and explicit transformations: \code{pSS*p}.
 
 \begin{CodeChunk}
 \begin{CodeInput}
@@ -862,44 +862,24 @@ innerpars <- unique(c(getParameters(mymodel),
                       getSymbols(f)))
 
 # Use repar() to replace left-hand side by right-hand side of formula
-trafo <- repar("x ~ x", x = innerpars)
-trafo <- repar("x ~ 0", x = reactions$states, trafo)
-trafo <- repar("x ~ exp(x)", x = innerpars, trafo)
+trafo <- repar("x~x"     , x = innerpars)
+trafo <- repar("x~0"     , x = reactions$states, trafo)
+trafo <- repar("x~exp(x)", x = setdiff(innerpars, "OnOff"), trafo)
 
-p <- P(trafo)
+p <- 
+  P(repar("OnOff~0", trafo), condition = "standard") +
+  P(repar("OnOff~1", trafo), condition = "open")
 \end{CodeInput}
 \end{CodeChunk}
 
-Both, the exchange of buffer and the opening of bile canaliculi by a Ca$^{2+}$/Mg$^{2+}$-free buffer are implemented as events. We therefore have different prediction functions for the two conditions.
+
+Although the observables have not changed compared to the set-up with purely explicit transformations, the observation function must be generated again because the ODEs have structurally changed and a new parameter \code{reflux_open} has appeared. Using the old observation function would result in a wrong propagation of parameter sensitivities.
 
 \begin{CodeChunk}
 \begin{CodeInput}
-# Set up prediction function with events
-event.buffer <- data.frame(var = "TCA_buffer",
-			   time = 0,
-			   value = 0,
-			   method = "replace")
-event.open   <- data.frame(var = "switch",
-			   time = 0,
-			   value = 1,
-			   method = "replace")
-
-x <- Xs(mymodel,
-	events = event.buffer,
-	condition = "standard") +
-     Xs(mymodel,
-        events = rbind(event.buffer, event.open),
-	condition = "open")
-\end{CodeInput}
-\end{CodeChunk}
-
-Although the observables have not changed compared to the set-up with purely explicit transformations, the observation function must be generated again because the new parameter \code{TCA_tot} has appeared. This parameter was not contained in the original reactions. Therefore, we use the \code{states} and \code{parameters} arguments to explicitly inform the observation function about the states and parameters involved. Otherwise, parameter sensitivities are not propagated correctly.
-
-\begin{CodeChunk}
-\begin{CodeInput}
-# Generate observation function with modified states/parameters
+# Generate observation function with modified equations
 g <- Y(observables, f = x,
-       compile = TRUE, modelname = "obsfn")
+       compile = TRUE, modelname = "obsfn2")
 \end{CodeInput}
 \end{CodeChunk}
 
@@ -941,7 +921,7 @@ amount of TCA in the system. This total amount must be fixed in which case the
 parameters \code{TCA\_cell}, \code{TCA\_cana} and \code{s} become identifiable.
 The prediction uncertainty is assessed by a \textit{prediction profile}
 which is computed based on a virtual data point for cellular TCA, measured at
-time point $t = 41$ under the ``standard'' condition. The \pkg{dMod} formulation reads as:
+time point $t = 41$ in the ``standard'' condition. The \pkg{dMod} formulation reads as:
 \begin{CodeChunk}
 \begin{CodeInput}
 obj.validation <- datapointL2(name = "TCA_cell",
@@ -955,21 +935,22 @@ obj.validation <- datapointL2(name = "TCA_cell",
 
 
 The uncertainty $\sigma = 0.002$ is set to a small
-value, i.e.~below 1\% of the prediction value. The \code{datapointL2()}
+value, i.e., below 1\% of the prediction value. The \code{datapointL2()}
 command returns an objective function which evaluates the model prediction\footnote{Several objective functions combined by the \code{"+"} operator
 share the same environment. Thus, the prediction computed by the first
 objective function can be evaluated by all other functions to come.} and
 computes the least-squares function of the virtual datapoint, returning
 derivatives for the data-point parameter \code{d1}. Its value ``d1'' is yet to be
 determined. By fitting the objective function \code{obj} together with
-\code{obj.validation}, ``d1'' equals the value of the \code{TCA\_cell} at
+\code{obj.validation}, ``d1'' equals the value of \code{TCA\_cell} at
 $t=41$, as only then its contribution to the objective value is zero.
 \begin{CodeChunk}
 \begin{CodeInput}
+fixed <- c(TCA_tot = log(1))
 myfit <- trust(obj + obj.validation,
-	       parinit = c(d1 = 1, bestfit[-7]),
-	       fixed = c(TCA_tot = log(1)),
-	       rinit = 1, rmax = 10)
+               parinit = c(d1 = 1, pouter[!names(pouter) %in% names(fixed)]),
+               fixed = fixed,
+               rinit = 1, rmax = 10)
 \end{CodeInput}
 \end{CodeChunk}
 Using the derivative information provided by \code{datapointL2}, a
@@ -977,8 +958,8 @@ prediction profile around \code{d1} is calculated.
 \begin{CodeChunk}
 \begin{CodeInput}
 profile_prediction <- profile(obj + obj.validation,
-			      myfit$argument, "d1", limits = c(-5, 5),
-			      fixed = c(TCA_tot = log(1)))
+                              myfit$argument, "d1", limits = c(-5, 5),
+                              fixed = fixed)
 \end{CodeInput}
 \end{CodeChunk}
 
@@ -1033,7 +1014,7 @@ The speed comparison shows that by a combination of compiled code and symbolical
 Computer algebra and symbolic tools are not part of \proglang{R}'s core functionality. In this section we illustrate two symbolic tools that are shiped with \pkg{dMod},  dealing with structural non-identifiability and steady-state constraints. They are implemented in \proglang{Python} and are interfaced via the \pkg{rPython} package \citep{rPython}.
 
 \subsection{Lie-group symmetry detection}
-In Section \ref{chap_uncertainty}, profile likelihood computation showed the existence of both practically and structurally non-identifiable parameters. While practical non-identifiability arises from insufficient information in the data, structural non-identifiabilty is connected to Lie-group symmetries, i.e. transformations of the states and parameters \[\Psi: (x,\theta) \longmapsto (x^*, \theta^*)\] that preserve the model prediction of the observables: \[g(x^*, \theta^*) = g(x,\theta)\,.\] Based on \cite{merkt2015higher}, the \code{symmetryDetection()} command outputs a list of available symmetry transformations. For example, the code
+In Section \ref{chap_uncertainty}, profile likelihood computation showed the existence of both practically and structurally non-identifiable parameters. While practical non-identifiability arises from insufficient information in the data, structural non-identifiabilty is connected to Lie-group symmetries, i.e., transformations of the states and parameters \[\Psi: (x,\theta) \longmapsto (x^*, \theta^*)\] that preserve the model prediction of the observables: \[g(x^*, \theta^*) = g(x,\theta)\,.\] Based on \cite{merkt2015higher}, the \code{symmetryDetection()} command outputs a list of available symmetry transformations. For example, the code
 \begin{CodeChunk}
 \begin{CodeInput}
 reactions <- NULL
@@ -1056,7 +1037,7 @@ symmetryDetection(as.eqnvec(reactions), observables)
 \end{CodeChunk}
 returns the following output:
 \begin{CodeChunk}
-\begin{CodeInput}
+\begin{CodeOutput}
 1 transformation(s) found:
 variable   : infinitesimal : transformation
 -----------------------------------------------------
@@ -1065,7 +1046,7 @@ TCA_buffer : -TCA_buffer   : TCA_buffer*exp(-epsilon)
 TCA_cana   : -TCA_cana     : TCA_cana*exp(-epsilon)
 TCA_cell   : -TCA_cell     : TCA_cell*exp(-epsilon)
 s          : s             : s*exp(epsilon)
-\end{CodeInput}
+\end{CodeOutput}
 \end{CodeChunk}
 
 

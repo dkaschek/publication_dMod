@@ -1,13 +1,13 @@
 # Fdb version 3
-["bibtex article"] 1553773118 "article.aux" "article.bbl" "article" 1553773119
+["bibtex article"] 1555157110 "article.aux" "article.bbl" "article" 1555158754
   "./jss.bst" 1506451051 33029 9e13367ef4850e3c0d4fa27c607e2137 ""
-  "article.aux" 1553773119 13665 cc383721c313f3404363e8e21878521a ""
+  "article.aux" 1555158754 13951 9979dcf2cd9f715432b2dea21b0d6112 ""
   "article.bcf" 0 -1 0 ""
-  "mybib.bib" 1553773081 9606 887e1b9c4135f7f7fa5ad73ad9fb3c1f ""
+  "mybib.bib" 1555157094 9605 91e4b2ee1e204dd8b50d4bbe49d405ee ""
   (generated)
-  "article.bbl"
   "article.blg"
-["pdflatex"] 1553773118 "article.tex" "article.pdf" "article" 1553773119
+  "article.bbl"
+["pdflatex"] 1555158753 "article.tex" "article.pdf" "article" 1555158754
   "/etc/texmf/web2c/texmf.cnf" 1510519994 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc" 1480098666 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1511824771 3332 103109f5612ad95229751940c61aada0 ""
@@ -179,10 +179,10 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1520210507 32485 c64754543d8ac501bea6e75e209ea521 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1528357699 2700761 ac0584cc9514ab21918550a6948c4ee2 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1539448362 4126493 94aaa487fa07b757d365dba51c54ea7d ""
-  "article.aux" 1553773119 13665 cc383721c313f3404363e8e21878521a ""
-  "article.bbl" 1553773118 8991 80a872d34096c09143afa2876fffd981 "bibtex article"
-  "article.out" 1553773119 3750 f57808a91803dcad9e0c88aeb06f421a ""
-  "article.tex" 1553772972 98882 e0b34f9e6184764a1a80297c94bc4f85 ""
+  "article.aux" 1555158754 13951 9979dcf2cd9f715432b2dea21b0d6112 ""
+  "article.bbl" 1555157110 9784 4778241feb787567a98b2a70cfa4663d "bibtex article"
+  "article.out" 1555158754 3750 f57808a91803dcad9e0c88aeb06f421a ""
+  "article.tex" 1555158752 95278 bb29a75a8e31e23852254f62bd10bd69 ""
   "images/figure1.pdf" 1506451051 64420 a2d12e36e86314b318ce80cd4d74b692 ""
   "images/figure10.pdf" 1506451051 58690 f72aa0a307b5e1e40452f9b523f49356 ""
   "images/figure2.pdf" 1506451051 32553 1c54b05c4dc49790edfe465aee931cea ""
@@ -197,7 +197,7 @@
   "jss.cls" 1506451051 15426 7baa85d872f568b77b27c84ff3f3efee ""
   "jsslogo.jpg" 1506451051 22731 b9564ddd59a06782310989e8f33db55e ""
   (generated)
-  "article.aux"
-  "article.log"
   "article.pdf"
   "article.out"
+  "article.log"
+  "article.aux"
