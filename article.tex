@@ -932,7 +932,7 @@ variable   : infinitesimal : transformation
 TCA_buffer : -TCA_buffer   : TCA_buffer*exp(-epsilon)
 TCA_cana   : -TCA_cana     : TCA_cana*exp(-epsilon)
 TCA_cell   : -TCA_cell     : TCA_cell*exp(-epsilon)
-s	   : s  	   : s*exp(epsilon)
+s          : s             : s*exp(epsilon)
 \end{CodeOutput}
 \end{CodeChunk}
 %
@@ -951,7 +951,7 @@ yielding the output
 \begin{CodeChunk}
 \begin{CodeOutput}
 TCA_cana   = TCA_buffer*export_cana*import_baso/(reflux*(export_cana + 
-	   export_sinus))
+             export_sinus))
 TCA_cell   = TCA_buffer*import_baso/(export_cana + export_sinus)
 TCA_buffer = TCA_buffer
 \end{CodeOutput}

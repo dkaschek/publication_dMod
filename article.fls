@@ -283,5 +283,4 @@ INPUT /usr/share/texmf/fonts/type1/public/lm/lmtt9.pfb
 INPUT /usr/share/texmf/fonts/type1/public/lm/lmtto10.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb
-INPUT /usr/share/texlive/texmf-dist/fonts/type1/urw/symbol/usyr.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/urw/zapfchan/uzcmi8a.pfb
