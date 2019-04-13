@@ -16,8 +16,9 @@ Azzalini A (1996).
 
 \bibitem[{Bellosta(2015)}]{rPython}
 Bellosta CJG (2015).
-\newblock \emph{rPython: Package Allowing R to Call Python}.
-\newblock R package version 0.0-6,
+\newblock \emph{\pkg{rPython}: Package Allowing \proglang{R} to Call
+  \proglang{Python}}.
+\newblock \proglang{R} package version 0.0-6,
   \urlprefix\url{https://CRAN.R-project.org/package=rPython}.
 
 \bibitem[{Bihorel(2014)}]{scaRabee}
@@ -25,7 +26,7 @@ Bihorel S (2014).
 \newblock \emph{\pkg{scaRabee}: Optimization Toolkit for
   Pharmacokinetic-Pharmacodynamic Models}.
 \newblock \proglang{R}~package version~1.1-3,
-  \urlprefix\url{http://CRAN.R-project.org/package=scaRabee}.
+  \urlprefix\url{https://CRAN.R-project.org/package=scaRabee}.
 
 \bibitem[{Brun \emph{et~al.}(2001)Brun, Reichert, and
   K{\"u}nsch}]{brun2001practical}
@@ -33,12 +34,13 @@ Brun R, Reichert P, K{\"u}nsch HR (2001).
 \newblock \enquote{Practical Identifiability Analysis of Large Environmental
   Simulation Models.}
 \newblock \emph{Water Resources Research}, \textbf{37}(4), 1015--1030.
+\newblock \doi{10.1029/2000wr900350}.
 
 \bibitem[{Geyer(2015)}]{trust}
 Geyer CJ (2015).
 \newblock \emph{\pkg{trust}: Trust Region Optimization}.
 \newblock \proglang{R}~package version~0.1-7,
-  \urlprefix\url{http://CRAN.R-project.org/package=trust}.
+  \urlprefix\url{https://CRAN.R-project.org/package=trust}.
 
 \bibitem[{Hass \emph{et~al.}(2016)Hass, Kreutz, Timmer, and
   Kaschek}]{hass2016fast}
@@ -46,19 +48,21 @@ Hass H, Kreutz C, Timmer J, Kaschek D (2016).
 \newblock \enquote{Fast Integration-Based Prediction Bands for Ordinary
   Differential Equation Models.}
 \newblock \emph{Bioinformatics}, \textbf{32}(8), 1204--1210.
+\newblock \doi{10.1093/bioinformatics/btv743}.
 
-\bibitem[{Hooker \emph{et~al.}(2016)Hooker, Xiao, and Ramsay}]{CollocInfer}
-Hooker G, Xiao L, Ramsay J (2016).
-\newblock \emph{\pkg{CollocInfer}: Collocation Inference for Dynamic Systems}.
-\newblock \proglang{R}~package version~1.0.4,
-  \urlprefix\url{http://CRAN.R-project.org/package=CollocInfer}.
+\bibitem[{Hooker \emph{et~al.}(2016)Hooker, Ramsay, and Xiao}]{CollocInfer}
+Hooker G, Ramsay JO, Xiao L (2016).
+\newblock \enquote{\pkg{CollocInfer}: Collocation Inference in Differential
+  Equation Models.}
+\newblock \emph{Journal of Statistical Software}, \textbf{75}(2), 1--52.
+\newblock \doi{10.18637/jss.v075.i02}.
 
-\bibitem[{Kaschek(2017)}]{cOde}
-Kaschek D (2017).
-\newblock \emph{\pkg{cOde}: Automated C Code Generation for 'deSolve',
-  'bvpSolve' and 'Sundials'}.
-\newblock \proglang{R}~package version~0.3,
-  \urlprefix\url{http://CRAN.R-project.org/package=cOde}.
+\bibitem[{Kaschek(2018)}]{cOde}
+Kaschek D (2018).
+\newblock \emph{\pkg{cOde}: Automated \proglang{C} Code Generation for
+  \pkg{deSolve}, \pkg{bvpSolve} and `Sundials'}.
+\newblock \proglang{R}~package version~0.4.1,
+  \urlprefix\url{https://CRAN.R-project.org/package=cOde}.
 
 \bibitem[{Kaschek \emph{et~al.}(2017)Kaschek, Sharanek, Guillouzo, Timmer, and
   Weaver}]{kaschek2017dynamic}
@@ -66,7 +70,6 @@ Kaschek D, Sharanek A, Guillouzo A, Timmer J, Weaver RJ (2017).
 \newblock \enquote{A Dynamic Mathematical Model of Bile Acid Clearance in
   HepaRG Cells.}
 \newblock \emph{Toxicological Sciences}.
-\newblock \doi{10.1093/toxsci/kfx199}.
 
 \bibitem[{King \emph{et~al.}(2017)King, Ionides, Breto, Ellner, Ferrari,
   Kendall, Lavine, Nguyen, Reuman, Wearing, Wood, Funk, and Johnson}]{pomp}
@@ -75,13 +78,14 @@ King AA, Ionides EL, Breto C, Ellner SP, Ferrari MJ, Kendall BE, Lavine M,
 \newblock \emph{\pkg{pomp}: Statistical Inference for Partially Observed Markov
   Processes}.
 \newblock \proglang{R}~package version~1.14,
-  \urlprefix\url{http://CRAN.R-project.org/package=pomp}.
+  \urlprefix\url{https://CRAN.R-project.org/package=pomp}.
 
 \bibitem[{Kreutz \emph{et~al.}(2013)Kreutz, Raue, Kaschek, and
   Timmer}]{kreutz2013profile}
 Kreutz C, Raue A, Kaschek D, Timmer J (2013).
 \newblock \enquote{Profile Likelihood in Systems Biology.}
 \newblock \emph{FEBS Journal}, \textbf{280}(11), 2564--2571.
+\newblock \doi{10.1111/febs.12276}.
 
 \bibitem[{Kreutz \emph{et~al.}(2012)Kreutz, Raue, and
   Timmer}]{kreutz2012likelihood}
@@ -89,6 +93,7 @@ Kreutz C, Raue A, Timmer J (2012).
 \newblock \enquote{Likelihood Based Observability Analysis and Confidence
   Intervals for Predictions of Dynamic Models.}
 \newblock \emph{BMC Systems Biology}, \textbf{6}(1), 120.
+\newblock \doi{10.1186/1752-0509-6-120}.
 
 \bibitem[{Maiwald \emph{et~al.}(2016)Maiwald, Hass, Steiert, Vanlier, Engesser,
   Raue, Kipkeew, Bock, Kaschek, Kreutz, and Timmer}]{maiwald2016driving}
@@ -97,6 +102,7 @@ Maiwald T, Hass H, Steiert B, Vanlier J, Engesser R, Raue A, Kipkeew F, Bock
 \newblock \enquote{Driving the Model to Its Limit: Profile Likelihood Based
   Model Reduction.}
 \newblock \emph{PloS ONE}, \textbf{11}(9), e0162366.
+\newblock \doi{10.1371/journal.pone.0162366}.
 
 \bibitem[{Merkt \emph{et~al.}(2015)Merkt, Timmer, and
   Kaschek}]{merkt2015higher}
@@ -104,61 +110,70 @@ Merkt B, Timmer J, Kaschek D (2015).
 \newblock \enquote{Higher-Order Lie Symmetries in Identifiability and
   Predictability Analysis of Dynamic Models.}
 \newblock \emph{Physical Review E}, \textbf{92}(1), 012920.
+\newblock \doi{10.1103/physreve.92.012920}.
 
-\bibitem[{Murphy and Van~der Vaart(2000)}]{murphy2000profile}
-Murphy SA, Van~der Vaart AW (2000).
+\bibitem[{Murphy and {Van der Vaart}(2000)}]{murphy2000profile}
+Murphy SA, {Van der Vaart} AW (2000).
 \newblock \enquote{On Profile Likelihood.}
 \newblock \emph{Journal of the American Statistical Association},
   \textbf{95}(450), 449--465.
+\newblock \doi{10.1080/01621459.2000.10474219}.
 
 \bibitem[{Press \emph{et~al.}(1996)Press, Teukolsky, Vetterling, and
   Flannery}]{press1996numerical}
 Press WH, Teukolsky SA, Vetterling WT, Flannery BP (1996).
-\newblock \emph{Numerical Recipes in C}, volume~2.
+\newblock \emph{Numerical Recipes in \proglang{C}}, volume~2.
 \newblock Cambridge University Press Cambridge.
 
-\bibitem[{{R Core Team}(2016)}]{parallel}
-{R Core Team} (2016).
-\newblock \emph{R: A Language and Environment for Statistical Computing}.
-\newblock R Foundation for Statistical Computing, Vienna, Austria.
-\newblock \urlprefix\url{https://www.R-project.org/}.
-
-\bibitem[{Ranke \emph{et~al.}(2016)Ranke, Lindenberger, and Lehmann}]{mkin}
-Ranke J, Lindenberger K, Lehmann R (2016).
+\bibitem[{Ranke \emph{et~al.}(2019)Ranke, Lindenberger, and Lehmann}]{mkin}
+Ranke J, Lindenberger K, Lehmann R (2019).
 \newblock \emph{\pkg{mkin}: Kinetic Evaluation of Chemical Degradation Data}.
-\newblock \proglang{R}~package version~0.9.44,
-  \urlprefix\url{http://CRAN.R-project.org/package=mkin}.
+\newblock \proglang{R}~package version~0.9.48.1,
+  \urlprefix\url{https://CRAN.R-project.org/package=mkin}.
 
 \bibitem[{Raue \emph{et~al.}(2009)Raue, Kreutz, Maiwald, Bachmann, Schilling,
-  Klingmüller, and Timmer}]{raue2009structural}
-Raue A, Kreutz C, Maiwald T, Bachmann J, Schilling M, Klingmüller U, Timmer J
-  (2009).
+  Klingm{\"u}ller, and Timmer}]{raue2009structural}
+Raue A, Kreutz C, Maiwald T, Bachmann J, Schilling M, Klingm{\"u}ller U, Timmer
+  J (2009).
 \newblock \enquote{Structural and Practical Identifiability Analysis of
   Partially Observed Dynamical Models by Exploiting the Profile Likelihood.}
 \newblock \emph{Bioinformatics}, \textbf{25}(15), 1923--1929.
+\newblock \doi{10.1093/bioinformatics/btp358}.
 
-\bibitem[{Raue \emph{et~al.}(2011)Raue, Kreutz, Maiwald, Klingmüller, and
+\bibitem[{Raue \emph{et~al.}(2011)Raue, Kreutz, Maiwald, Klingm{\"u}ller, and
   Timmer}]{raue2011addressing}
-Raue A, Kreutz C, Maiwald T, Klingmüller U, Timmer J (2011).
+Raue A, Kreutz C, Maiwald T, Klingm{\"u}ller U, Timmer J (2011).
 \newblock \enquote{Addressing Parameter Identifiability by Model-Based
   Experimentation.}
 \newblock \emph{IET Systems Biology}, \textbf{5}(2), 120--130.
+\newblock \doi{10.1049/iet-syb.2010.0061}.
 
 \bibitem[{Raue \emph{et~al.}(2013{\natexlab{a}})Raue, Kreutz, Theis, and
   Timmer}]{raue2013joining}
 Raue A, Kreutz C, Theis FJ, Timmer J (2013{\natexlab{a}}).
 \newblock \enquote{Joining Forces of Bayesian and Frequentist Methodology: A
   Study for Inference in the Presence of Non-Identifiability.}
-\newblock \emph{Phil. Trans. R. Soc. A}, \textbf{371}(1984), 20110544.
+\newblock \emph{Philosophical Transactions of the Royal Society A},
+  \textbf{371}(1984), 20110544.
+\newblock \doi{10.1098/rsta.2011.0544}.
 
 \bibitem[{Raue \emph{et~al.}(2013{\natexlab{b}})Raue, Schilling, Bachmann,
-  Matteson, Schelker, Kaschek, Hug, Kreutz, Harms, Theis, Klingmüller, and
+  Matteson, Schelker, Kaschek, Hug, Kreutz, Harms, Theis, Klingm{\"u}ller, and
   Timmer}]{raue2013lessons}
 Raue A, Schilling M, Bachmann J, Matteson A, Schelker M, Kaschek D, Hug S,
-  Kreutz C, Harms BD, Theis FJ, Klingmüller U, Timmer J (2013{\natexlab{b}}).
+  Kreutz C, Harms BD, Theis FJ, Klingm{\"u}ller U, Timmer J
+  (2013{\natexlab{b}}).
 \newblock \enquote{Lessons Learned from Quantitative Dynamical Modeling in
   Systems Biology.}
 \newblock \emph{PloS ONE}, \textbf{8}(9), e74335.
+\newblock \doi{10.1371/journal.pone.0074335}.
+
+\bibitem[{{\proglang{R} Core Team}(2019)}]{parallel}
+{\proglang{R} Core Team} (2019).
+\newblock \emph{\proglang{R}: {A} Language and Environment for Statistical
+  Computing}.
+\newblock \proglang{R} Foundation for Statistical Computing, Vienna, Austria.
+\newblock \urlprefix\url{https://www.R-project.org/}.
 
 \bibitem[{Rosenblatt \emph{et~al.}(2016)Rosenblatt, Timmer, and
   Kaschek}]{rosenblatt2016customized}
@@ -166,57 +181,63 @@ Rosenblatt M, Timmer J, Kaschek D (2016).
 \newblock \enquote{Customized Steady-State Constraints for Parameter Estimation
   in Non-Linear Ordinary Differential Equation Models.}
 \newblock \emph{Frontiers in Cell and Developmental Biology}, \textbf{4}.
+\newblock \doi{10.3389/fcell.2016.00041}.
 
-\bibitem[{Sklyar \emph{et~al.}(2015)Sklyar, Murdoch, Smith, Eddelbuettel,
-  Francoi, and Soetaert}]{inline}
-Sklyar O, Murdoch D, Smith M, Eddelbuettel D, Francoi o, Soetaert K (2015).
-\newblock \emph{\pkg{inline}: Functions to Inline C, C++, Fortran Function
-  Calls from R}.
-\newblock \proglang{R}~package version~0.3.14,
-  \urlprefix\url{http://CRAN.R-project.org/package=inline}.
+\bibitem[{Sklyar \emph{et~al.}(2018)Sklyar, Murdoch, Smith, Eddelbuettel,
+  Fran\c{c}ois, and Soetaert}]{inline}
+Sklyar O, Murdoch D, Smith M, Eddelbuettel D, Fran\c{c}ois R, Soetaert K
+  (2018).
+\newblock \emph{\pkg{inline}: Functions to Inline \proglang{C}, \proglang{C++},
+  \proglang{Fortran} Function Calls from \proglang{R}}.
+\newblock \proglang{R}~package version~0.3.15,
+  \urlprefix\url{https://CRAN.R-project.org/package=inline}.
 
-\bibitem[{Soetaert(2009)}]{rootSolve}
-Soetaert K (2009).
-\newblock \enquote{rootSolve: Nonlinear Root Finding, Equilibrium and
-  Steady-State Analysis of Ordinary Differential Equations.}
-\newblock \emph{R package version}, \textbf{1}.
+\bibitem[{Soetaert and Herman(2009)}]{rootSolve}
+Soetaert K, Herman PMJ (2009).
+\newblock \emph{A Practical Guide to Ecological Modelling: Using \proglang{R}
+  as a Simulation Platform}.
+\newblock Springer-Verlag.
 
 \bibitem[{Soetaert and Petzoldt(2010)}]{FME}
 Soetaert K, Petzoldt T (2010).
 \newblock \enquote{Inverse Modelling, Sensitivity and Monte Carlo Analysis in
-  {R} Using Package {FME}.}
+  \proglang{R} Using Package \pkg{FME}.}
 \newblock \emph{Journal of Statistical Software}, \textbf{33}(3), 1--28.
-\newblock \urlprefix\url{http://www.jstatsoft.org/v33/i03/}.
+\newblock \doi{10.18637/jss.v033.i03}.
 
 \bibitem[{Soetaert \emph{et~al.}(2010)Soetaert, Petzoldt, and Setzer}]{deSolve}
 Soetaert K, Petzoldt T, Setzer RW (2010).
-\newblock \enquote{Solving Differential Equations in R: Package deSolve.}
+\newblock \enquote{Solving Differential Equations in \proglang{R}: Package
+  \pkg{deSolve}.}
 \newblock \emph{Journal of Statistical Software}, \textbf{33}(9), 1--25.
 \newblock ISSN 1548-7660.
-\newblock \urlprefix\url{http://www.jstatsoft.org/v33/i09}.
+\newblock \doi{10.18637/jss.v033.i09}.
 
 \bibitem[{Squire and Trapp(1998)}]{squire1998using}
 Squire W, Trapp G (1998).
 \newblock \enquote{Using Complex Variables to Estimate Derivatives of Real
   Functions.}
 \newblock \emph{SIAM Review}, \textbf{40}(1), 110--112.
+\newblock \doi{10.1137/s003614459631241x}.
 
 \bibitem[{Tornoe(2012)}]{nlmeODE}
 Tornoe CW (2012).
 \newblock \emph{\pkg{nlmeODE}: Non-Linear Mixed-Effects Modelling in \pkg{nlme}
   Using Differential Equations}.
 \newblock \proglang{R}~package version~1.1,
-  \urlprefix\url{http://CRAN.R-project.org/package=nlmeODE}.
+  \urlprefix\url{https://CRAN.R-project.org/package=nlmeODE}.
 
 \bibitem[{Venzon and Moolgavkar(1988)}]{venzon1988method}
-Venzon D, Moolgavkar S (1988).
+Venzon DJ, Moolgavkar SH (1988).
 \newblock \enquote{A Method for Computing Profile-Likelihood-Based Confidence
   Intervals.}
 \newblock \emph{Applied Statistics}, pp. 87--94.
+\newblock \doi{10.2307/2347496}.
 
 \bibitem[{Wright and Nocedal(1999)}]{wright1999numerical}
 Wright S, Nocedal J (1999).
 \newblock \enquote{Numerical Optimization.}
-\newblock \emph{Springer Verlag}, \textbf{35}, 67--68.
+\newblock \emph{Springer-Verlag}, \textbf{35}, 67--68.
+\newblock \doi{10.1007/b98874}.
 
 \end{thebibliography}
